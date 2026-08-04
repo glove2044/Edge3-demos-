@@ -176,6 +176,35 @@ section:last-of-type { border-bottom: none; }
 .lifecycle .stage .name { font-weight: 700; font-size: 17px; display: block; margin-bottom: 8px; }
 .lifecycle .stage p { font-size: 14px; color: var(--ink-soft); }
 
+/* ---------- Differentiators ---------- */
+
+.diff-list { border-top: 1px solid var(--line); }
+.diff {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
+  padding: 36px 0; border-bottom: 1px solid var(--line);
+  align-items: baseline;
+}
+.diff h3 { font-size: clamp(24px, 3vw, 34px); letter-spacing: -0.015em; }
+.diff p { color: var(--ink-soft); font-size: 17px; }
+
+/* ---------- Lifecycle chain ---------- */
+
+.chain { display: flex; flex-wrap: wrap; border: 1px solid var(--line); }
+.chain span {
+  flex: 1 1 auto; text-align: center;
+  padding: 22px 18px; border-right: 1px solid var(--line);
+  font-weight: 700; font-size: 16px; letter-spacing: -0.01em;
+  background: var(--paper-raised); white-space: nowrap;
+}
+.chain span:last-child { border-right: none; }
+
+/* ---------- Enterprise line ---------- */
+
+.enterprise-line {
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 32px; flex-wrap: wrap;
+}
+
 /* ---------- Value table ---------- */
 
 .value-table { width: 100%; border-collapse: collapse; border: 1px solid var(--line); }
