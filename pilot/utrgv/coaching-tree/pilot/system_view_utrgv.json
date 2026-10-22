@@ -1,0 +1,266 @@
+{
+  "meta": {
+    "program": "UTRGV Football",
+    "team_short": "UTRGV",
+    "mascot": "Vaqueros",
+    "head_coach": "Travis Bush",
+    "season": 2026,
+    "generated": "2026-10-22",
+    "model_note": "Coaching-tree archetypes are priors built from each coach's own history (Rule 1). They are not model output and never carry a R/Y/G tier. Coach workbook names outrank them.",
+    "source": "pilot/utrgv/coaching-tree (Edge3-demos branch claude/utrgv-coaching-tree-history-hp4dlh)"
+  },
+  "coach": {
+    "name": "Travis Bush",
+    "title": "Head Coach",
+    "prior_program": "First-time college head coach. Assistant stops: Texas State (WR, then associate HC and co-OC, 2004-09), UTSA (first OC, 2011), Houston (RB, then OC/QBs and assistant HC, 2012-14), Buffalo Bills (offensive assistant, 2015); HC at Seguin HS and New Braunfels Canyon HS.",
+    "philosophy_quote": null,
+    "philosophy_source": null,
+    "system_summary": "A pass-leaning spread with Air Raid influence (Levine/Meacham at Houston) layered on the Texas State offense he helped run to 4th in FCS scoring in 2008. His best players were volume pass-game producers and accurate, moderately mobile quarterbacks; his documented lows were pocket quarterbacks in year two of a system. 2025 synthesized it: a portal QB (Newcomer of the Year), a freshman WR (Freshman of the Year), a freshman OL All-American, 9-3.",
+    "system_pillars": [
+      {
+        "label": "Texas State (Bailiff/Wright, 2004–09)",
+        "detail": "scheme listed as \"Multiple,\" but Bush's own co-OC units ranked 4th in FCS scoring (2008) and 8th in pass offense (2009); the rewarded profile was a big, record-setting WR (Luke) and an efficient multi-year QB (George). https://goutsa.com/staff/travis-bush ; https://txst.com/news/2008/12/17/121708aaa_632"
+      },
+      {
+        "label": "UTSA (Coker, 2011)",
+        "detail": "start-up spread with a sophomore QB who ran and threw (Soza 237/108 in game one); a start-from-scratch blueprint he explicitly cited when taking UTRGV. https://en.wikipedia.org/wiki/2011_UTSA_Roadrunners_football_team ; https://texasfootball.com/article/2023/07/25/bush-sees-similarities-and-differences-between-utsa-and-utrgv"
+      },
+      {
+        "label": "Houston (Levine, 2012–14)",
+        "detail": "tempo spread with Air Raid influence (Meacham co-OC 2013); rewarded high-volume WRs (Greenberry 76 rec) and a freshman QB throwing 28 TD; the 2014 Wildcat/Ward package shows willingness to play a converted athlete at QB. https://uhcougars.com/news/2013/1/14/Doug_Meacham_Named_Houston_Offensive_Coordinator ; https://thedailycougar.com/2014/09/11/insertion-ward-wildcat-package-takes-pressure-okorn/"
+      },
+      {
+        "label": "Buffalo (Ryan/Roman/Lynn, 2015)",
+        "detail": "run-first, two-back \"balance in the backfield\" with elite broken-tackle backs (McCoy, Williams 5.8 ypc); his one exposure to a power-run NFL system. https://www.pff.com/news/pro-bills-find-balance-in-backfield-with-mccoy-and-williams"
+      },
+      {
+        "label": "High school (Seguin/Canyon)",
+        "detail": "52-ppg district champion at Seguin and a 3,000-yd/34-TD QB at Canyon who became a P4 signee, consistent with a QB-centric spread. https://n.rivals.com/news/louisville-lands-central-texas-playmaker-qb-deuce-adams"
+      }
+    ],
+    "tree_roots": [
+      "Texas State 2004-10 (Bush, Bowen, Barela, Langford, Regalado)",
+      "UTSA 2011 (Bush, Bowen)",
+      "Houston 2012-14 (Bush; McDonald played)",
+      "Seguin HS 2016-20 (Bush, Langford; Ian Box)",
+      "Spavital node (Gamble, McDonald)",
+      "Meacham node (Bush 2013, Aych 2025)"
+    ]
+  },
+  "archetype": {
+    "title": "How you play, your program archetype",
+    "lede": "Built from every stop of your career and your position coaches' careers, not from one UTRGV season. Each room below reads the coach's own producers and the recruits they came in as.",
+    "system_profile": "Pass-first spread (39.6 ppg in 2025) protected by a developmental line, with a multiple, 3-4-hybrid defense that led the Southland in five categories. Producers across the staff were three-stars and below, Texas-rooted, and arrived from high school, JUCO or as transfers down.",
+    "slots": [
+      {
+        "abbr": "QB",
+        "slot": "Quarterback",
+        "coach": "Theron Aych",
+        "coach_title": "Co-Offensive Coordinator / Quarterbacks Coach",
+        "archetype": "Accurate, moderately mobile processor who can run when needed; converts and late bloomers welcome. Bush's lineage rewards volume passers; Aych's producers spike in year two or three.",
+        "baseline": "2 to 3★ (7 rated of 11; no 4★) · origin JUCO 4, HS 3, transfer 3, walk-on 1 · signing size 6-6/225, 6-5/?, 6-1/180, 5-8.5/161",
+        "baseline_note": "Recruiting band of this coach's documented producers across every stop (all positions he coached), from Rule 4; not a model threshold.",
+        "tree_proof": [
+          "Delanie Walker (Central Missouri, 2004-05): 2006 NFL Draft (49ers); Pro Bowl TE with Titans; Aych was his position coach",
+          "Shawn Poindexter (Arizona, 2017-18): Led team in rec. yds 2018, tied school record 11 TD; 67-1,135-12 career; UDFA 49ers 2019",
+          "Kyle Washington (Angelo State, 2012-15): 2x LSC Offensive POY (2014, 2015); 3x All-LSC; Harlon Hill semifinalist 2014; ASU single-season record 3,691 p",
+          "Jacob Cowing (UTEP, 2021): First-team All-C-USA; 69-1,354-7 (whether he was in Aych's inside group: unverified)"
+        ],
+        "maps_to": [
+          "Eddie Lee Marburger (QB; 3★ · transfer-down · 6-1/195): 1st-team All-SLC; SLC Newcomer of the Year; Phil Steele SLC OPOY; DCTF Texas Non-FBS OPOY;"
+        ],
+        "y2_status": "provisional",
+        "y2_note": "Aych is in his first UTRGV season; the room history is Bush's (George, O'Korn, Ward, Marburger) plus Aych's Angelo State and Arizona rooms.",
+        "confidence": "Timeline Medium (stops are consistent across OSU/Arizona/UTEP/UTRGV bios, but Central Missouri/Washington years conflict and 2008-10 is a hole; Houston title conflicts). Players Low-Medium (Washington, Poindexter, Cowing, Walker are well sourced; 2022-23 TSU and 2025 OSU honors, Angelo State non-QB honors not found).",
+        "read_rule": "Coach history, not program history; ranked NFL, then production, then PFF; recruiting profile on every row."
+      },
+      {
+        "abbr": "RB",
+        "slot": "Running back",
+        "coach": "Marco Regalado",
+        "coach_title": "Running Backs (also Recruiting Coordinator)",
+        "archetype": "Downhill, high-floor back in a committee inside a pass-first offense; mature transfers and small Texas HS producers rather than rated recruits.",
+        "baseline": "3 to 3★ (1 rated of 4; no 4★) · origin transfer 2, HS 2 · signing size 5-10/205, 5-7/175, 6-1/215, 5-7/175",
+        "baseline_note": "Recruiting band of this coach's documented producers across every stop (all positions he coached), from Rule 4; not a model threshold.",
+        "tree_proof": [],
+        "maps_to": [
+          "Nathan Denney (RB (grad transfer from Yale); unrated · transfer-down · 5-10/205): 884 rush yds, 4.68 ypc, 73.8 ypg (2nd SLC, 36th FCS); Phil Steele 2nd Team All-Southland; ",
+          "TJ Dement (RB (Fr); unrated · HS · 5-7/175): 5 rushing TD as a freshman; returning starter candidate 2026",
+          "Djouvensky Schlenbaker (RB (RS-Jr); 3★ · transfer-down · 6-1/215): Scored first rushing TD in program history (Aug 30 vs Sul Ross); season stats not found",
+          "Fabian Garcia, Brennan Carroll (RB; unrated · HS · 5-7/175): Rotation backs; Garcia returning 2026; no honors found"
+        ],
+        "y2_status": "provisional",
+        "y2_note": "One UTRGV season of data; Regalado's pre-UTRGV career was personnel, not position coaching.",
+        "confidence": "Timeline Medium (Rice, UTRGV, Jaguars and WSU stops are well sourced; TAMUK 2014 HC, the 2017–19 gap, and the Eaton HS head coach are not found). Players Low-Medium (Denney's honors are solid; other backs' season stats and any recruiting ratings not found; pre-UTRGV stops have no attributable players).",
+        "read_rule": "Coach history, not program history; ranked NFL, then production, then PFF; recruiting profile on every row."
+      },
+      {
+        "abbr": "WR",
+        "slot": "Wide receiver",
+        "coach": "Gunnar Henderson",
+        "coach_title": "Pass Game Coordinator / Wide Receivers",
+        "archetype": "High-volume, high-TD target who produces young and gets poached upward; small at signing, Texas HS direct.",
+        "baseline": "0 to 0★ (1 rated of 2; no 4★) · origin transfer 1 · signing size 5-11/176",
+        "baseline_note": "Recruiting band of this coach's documented producers across every stop (all positions he coached), from Rule 4; not a model threshold.",
+        "tree_proof": [],
+        "maps_to": [
+          "Tony Diaz (WR; 0★ · HS · 5-11/176): 1st-team All-SLC; SLC Freshman of the Year; FCS Football Central Freshman All-American",
+          "Xavyion (WR): 2nd Team All-Southland (per Oregon State roster bio; confirm on Southland release); 831 yd"
+        ],
+        "y2_status": "provisional",
+        "y2_note": "One season, two producers, both left for FBS. Retention, not evaluation, is the open question.",
+        "confidence": "Timeline High (consistent across UTRGV releases, local papers and the TCU roster). Players Medium-Low (honors are well sourced, but it is one season; Noland's 2nd-team honor rests on an Oregon State bio).",
+        "read_rule": "Coach history, not program history; ranked NFL, then production, then PFF; recruiting profile on every row."
+      },
+      {
+        "abbr": "TE",
+        "slot": "Tight end",
+        "coach": "Mike Barela",
+        "coach_title": "Run Game Coordinator / Tight Ends",
+        "archetype": "Blocking-first tight end with red-zone value, often a Power-5 drop-down or position convert; honors land on the OL when Barela coaches OL.",
+        "baseline": "3 to 3★ (2 rated of 7; no 4★) · origin transfer 3, JUCO 1, HS 1 · signing size 6-5/210",
+        "baseline_note": "Recruiting band of this coach's documented producers across every stop (all positions he coached), from Rule 4; not a model threshold.",
+        "tree_proof": [
+          "Michael Bowie (Northeastern State OL / run game, 2012): All-MIAA 2nd Team; D2Football.com All-America HM; no sacks allowed, 47 knockdowns; drafted 7th rd (No. 242) 20",
+          "Cole Wick (Incarnate Word TE / run game, 2015): 1st Team All-Southland; 30 rec, 364 yds, 2 TD; UDFA Detroit Lions 2016 (6 NFL games), later 49ers/Titans/Saint",
+          "Devin Hannan (Valdosta State OL, 2023): AFCA All-America 1st Team; AP D2 All-America 2nd Team; D2CCA All-Region 2nd; Gene Upshaw nominee; started ever",
+          "Caelan Keenan (Colorado Mesa TE (2018–19) / OL (2020–21), 2021): All-RMAC 2nd Team; D2CCA All-Region 2nd Team; team 8-2"
+        ],
+        "maps_to": [
+          "Ismael Smith Flores (TE (RS-So; 3★ · transfer-down · 6-5/210): 9 starts, 20 rec / 244 yds / 6 TD (7th SLC in rec TD); former 3-star Nebraska signee (Arli"
+        ],
+        "y2_status": "ok",
+        "y2_note": "Smith Flores left for ECU; the 2026 room is unproven.",
+        "confidence": "Timeline Medium-High (three school bios agree on stops; disagreements on UTRGV hire year 2023 vs 2024 and Valdosta end 2023 vs 2024). Players Medium (named honorees are well sourced; CMU 2018–19 TE, 2012 NSU all-conference OL, UIW 2017 TE names and Texas State 2007–10 TE honors beyond John Gilley's 2008 HM, https://txst.com/news/2008/11/26/112608aag_904, were not found).",
+        "read_rule": "Coach history, not program history; ranked NFL, then production, then PFF; recruiting profile on every row."
+      },
+      {
+        "abbr": "OL",
+        "slot": "Offensive line",
+        "coach": "Jeff Bowen",
+        "coach_title": "Co-Offensive Coordinator / Offensive Line",
+        "archetype": "Durable, high-availability interior players; freshmen who can start and JUCO sophomores who move up within a year. Pass protection is the measured output.",
+        "baseline": "3 to 3★ (1 rated of 8; no 4★) · origin JUCO 4, HS 2, transfer 1 · signing size 6-5/280, 6-1/195, 6-5/335, 6-3/272",
+        "baseline_note": "Recruiting band of this coach's documented producers across every stop (all positions he coached), from Rule 4; not a model threshold.",
+        "tree_proof": [
+          "Madison Wrather (Northeastern State, 2019–21): HM All-MIAA 2021; CoSIDA Academic All-America 1st team; 24 consecutive starts; 11 starts in 2019",
+          "Sammy Bernard (Northeastern Oklahoma A&M, 2016): 1st-team all-conference; signed with New Mexico",
+          "Larry Joubert (Northeastern Oklahoma A&M, 2016): 1st-team all-conference; signed with Oklahoma State"
+        ],
+        "maps_to": [
+          "Nick Hughes (OL; unrated · HS): 2nd-team All-SLC, started all 12; Freshman All-American",
+          "Wes Thompson (OL; unrated · JUCO · 6-5/335): 2026 Phil Steele preseason 1st-team All-Southland",
+          "Abram Nicklas (OL; unrated · JUCO · 6-3/272): 2026 Phil Steele preseason 2nd-team All-Southland"
+        ],
+        "y2_status": "ok",
+        "y2_note": "Hughes (true freshman All-American), Thompson and Nicklas return; the line protected a Walter Payton finalist.",
+        "confidence": "Timeline Medium (seven consistent school bios; HC names at Texas State 2006–10 and Northeastern State 2019–22 not confirmed; UTRGV title shifted OL coach → OC → co-OC). Players Low (only UTRGV 2025 and NEO 2016 have named honorees; NSU, SFA and most of Northeastern State are empty; no LOW performers found).",
+        "read_rule": "Coach history, not program history; ranked NFL, then production, then PFF; recruiting profile on every row."
+      },
+      {
+        "abbr": "DL",
+        "slot": "Defensive line",
+        "coach": "Nate (Nathan) Langford",
+        "coach_title": "Defensive Line Coach",
+        "archetype": "Texas-rooted, non-blue-chip paths: FCS transfer, developmental redshirt, veteran nose. Production in TFL and sacks over size.",
+        "baseline": "origin transfer 3, HS 1 · signing size 6-3/236",
+        "baseline_note": "Recruiting band of this coach's documented producers across every stop (all positions he coached), from Rule 4; not a model threshold.",
+        "tree_proof": [],
+        "maps_to": [
+          "Ja'Marcus Anderson (DL (R-So./So.; unrated · HS): Phil Steele FCS Freshman All-American 2nd team; All-Southland 3rd team; 29 tkl, 4.5 TFL, 2",
+          "Nathan Huerta (NT (Harlingen HS; signed Southwestern Univ. D3 out of HS; Texas State grad-transfer claim NOT supported by any source); unrated · transfer): 11 starts at nose in 2025; returns 2026. Correction: no source supports the earlier 'grad "
+        ],
+        "y2_status": "ok",
+        "y2_note": "Entire 2025 DL returns; Langford's HS stops carry 'most improved defense' tags but no individual data.",
+        "confidence": "Timeline Medium (UTRGV bios and news agree on the sequence but disagree on Seguin start year and on his All-Southland year/team; San Marcos HS years not sourced). Players Low (one college season; HS stops have no individual data).",
+        "read_rule": "Coach history, not program history; ranked NFL, then production, then PFF; recruiting profile on every row."
+      },
+      {
+        "abbr": "EDGE",
+        "slot": "Edge / outside linebacker",
+        "coach": "James Lockhart IV",
+        "coach_title": "Outside Linebackers Coach",
+        "archetype": "Long 235 to 265 lb stand-up/hand-down hybrid; bounce-back transfer rather than rated recruit (Box; Wilson by association at Texas Tech).",
+        "baseline": "3 to 3★ (2 rated of 5; no 4★) · origin transfer 4, HS 1 · signing size 6-6/230, 6-2/220, 6-0/215, 6-3/236",
+        "baseline_note": "Recruiting band of this coach's documented producers across every stop (all positions he coached), from Rule 4; not a model threshold.",
+        "tree_proof": [
+          "Tyree Wilson (Texas Tech, 2022): 1st-team All-Big 12 (13.5 TFL, 7.0 sacks); No. 7 overall pick, 2023 NFL Draft (Raiders)",
+          "Jesiah Pierre (Texas Tech, 2022-23): 7.0 TFL, 4.5 sacks at OLB in 2022; HM All-Big 12 at LB 2023"
+        ],
+        "maps_to": [
+          "Ian Box (DE; unrated · transfer · 6-3/236): 2nd-team All-Southland (defense-wide, under Gamble as DC)",
+          "Percy Jackson III (Edge; unrated · unknown): 24 tkl, 6.5 TFL, 2 sacks, 2 FF, 1 FR (no all-conference honor found)"
+        ],
+        "y2_status": "provisional",
+        "y2_note": "One season of Lockhart's own coaching; Box is shared between the OLB and DL rooms.",
+        "confidence": "Timeline High (multiple school bios agree; only the GA start year is disputed). Players Low (one coaching season, unit assignments blurred between OLB and DL rooms, no official 2025 All-SLC team list retrieved).",
+        "read_rule": "Coach history, not program history; ranked NFL, then production, then PFF; recruiting profile on every row."
+      },
+      {
+        "abbr": "LB",
+        "slot": "Inside linebacker",
+        "coach": "Brian Gamble",
+        "coach_title": "Assistant Head Coach / Defensive Coordinator / Linebackers",
+        "archetype": "High-volume tackler from an overlooked origin (walk-on, transfer down, true freshman) who plays early in a multiple or 3-4 front.",
+        "baseline": "2 to 3★ (6 rated of 11; no 4★) · origin HS 5, transfer 2, JUCO 2, walk-on 1 · signing size 6-2/225, 6-2/?, 6-0/223, 6-2/238",
+        "baseline_note": "Recruiting band of this coach's documented producers across every stop (all positions he coached), from Rule 4; not a model threshold.",
+        "tree_proof": [
+          "Trey Baldwin (Louisiana Tech, 2020): 2nd-team All-C-USA, Phil Steele 3rd team; 85 tackles, team-best 53 solo",
+          "Tyler Grubbs (Louisiana Tech, 2020 (Fr.)): 2nd-team All-C-USA, Phil Steele 2nd team, C-USA All-Freshman; team-best 99 tackles (one La Tech release says 1",
+          "Ezekiel Barnett (Louisiana Tech, by 2020): HM All-C-USA; Burlsworth Trophy nominee (walk-on award)",
+          "Connor Taylor (Louisiana Tech, 2018–20): HM All-C-USA (season unspecified)"
+        ],
+        "maps_to": [
+          "Jaiden Haygood (LB; unrated · HS · 6-0/215): Team-high 102 tackles; Freshman All-American (FCS Football Central, Stats Perform, Phil St"
+        ],
+        "y2_status": "ok",
+        "y2_note": "Haygood (102 tackles as a redshirt freshman) is the archetype in the building; Gamble's only documented LOW was a producer who transferred up.",
+        "confidence": "Timeline Medium (stops and years are consistent across four school bios; HC/DC at Houston and La Tech and the Kilgore HC are unconfirmed; UTRGV title wording disagrees). Players Low–Medium (La Tech and UTRGV lists are sourced; UIW is empty; Texas State honors list for 2021 not retrieved; LOW list is one documented transfer).",
+        "read_rule": "Coach history, not program history; ranked NFL, then production, then PFF; recruiting profile on every row."
+      },
+      {
+        "abbr": "S",
+        "slot": "Safety / nickel",
+        "coach": "Adrian McDonald",
+        "coach_title": "Pass Game Coordinator / Safeties Coach",
+        "archetype": "Ball-production safety who mirrors McDonald's own 17-INT profile; first-year players on the field; nickel/star versatility.",
+        "baseline": "origin transfer 3, HS 2, JUCO 1 · signing size 6-0/185",
+        "baseline_note": "Recruiting band of this coach's documented producers across every stop (all positions he coached), from Rule 4; not a model threshold.",
+        "tree_proof": [
+          "Malik Sonnier (Midwestern State, 2021): All-LSC defensive honors; 2021 team 7-3, LSC champion",
+          "Dylon Davis (Midwestern State, 2021): All-LSC defensive honors as a freshman"
+        ],
+        "maps_to": [
+          "Alijah Prosser (DB; unrated · HS): FCS Football Central Freshman AA; 2 INT, 1 sack, 2 FF",
+          "Elijah Graham (DB; unrated · transfer): Phil Steele FCS Midseason All-American; declared for NFL draft",
+          "Logic Hudgens (DB; unrated · transfer · 6-0/185): Phil Steele All-Southland 4th team"
+        ],
+        "y2_status": "ok",
+        "y2_note": "Prosser (Freshman All-American), Graham (NFL draft declare), Hudgens and Neal all transfers or unrated HS; no LOW documented.",
+        "confidence": "Timeline High (UTRGV, Texas State, MSU and Houston bios agree on every stop and year; only the March 6 vs March 10, 2023 hire date differs). Players Low (only 2021 MSU and 2025 UTRGV honors found; 2022 MSU and official 2025 All-Southland DB names, player sizes/ratings/hometowns not reached).",
+        "read_rule": "Coach history, not program history; ranked NFL, then production, then PFF; recruiting profile on every row."
+      },
+      {
+        "abbr": "CB",
+        "slot": "Cornerback / special teams",
+        "coach": "Josh Jones",
+        "coach_title": "Special Teams Coordinator / Cornerbacks Coach",
+        "archetype": "Takeaway and pass-breakup volume over size; JUCO and small-school Southern origins; proven in a 4-3 at the FCS/G5 level.",
+        "baseline": "2 to 3★ (2 rated of 6; no 4★) · origin HS 3, JUCO 2, transfer 1 · signing size 6-1/194, 5-11/190",
+        "baseline_note": "Recruiting band of this coach's documented producers across every stop (all positions he coached), from Rule 4; not a model threshold.",
+        "tree_proof": [
+          "Tremon Smith (Central Arkansas CBs, 2016-17 (at UCA 2014-17)): 1st-team All-Southland 2015-17 (UCA page lists 2015-16); 37 career passes defensed (10 INT); 6th round, No. 19",
+          "Tyler Williams (Central Arkansas CBs, 2016 (senior)): UTRGV/UCA bio: All-Southland and \"multiple All-American teams after leading the nation in pass break-ups\" — ye",
+          "Tavares Garner (Henderson State CBs, 2015): 1st-team All-GAC; team 11-2, D2 playoffs",
+          "Jalen Thompson (South Alabama CBs, 2018-20): Program all-time INT leader (9); PFF 3rd-team All-Sun Belt (flex) 2019"
+        ],
+        "maps_to": [],
+        "y2_status": "provisional",
+        "y2_note": "Jones joined in February 2026; no UTRGV corner has been coached by him through a season yet.",
+        "confidence": "Timeline High (six school bios plus UFL staff releases agree; only the 2025 Brahmas HC and the UAPB HC are unresolved). Players Medium for UCA/South Alabama (school bios plus PFF/NFL draft records), Low elsewhere.",
+        "read_rule": "Coach history, not program history; ranked NFL, then production, then PFF; recruiting profile on every row."
+      }
+    ],
+    "gaps_summary": "Combine and camp testing is almost absent from the public record (one hand-timed 40). Recruiting ratings exist for 38 of 100 rows; the rest are unrated by the services, which is itself part of the archetype. Position coaches new in 2026 (Aych, Jones) and one-season rooms (Henderson, Regalado, Lockhart) are provisional until 2026 results land."
+  }
+}

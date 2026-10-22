@@ -8,7 +8,7 @@ The UTRGV pilot reads every recruit against the coach's own standard, not a nati
 
 Coach Bush is a first-time college head coach, so his tree goes back to every stop where he was an assistant (Texas State, UTSA, Houston, Buffalo Bills) and his two Texas high school head-coaching jobs. The same method is applied to the ten position coaches.
 
-Dennis's October 9 summary referenced "the tree designed for Coach Bush" as the template for coaching-tree data in the model. That earlier artifact could not be located in the Edge3-demos repo, Google Drive, Gmail, or the cloud sessions searchable from this environment, so this is a fresh run. If the original turns up on the desktop, treat this document as the superset and reconcile the two.
+Dennis's October 9 summary referenced "the tree designed for Coach Bush" as the template for coaching-tree data in the model. A sweep of the Edge3-demos and edge3-model repos, Google Drive, Gmail, the cloud sessions, and (on October 22, by a local session) the Desktop, Downloads and the UTRGV folders found no such file. "Coaching tree" appeared only as a method concept in the Wes French deck, the shadow IT process map, the August 9 carryover file and the wallet templates. The July Risk/Fit page addressed to Coach Bush and staff (`chase-utrgv-staff/index.html` on the Desktop) covers roster fit and staff stability with no tree. This document is therefore the first built-out tree, and the format below is shaped for the live pilot.
 
 ## Method and limits
 
@@ -124,6 +124,18 @@ Chase Ames is a 2027 quarterback from Dripping Springs High School (Texas Class 
 | In edge3-model | The pattern was generalized: `scripts/build_utrgv_fcs_comps.py` ("UTRGV FCS comp mapping, Chase Ames pattern, generalized") builds comps for every UTRGV player from rooms Coach Bush knows personally first (Texas State, UTSA, Houston), then regional G5, then the full cohort. The Garret Rangel comp card follows the same anchor ("your offense just made a Walter Payton Award finalist out of this room"). `docs/athletes/wallets/chase-ames/` is the public sample preview, structure only. | edge3-model repo |
 
 Two things could not be retrieved from this environment: the two Netlify pages themselves (the domain does not resolve here, and their source is not in either repo, so they were deployed from the desktop), and the FBS/FCS media-guide mapping run. The only media-guide references in edge3-model are the FB-01b verification notes and the April 21 Positional Baselines scope, which proposed a one-time manual scrape of team media guides to fill OC and DC by year. `data/fcs/fcs_head_coaches_manual.csv` holds one row (Bush). The media-guide run is on the desktop or downloads, which this session cannot reach.
+
+## Live pilot package
+
+The target format is the platform Dennis runs for the pilot (Prisma on Postgres behind Cognito; `edge3_loader` writes reference tables, `edge3_app` reads them). The `pilot/` folder beside this report holds:
+
+| File | Loads into |
+|---|---|
+| `migration_coach_tree.sql` | A new Prisma migration adding `CoachStaff`, `CoachStop` and `CoachTreePlayer` as league-wide reference tables, RLS off, grants mirroring `PlayerComparable`. |
+| `coaching_tree_coaches.csv`, `coaching_tree_stops.csv`, `coaching_tree_players.csv` | Seeds for those three tables: 11 coaches, 108 career stops, 100 ranked player rows with the recruiting profile. UTRGV rows carry `cfbd_player_id` so the loader can link them to `Player`. |
+| `player_facts_utrgv.csv` | Rows for the existing `PlayerFact` table on the 21 UTRGV players in the tree: which coach's room each is read in, the archetype he is read against, and his recruiting profile as labeled facts. |
+| `system_view_utrgv.json` | The System view block in the New Mexico demo pattern: a head-coach block for Bush and one slot per room with the position coach, archetype line, recruiting baseline band, historical proof, the 2025 UTRGV players who map to it, and a provisional or settled status. |
+| `README.md` | Load order, join keys, and the vocabulary rules (facts and priors, never `coach_notes`, never a tier). |
 
 ## Rules added
 
