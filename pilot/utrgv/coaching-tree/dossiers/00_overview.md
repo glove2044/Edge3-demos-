@@ -85,6 +85,30 @@ Two staff-wide signals stand out. First, almost every documented top performer w
 - Do not train on the LOW set. It is too small and too dependent on staff churn to carry signal. Use it as a list of documented failure modes to check a recruit against (pocket QB in a new system, producer likely to be poached upward).
 - Mentor names and schemes are the join keys to the model's existing coaching data (CFBD covers FBS head coaches only). Assistant and FCS histories in this document are the part CFBD does not have.
 
+## Recruiting profile layer: what the producers looked like as recruits
+
+Every player row now carries a recruiting profile (Rule 4): 247Sports or Rivals rating and class, high school and hometown, height and weight at signing where a signing-era listing exists, high school production and honors, origin into the program, and testing where any was published. Local tables in edge3-model (the 247 composite proxy and CFBD recruits) were joined first; a same-name local match was kept only when the commit school or high school agreed with the player's documented path, which rejected four false matches (Jalen Thompson, Tyler Williams, Jordan Smith, Logic Hudgens' transfer rating). The web pass then filled the rest from 247Sports, Rivals, On3, MaxPreps, Hudl, school signing releases and local press.
+
+Coverage across the 100 player rows that remain after the attribution corrections:
+
+| Field | Rows filled | Note |
+|---|---|---|
+| Any recruiting or HS profile | 86 | The 14 blanks are pre-2005 Texas State players with no surviving profile, two JUCO linemen whose names could not be confirmed, and group rows. |
+| Star rating (247 or Rivals) | 38 | Pre-2010 recruits, D2 signees, walk-ons and most UTRGV 2025 signees are unrated. "Unrated" is itself a finding. |
+| Height and weight at signing | 49 | Signing-era listings where found; otherwise the earliest college roster figure, labeled in the notes. |
+| High school stats or honors | 68 | MaxPreps, press or the college bio. |
+| Combine or camp testing | 1 | One hand-timed 40 (Devin Rockette, Oxford Eagle). Verified camp numbers were not found for anyone else; blanks are honest, not estimates. |
+
+What the recruiting view says, staff-wide:
+
+- **The producers were three-stars and below.** Of the 32 TOP rows with a 247 star rating, 23 are three-stars, 6 are two-stars, 2 are unrated (Tony Diaz, Brennan Carroll) and one is a five-star (Karlos Williams, a Bills pro, not a college recruit of this staff). The only four-star-plus players anywhere in the tree are Deontay Greenberry (Rivals four-star, Fresno), Tavares Garner (Rivals four-star, Manvel, transferred down from Texas A&M), Willie Baker (ESPN four-star, Livonia) and Boobie Curry (four-star, Houston St. Pius X), and Curry is a documented LOW.
+- **Origin is the strongest signal.** Among TOP rows: 34 came straight from high school, 26 were transfers (most of them down from FBS, including Trey Baldwin from Missouri, Brian Holloway from SMU, Michael Bowie from Oklahoma State, Smith Flores from Nebraska, Tyree Wilson from Texas A&M, Marburger from UTSA), 15 were JUCO products, 2 were walk-ons (Ezekiel Barnett, Stanley Berryhill) and 10 are unknown. Bowen's and Aych's rooms are JUCO-heavy; Lockhart, Langford, McDonald and Barela have produced almost entirely with transfers.
+- **Texas, by a wide margin.** Of the rows with a known high school, roughly two-thirds are Texas schools, and the UTRGV 2025 producers are almost all Texas HS products (San Marcos, Judson, Manor, Seguin, Dickinson, Harlingen, Boerne, San Benito, Roosevelt, Central Catholic, Sharyland Pioneer, Tomball).
+- **Size at signing ran small at the skill spots.** Greg Ward 5-10/160, Larry McDuffey 5-10/162, Tony Diaz 5-11/176, TJ Dement 5-7/175, Fabian Garcia 5-7/175, Brennan Carroll 5-8/165, Shun Brown 5-8/161. The exceptions are the converts and late bloomers that Aych and Barela produced (Poindexter 6-5, Smith Flores 6-5/210, Kyle Washington 6-6/225).
+- **Where the lows sat.** The documented LOW rows are mostly three-stars from high school in a pocket-QB or scheme-change situation (O'Korn, Piland, Joiner), one four-star who did not produce (Curry) and two-stars who left for playing time (Berryhill, Starling). The LOW set is not a rating band; it is a situation band.
+
+The per-coach recruiting read is in the "Recruiting / HS profile" column of each stop table and in `coaching_tree_players.csv` (columns `recruit_class`, `stars_247`, `composite_247`, `stars_rivals`, `hs_name`, `hs_city`, `hs_state`, `origin`, `height_signing`, `weight_signing`, `hs_stats`, `hs_honors`, `forty`, `shuttle`, `vertical`, `broad`, `recruit_match_status`, `recruit_confidence`, `recruit_sources`).
+
 ## Chase Ames: what was pulled, and what Coach Bush received
 
 Chase Ames is a 2027 quarterback from Dripping Springs High School (Texas Class 6A). He is the recruit whose read was built on Coach Bush's own history rather than UTRGV's one-season program history, and that method is now Rule 1 below. The record, from Gmail, Drive and the edge3-model repo:

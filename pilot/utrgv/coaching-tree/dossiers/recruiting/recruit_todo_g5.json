@@ -1,0 +1,179 @@
+[
+ {
+  "coach": "James Lockhart IV",
+  "stop": "Texas Tech, 2022–23 (QC only; players belong to Ah You/DeRuyter)",
+  "tier": "TOP",
+  "player": "Tyree Wilson",
+  "pos": "Edge/DE",
+  "years": "2022",
+  "known": {
+   "class_year": 2018,
+   "stars_247": 3,
+   "composite_247": 0.8813,
+   "hs_name": "West Rusk",
+   "hs_city": "New London",
+   "hs_state": "TX",
+   "committed_to": "Texas A&M"
+  },
+  "status": "verified (commit school or HS matches the record)",
+  "need": "HS profile (height/weight at signing, HS stats), combine/camp numbers; confirm 247 rating",
+  "context": "1st-team All-Big 12 (13.5 TFL, 7.0 sacks); No. 7 overall pick, 2023 NFL Draft (Raiders)"
+ },
+ {
+  "coach": "James Lockhart IV",
+  "stop": "Texas Tech, 2022–23 (QC only; players belong to Ah You/DeRuyter)",
+  "tier": "TOP",
+  "player": "Jesiah Pierre",
+  "pos": "OLB (2022) / ILB (2023)",
+  "years": "2022-23",
+  "known": {
+   "class_year": 2019,
+   "stars_247": 3,
+   "composite_247": 0.8719,
+   "hs_name": "Mount Dora Christian Academy",
+   "hs_city": "Mount Dora",
+   "hs_state": "FL",
+   "committed_to": "Florida"
+  },
+  "status": "unverified name match; confirm",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "7.0 TFL, 4.5 sacks at OLB in 2022; HM All-Big 12 at LB 2023"
+ },
+ {
+  "coach": "James Lockhart IV",
+  "stop": "UTRGV, 2024–present (2024 was a no-games prep year; first season 2025)",
+  "tier": "TOP",
+  "player": "Percy Jackson III",
+  "pos": "Edge",
+  "years": "2025",
+  "known": {},
+  "status": "no local match",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "24 tkl, 6.5 TFL, 2 sacks, 2 FF, 1 FR (no all-conference honor found)"
+ },
+ {
+  "coach": "Nate (Nathan) Langford",
+  "stop": "UTRGV DL, 2024–present (first games 2025)",
+  "tier": "TOP",
+  "player": "Ja'Marcus Anderson",
+  "pos": "DL (R-So./So., class listing disputed)",
+  "years": "2025",
+  "known": {},
+  "status": "no local match",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "Phil Steele FCS Freshman All-American 2nd team; All-Southland 3rd team; 29 tkl, 4.5 TFL, 2 sacks, 5 QBH, 1 FF in 11 games/2 starts"
+ },
+ {
+  "coach": "Nate (Nathan) Langford",
+  "stop": "UTRGV DL, 2024–present (first games 2025)",
+  "tier": "TOP",
+  "player": "Nathan Huerta",
+  "pos": "NT, grad transfer from Texas State",
+  "years": "2025",
+  "known": {},
+  "status": "no local match",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "11 starts at nose; returns 2026"
+ },
+ {
+  "coach": "Josh Jones",
+  "stop": "Henderson State CBs, 2015 — thin",
+  "tier": "TOP",
+  "player": "Tavares Garner",
+  "pos": "DB",
+  "years": "2015",
+  "known": {},
+  "status": "no local match",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "1st-team All-GAC; team 11-2, D2 playoffs"
+ },
+ {
+  "coach": "Josh Jones",
+  "stop": "Central Arkansas CBs, 2016–17",
+  "tier": "TOP",
+  "player": "Tremon Smith",
+  "pos": "CB",
+  "years": "2016-17 (at UCA 2014-17)",
+  "known": {},
+  "status": "no local match",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "1st-team All-Southland 2015-17 (UCA page lists 2015-16); 37 career passes defensed (10 INT); 6th round, No. 196, 2018 NFL Draft (Chiefs); la"
+ },
+ {
+  "coach": "Josh Jones",
+  "stop": "Central Arkansas CBs, 2016–17",
+  "tier": "TOP",
+  "player": "Tyler Williams",
+  "pos": "CB, 6-1 194, Norcross GA, Hutchinson CC transfer",
+  "years": "2016 (senior)",
+  "known": {
+   "class_year": 2017,
+   "stars_247": 3,
+   "composite_247": 0.8242,
+   "hs_name": "Oxbridge Academy",
+   "hs_city": "West Palm Beach",
+   "hs_state": "FL"
+  },
+  "status": "unverified name match; confirm",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "UTRGV/UCA bio: All-Southland and \"multiple All-American teams after leading the nation in pass break-ups\" — year/team not independently veri"
+ },
+ {
+  "coach": "Josh Jones",
+  "stop": "South Alabama CBs, 2018–20",
+  "tier": "TOP",
+  "player": "Jalen Thompson",
+  "pos": "CB/flex",
+  "years": "2018-20",
+  "known": {
+   "class_year": 2016,
+   "stars_247": 3,
+   "composite_247": 0.8433,
+   "hs_name": "Downey",
+   "hs_city": "Downey",
+   "hs_state": "CA"
+  },
+  "status": "unverified name match; confirm",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "Program all-time INT leader (9); PFF 3rd-team All-Sun Belt (flex) 2019"
+ },
+ {
+  "coach": "Josh Jones",
+  "stop": "South Alabama CBs, 2018–20",
+  "tier": "TOP",
+  "player": "Darian Mills",
+  "pos": "CB",
+  "years": "2018 (year unverified)",
+  "known": {
+   "class_year": 2014,
+   "stars_247": 2,
+   "composite_247": 0.7593,
+   "hs_name": "Winter Haven",
+   "hs_city": "Winter Haven",
+   "hs_state": "FL"
+  },
+  "status": "unverified name match; confirm",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "All-Sun Belt; 2nd in conference in PBU"
+ },
+ {
+  "coach": "Josh Jones",
+  "stop": "South Alabama CBs, 2018–20",
+  "tier": "TOP",
+  "player": "Devin Rockette",
+  "pos": "CB",
+  "years": "2019",
+  "known": {
+   "class_year": 2017,
+   "stars_247": 3,
+   "composite_247": 0.8497,
+   "hs_name": "Oxford",
+   "hs_city": "Oxford",
+   "hs_state": "MS",
+   "committed_to": "South Alabama"
+  },
+  "status": "verified (commit school or HS matches the record)",
+  "need": "HS profile (height/weight at signing, HS stats), combine/camp numbers; confirm 247 rating",
+  "context": "PFF All-Sun Belt HM; 6 PBU, 1 INT in first season as starter"
+ }
+]

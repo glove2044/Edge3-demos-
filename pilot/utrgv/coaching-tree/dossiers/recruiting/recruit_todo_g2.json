@@ -1,0 +1,276 @@
+[
+ {
+  "coach": "Brian Gamble",
+  "stop": "Louisiana Tech, 2018–20 (LB)",
+  "tier": "TOP",
+  "player": "Trey Baldwin",
+  "pos": "LB",
+  "years": "2020",
+  "known": {
+   "class_year": 2016,
+   "stars_247": 3,
+   "composite_247": 0.8444,
+   "hs_name": "Cy Falls",
+   "hs_city": "Houston",
+   "hs_state": "TX",
+   "committed_to": "Louisiana Tech"
+  },
+  "status": "verified (commit school or HS matches the record)",
+  "need": "HS profile (height/weight at signing, HS stats), combine/camp numbers; confirm 247 rating",
+  "context": "2nd-team All-C-USA, Phil Steele 3rd team; 85 tackles, team-best 53 solo"
+ },
+ {
+  "coach": "Brian Gamble",
+  "stop": "Louisiana Tech, 2018–20 (LB)",
+  "tier": "TOP",
+  "player": "Tyler Grubbs",
+  "pos": "LB",
+  "years": "2020 (Fr.)",
+  "known": {
+   "class_year": 2020,
+   "stars_247": 3,
+   "composite_247": 0.8179,
+   "hs_name": "Holy Cross",
+   "hs_city": "New Orleans",
+   "hs_state": "LA",
+   "committed_to": "Louisiana Tech"
+  },
+  "status": "verified (commit school or HS matches the record)",
+  "need": "HS profile (height/weight at signing, HS stats), combine/camp numbers; confirm 247 rating",
+  "context": "2nd-team All-C-USA, Phil Steele 2nd team, C-USA All-Freshman; team-best 99 tackles (one La Tech release says 1st team — disagreement)"
+ },
+ {
+  "coach": "Brian Gamble",
+  "stop": "Louisiana Tech, 2018–20 (LB)",
+  "tier": "TOP",
+  "player": "Ezekiel Barnett",
+  "pos": "LB",
+  "years": "by 2020",
+  "known": {},
+  "status": "no local match",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "HM All-C-USA; Burlsworth Trophy nominee (walk-on award)"
+ },
+ {
+  "coach": "Brian Gamble",
+  "stop": "Louisiana Tech, 2018–20 (LB)",
+  "tier": "TOP",
+  "player": "Connor Taylor",
+  "pos": "LB",
+  "years": "2018–20",
+  "known": {
+   "class_year": 2018,
+   "stars_247": 3,
+   "composite_247": 0.8267,
+   "hs_name": "Snow College",
+   "hs_city": "Kaysville",
+   "hs_state": "UT",
+   "committed_to": "Louisiana Tech"
+  },
+  "status": "verified (commit school or HS matches the record)",
+  "need": "HS profile (height/weight at signing, HS stats), combine/camp numbers; confirm 247 rating",
+  "context": "HM All-C-USA (season unspecified)"
+ },
+ {
+  "coach": "Brian Gamble",
+  "stop": "Louisiana Tech, 2018–20 (LB)",
+  "tier": "TOP",
+  "player": "Willie Baker",
+  "pos": "LB",
+  "years": "2018–20",
+  "known": {
+   "class_year": 2016,
+   "stars_247": 3,
+   "composite_247": 0.8547,
+   "hs_name": "Livonia",
+   "hs_city": "Livonia",
+   "hs_state": "LA"
+  },
+  "status": "unverified name match; confirm",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "HM All-C-USA (season unspecified)"
+ },
+ {
+  "coach": "Brian Gamble",
+  "stop": "Louisiana Tech, 2018–20 (LB)",
+  "tier": "TOP",
+  "player": "Collin Scott",
+  "pos": "LB",
+  "years": "2018–19",
+  "known": {
+   "class_year": 2015,
+   "stars_247": 3,
+   "composite_247": 0.8007,
+   "hs_name": "Manvel",
+   "hs_city": "Manvel",
+   "hs_state": "TX"
+  },
+  "status": "unverified name match; confirm",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "HM All-C-USA 2018 and 2019; 12 starts, 65 tackles in 2019"
+ },
+ {
+  "coach": "Brian Gamble",
+  "stop": "Texas State, 2021–22 (ILB)",
+  "tier": "TOP",
+  "player": "Brian Holloway",
+  "pos": "ILB",
+  "years": "2022",
+  "known": {
+   "class_year": 2019,
+   "stars_247": 2,
+   "composite_247": 0.78,
+   "hs_name": "Kilgore College",
+   "hs_city": "Houston",
+   "hs_state": "TX",
+   "committed_to": "SMU"
+  },
+  "status": "verified (commit school or HS matches the record)",
+  "need": "HS profile (height/weight at signing, HS stats), combine/camp numbers; confirm 247 rating",
+  "context": "SMU transfer; 49 tackles, 5.0 TFL, 1.0 sack; one of two starting ILBs in a front seven described as among Sun Belt's best; graduated"
+ },
+ {
+  "coach": "Brian Gamble",
+  "stop": "Texas State, 2021–22 (ILB)",
+  "tier": "TOP",
+  "player": "Dan Foster",
+  "pos": "ILB",
+  "years": "2022",
+  "known": {
+   "class_year": 2019,
+   "stars_247": 3,
+   "composite_247": 0.83,
+   "hs_name": "Dwyer",
+   "hs_city": "Palm Beach Gardens",
+   "hs_state": "FL",
+   "committed_to": "Marshall"
+  },
+  "status": "unverified name match; confirm",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "Starting ILB alongside Holloway"
+ },
+ {
+  "coach": "Brian Gamble",
+  "stop": "Texas State, 2021–22 (ILB)",
+  "tier": "LOW",
+  "player": "Jordan Smith",
+  "pos": "LB",
+  "years": "~2023 (unverified)",
+  "known": {
+   "class_year": 2020,
+   "stars_247": 3,
+   "composite_247": 0.8551,
+   "hs_name": "Columbia",
+   "hs_city": "Lake City",
+   "hs_state": "FL",
+   "committed_to": "New Mexico State"
+  },
+  "status": "unverified name match; confirm",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "Navarro JUCO transfer who left after spring ball for the portal — may postdate Gamble's departure; unverified"
+ },
+ {
+  "coach": "Brian Gamble",
+  "stop": "UTRGV, 2025 (DC/LB)",
+  "tier": "TOP",
+  "player": "Jaiden Haygood",
+  "pos": "LB",
+  "years": "2025 (So.)",
+  "known": {},
+  "status": "no local match",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "Team-high 102 tackles; Freshman All-American (FCS Football Central, Stats Perform, Phil Steele); Phil Steele 3rd-team All-Conf; Jerry Rice A"
+ },
+ {
+  "coach": "Brian Gamble",
+  "stop": "UTRGV, 2025 (DC/LB)",
+  "tier": "TOP",
+  "player": "Alijah Prosser",
+  "pos": "DB",
+  "years": "2025 (Fr.)",
+  "known": {},
+  "status": "no local match",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "FCS Football Central Freshman AA; 2 INT, 1 sack, 2 FF"
+ },
+ {
+  "coach": "Brian Gamble",
+  "stop": "UTRGV, 2025 (DC/LB)",
+  "tier": "TOP",
+  "player": "Ian Box",
+  "pos": "DE",
+  "years": "2025 (Jr.)",
+  "known": {
+   "class_year": 2022,
+   "stars_247": null,
+   "composite_247": null,
+   "hs_name": "Seguin",
+   "hs_city": "Seguin",
+   "hs_state": "TX",
+   "committed_to": "Lamar"
+  },
+  "status": "unverified name match; confirm",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "2nd-team All-Southland (defense-wide, under Gamble as DC)"
+ },
+ {
+  "coach": "Jeff Bowen",
+  "stop": "Northeastern Oklahoma A&M, 2016 (OL) — thin",
+  "tier": "TOP",
+  "player": "Larry Joubert",
+  "pos": "OL",
+  "years": "2016",
+  "known": {},
+  "status": "no local match",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "1st-team all-conference; signed with Oklahoma State"
+ },
+ {
+  "coach": "Jeff Bowen",
+  "stop": "Northeastern Oklahoma A&M, 2016 (OL) — thin",
+  "tier": "TOP",
+  "player": "Sammy Bernard",
+  "pos": "OL",
+  "years": "2016",
+  "known": {},
+  "status": "no local match",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "1st-team all-conference; signed with New Mexico"
+ },
+ {
+  "coach": "Jeff Bowen",
+  "stop": "Northeastern State, 2019–22 (OC/OL) — thin",
+  "tier": "TOP",
+  "player": "Madison Wrather",
+  "pos": "OL",
+  "years": "2019–21",
+  "known": {},
+  "status": "no local match",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "HM All-MIAA 2021; CoSIDA Academic All-America 1st team; 24 consecutive starts; 11 starts in 2019"
+ },
+ {
+  "coach": "Jeff Bowen",
+  "stop": "UTRGV, 2025 (OC/OL)",
+  "tier": "TOP",
+  "player": "Wes Thompson",
+  "pos": "OL",
+  "years": "2025 (Sr. in 2026)",
+  "known": {},
+  "status": "no local match",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "2026 Phil Steele preseason 1st-team All-Southland"
+ },
+ {
+  "coach": "Jeff Bowen",
+  "stop": "UTRGV, 2025 (OC/OL)",
+  "tier": "TOP",
+  "player": "Abram Nicklas",
+  "pos": "OL",
+  "years": "2025 (5th-yr in 2026)",
+  "known": {},
+  "status": "no local match",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "2026 Phil Steele preseason 2nd-team All-Southland"
+ }
+]

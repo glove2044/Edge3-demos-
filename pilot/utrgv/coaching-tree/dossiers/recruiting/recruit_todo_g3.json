@@ -1,0 +1,269 @@
+[
+ {
+  "coach": "Theron Aych",
+  "stop": "Central Missouri, 2004-07 (WRs) — thin",
+  "tier": "TOP",
+  "player": "Delanie Walker",
+  "pos": "WR (college)",
+  "years": "2004-05",
+  "known": {},
+  "status": "no local match",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "2006 NFL Draft (49ers); Pro Bowl TE with Titans; Aych was his position coach"
+ },
+ {
+  "coach": "Theron Aych",
+  "stop": "Angelo State, 2011-15 (OC) — thin",
+  "tier": "TOP",
+  "player": "Kyle Washington",
+  "pos": "QB",
+  "years": "2012-15",
+  "known": {},
+  "status": "no local match",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "2x LSC Offensive POY (2014, 2015); 3x All-LSC; Harlon Hill semifinalist 2014; ASU single-season record 3,691 pass yds + 27 TD + 831 rush yds"
+ },
+ {
+  "coach": "Theron Aych",
+  "stop": "Arizona, 2017-20 (WRs/TEs, inside WRs)",
+  "tier": "TOP",
+  "player": "Shawn Poindexter",
+  "pos": "WR (6-5 \"late bloomer\")",
+  "years": "2017-18",
+  "known": {},
+  "status": "no local match",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "Led team in rec. yds 2018, tied school record 11 TD; 67-1,135-12 career; UDFA 49ers 2019"
+ },
+ {
+  "coach": "Theron Aych",
+  "stop": "Arizona, 2017-20 (WRs/TEs, inside WRs)",
+  "tier": "TOP",
+  "player": "Stanley Berryhill III",
+  "pos": "WR",
+  "years": "2018-20",
+  "known": {
+   "class_year": 2017,
+   "stars_247": 2,
+   "composite_247": 0.7483,
+   "hs_name": "Mountain View",
+   "hs_city": "Tucson",
+   "hs_state": "AZ"
+  },
+  "status": "unverified name match; confirm",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "Walk-on awarded scholarship 2018; led team 23 rec 2020"
+ },
+ {
+  "coach": "Theron Aych",
+  "stop": "Arizona, 2017-20 (WRs/TEs, inside WRs)",
+  "tier": "TOP",
+  "player": "Jamarye Joiner",
+  "pos": "WR (converted QB)",
+  "years": "2019-20",
+  "known": {
+   "class_year": 2018,
+   "stars_247": 3,
+   "composite_247": 0.8734,
+   "hs_name": "Cienega",
+   "hs_city": "Tucson",
+   "hs_state": "AZ",
+   "committed_to": "Arizona"
+  },
+  "status": "verified (commit school or HS matches the record)",
+  "need": "HS profile (height/weight at signing, HS stats), combine/camp numbers; confirm 247 rating",
+  "context": "Led team 552 yds, 5 TD in 2019"
+ },
+ {
+  "coach": "Theron Aych",
+  "stop": "Arizona, 2017-20 (WRs/TEs, inside WRs)",
+  "tier": "TOP",
+  "player": "Shun Brown, Tony Ellison, Cedric Peterson",
+  "pos": "WR",
+  "years": "2017-18",
+  "known": {},
+  "status": "no local match",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "Starters; combined 108-1,522-12 in 2017; unit led Pac-12 in yds/reception 2018"
+ },
+ {
+  "coach": "Theron Aych",
+  "stop": "Arizona, 2017-20 (WRs/TEs, inside WRs)",
+  "tier": "LOW",
+  "player": "Boobie Curry",
+  "pos": "WR",
+  "years": "2019-20",
+  "known": {},
+  "status": "no local match",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "\"Projected to have a breakout season,\" 16 rec/157 yds in two years; entered portal Dec 2020"
+ },
+ {
+  "coach": "Theron Aych",
+  "stop": "UTEP, 2021 (inside WRs)",
+  "tier": "TOP",
+  "player": "Jacob Cowing",
+  "pos": "WR",
+  "years": "2021",
+  "known": {
+   "class_year": 2019,
+   "stars_247": 2,
+   "composite_247": 0.7683,
+   "hs_name": "Maricopa",
+   "hs_city": "Maricopa",
+   "hs_state": "AZ",
+   "committed_to": "UTEP"
+  },
+  "status": "verified (commit school or HS matches the record)",
+  "need": "HS profile (height/weight at signing, HS stats), combine/camp numbers; confirm 247 rating",
+  "context": "First-team All-C-USA; 69-1,354-7 (whether he was in Aych's inside group: unverified)"
+ },
+ {
+  "coach": "Theron Aych",
+  "stop": "UTEP, 2021 (inside WRs)",
+  "tier": "TOP",
+  "player": "Justin Garrett",
+  "pos": "WR (JUCO, Los Angeles)",
+  "years": "2021",
+  "known": {
+   "class_year": 2016,
+   "stars_247": 3,
+   "composite_247": 0.8111,
+   "hs_name": "Richard Gahr",
+   "hs_city": "Cerritos",
+   "hs_state": "CA",
+   "committed_to": "UTEP"
+  },
+  "status": "verified (commit school or HS matches the record)",
+  "need": "HS profile (height/weight at signing, HS stats), combine/camp numbers; confirm 247 rating",
+  "context": "50-685; HM All-C-USA 2019-20 (pre-Aych)"
+ },
+ {
+  "coach": "Theron Aych",
+  "stop": "UTEP, 2021 (inside WRs)",
+  "tier": "TOP",
+  "player": "Tyrin Smith",
+  "pos": "WR",
+  "years": "2021",
+  "known": {
+   "class_year": 2021,
+   "stars_247": null,
+   "composite_247": null,
+   "hs_name": "Cisco College",
+   "hs_city": "Cisco",
+   "hs_state": "TX",
+   "committed_to": "UTEP"
+  },
+  "status": "verified (commit school or HS matches the record)",
+  "need": "HS profile (height/weight at signing, HS stats), combine/camp numbers; confirm 247 rating",
+  "context": "33-570"
+ },
+ {
+  "coach": "Theron Aych",
+  "stop": "Tennessee State, 2022-23 (OC) — thin",
+  "tier": "TOP",
+  "player": "Draylen Ellis",
+  "pos": "QB",
+  "years": "2022-23",
+  "known": {
+   "class_year": 2020,
+   "stars_247": 3,
+   "composite_247": 0.8053,
+   "hs_name": "Kirby",
+   "hs_city": "Memphis",
+   "hs_state": "TN",
+   "committed_to": "Austin Peay"
+  },
+  "status": "unverified name match; confirm",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "2022 preseason All-OVC (earned pre-Aych); 2022: 153-279, 1,807 yds, 8 TD in 10 starts"
+ },
+ {
+  "coach": "Theron Aych",
+  "stop": "Tennessee State, 2022-23 (OC) — thin",
+  "tier": "TOP",
+  "player": "Devon Starling",
+  "pos": "RB",
+  "years": "2022",
+  "known": {
+   "class_year": 2019,
+   "stars_247": 2,
+   "composite_247": 0.7683,
+   "hs_name": "Cane Ridge",
+   "hs_city": "Antioch",
+   "hs_state": "TN",
+   "committed_to": "Memphis"
+  },
+  "status": "unverified name match; confirm",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "540 rush yds, 207 vs Eastern Washington; OVC Co-Freshman of Year 2021 (pre-Aych)"
+ },
+ {
+  "coach": "Adrian McDonald",
+  "stop": "Midwestern State, 2021-22 (DBs) — thin",
+  "tier": "TOP",
+  "player": "Malik Sonnier",
+  "pos": "S (Sr.)",
+  "years": "2021",
+  "known": {},
+  "status": "no local match",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "All-LSC defensive honors; 2021 team 7-3, LSC champion"
+ },
+ {
+  "coach": "Adrian McDonald",
+  "stop": "Midwestern State, 2021-22 (DBs) — thin",
+  "tier": "TOP",
+  "player": "Dylon Davis",
+  "pos": "CB (Fr.)",
+  "years": "2021",
+  "known": {},
+  "status": "no local match",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "All-LSC defensive honors as a freshman"
+ },
+ {
+  "coach": "Adrian McDonald",
+  "stop": "UTRGV, 2023-present (safeties; 2025 first varsity season, 9-3, 5-3 SLC, 7-0 home)",
+  "tier": "TOP",
+  "player": "Elijah Graham",
+  "pos": "DB, Sr. (#8)",
+  "years": "2025",
+  "known": {},
+  "status": "no local match",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "Phil Steele FCS Midseason All-American; declared for NFL draft"
+ },
+ {
+  "coach": "Adrian McDonald",
+  "stop": "UTRGV, 2023-present (safeties; 2025 first varsity season, 9-3, 5-3 SLC, 7-0 home)",
+  "tier": "TOP",
+  "player": "Logic Hudgens",
+  "pos": "DB",
+  "years": "2025",
+  "known": {
+   "class_year": 2024,
+   "stars_247": 3,
+   "composite_247": 0.82,
+   "hs_name": "Monroe College",
+   "hs_city": "Severn",
+   "hs_state": "MD",
+   "committed_to": "Florida Atlantic"
+  },
+  "status": "unverified name match; confirm",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "Phil Steele All-Southland 4th team"
+ },
+ {
+  "coach": "Adrian McDonald",
+  "stop": "UTRGV, 2023-present (safeties; 2025 first varsity season, 9-3, 5-3 SLC, 7-0 home)",
+  "tier": "TOP",
+  "player": "TJ Neal",
+  "pos": "position unverified",
+  "years": "2025",
+  "known": {},
+  "status": "no local match",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "Southland Defensive Player of the Week"
+ }
+]

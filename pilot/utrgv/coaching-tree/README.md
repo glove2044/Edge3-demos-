@@ -85,6 +85,30 @@ Two staff-wide signals stand out. First, almost every documented top performer w
 - Do not train on the LOW set. It is too small and too dependent on staff churn to carry signal. Use it as a list of documented failure modes to check a recruit against (pocket QB in a new system, producer likely to be poached upward).
 - Mentor names and schemes are the join keys to the model's existing coaching data (CFBD covers FBS head coaches only). Assistant and FCS histories in this document are the part CFBD does not have.
 
+## Recruiting profile layer: what the producers looked like as recruits
+
+Every player row now carries a recruiting profile (Rule 4): 247Sports or Rivals rating and class, high school and hometown, height and weight at signing where a signing-era listing exists, high school production and honors, origin into the program, and testing where any was published. Local tables in edge3-model (the 247 composite proxy and CFBD recruits) were joined first; a same-name local match was kept only when the commit school or high school agreed with the player's documented path, which rejected four false matches (Jalen Thompson, Tyler Williams, Jordan Smith, Logic Hudgens' transfer rating). The web pass then filled the rest from 247Sports, Rivals, On3, MaxPreps, Hudl, school signing releases and local press.
+
+Coverage across the 100 player rows that remain after the attribution corrections:
+
+| Field | Rows filled | Note |
+|---|---|---|
+| Any recruiting or HS profile | 86 | The 14 blanks are pre-2005 Texas State players with no surviving profile, two JUCO linemen whose names could not be confirmed, and group rows. |
+| Star rating (247 or Rivals) | 38 | Pre-2010 recruits, D2 signees, walk-ons and most UTRGV 2025 signees are unrated. "Unrated" is itself a finding. |
+| Height and weight at signing | 49 | Signing-era listings where found; otherwise the earliest college roster figure, labeled in the notes. |
+| High school stats or honors | 68 | MaxPreps, press or the college bio. |
+| Combine or camp testing | 1 | One hand-timed 40 (Devin Rockette, Oxford Eagle). Verified camp numbers were not found for anyone else; blanks are honest, not estimates. |
+
+What the recruiting view says, staff-wide:
+
+- **The producers were three-stars and below.** Of the 32 TOP rows with a 247 star rating, 23 are three-stars, 6 are two-stars, 2 are unrated (Tony Diaz, Brennan Carroll) and one is a five-star (Karlos Williams, a Bills pro, not a college recruit of this staff). The only four-star-plus players anywhere in the tree are Deontay Greenberry (Rivals four-star, Fresno), Tavares Garner (Rivals four-star, Manvel, transferred down from Texas A&M), Willie Baker (ESPN four-star, Livonia) and Boobie Curry (four-star, Houston St. Pius X), and Curry is a documented LOW.
+- **Origin is the strongest signal.** Among TOP rows: 34 came straight from high school, 26 were transfers (most of them down from FBS, including Trey Baldwin from Missouri, Brian Holloway from SMU, Michael Bowie from Oklahoma State, Smith Flores from Nebraska, Tyree Wilson from Texas A&M, Marburger from UTSA), 15 were JUCO products, 2 were walk-ons (Ezekiel Barnett, Stanley Berryhill) and 10 are unknown. Bowen's and Aych's rooms are JUCO-heavy; Lockhart, Langford, McDonald and Barela have produced almost entirely with transfers.
+- **Texas, by a wide margin.** Of the rows with a known high school, roughly two-thirds are Texas schools, and the UTRGV 2025 producers are almost all Texas HS products (San Marcos, Judson, Manor, Seguin, Dickinson, Harlingen, Boerne, San Benito, Roosevelt, Central Catholic, Sharyland Pioneer, Tomball).
+- **Size at signing ran small at the skill spots.** Greg Ward 5-10/160, Larry McDuffey 5-10/162, Tony Diaz 5-11/176, TJ Dement 5-7/175, Fabian Garcia 5-7/175, Brennan Carroll 5-8/165, Shun Brown 5-8/161. The exceptions are the converts and late bloomers that Aych and Barela produced (Poindexter 6-5, Smith Flores 6-5/210, Kyle Washington 6-6/225).
+- **Where the lows sat.** The documented LOW rows are mostly three-stars from high school in a pocket-QB or scheme-change situation (O'Korn, Piland, Joiner), one four-star who did not produce (Curry) and two-stars who left for playing time (Berryhill, Starling). The LOW set is not a rating band; it is a situation band.
+
+The per-coach recruiting read is in the "Recruiting / HS profile" column of each stop table and in `coaching_tree_players.csv` (columns `recruit_class`, `stars_247`, `composite_247`, `stars_rivals`, `hs_name`, `hs_city`, `hs_state`, `origin`, `height_signing`, `weight_signing`, `hs_stats`, `hs_honors`, `forty`, `shuttle`, `vertical`, `broad`, `recruit_match_status`, `recruit_confidence`, `recruit_sources`).
+
 ## Chase Ames: what was pulled, and what Coach Bush received
 
 Chase Ames is a 2027 quarterback from Dripping Springs High School (Texas Class 6A). He is the recruit whose read was built on Coach Bush's own history rather than UTRGV's one-season program history, and that method is now Rule 1 below. The record, from Gmail, Drive and the edge3-model repo:
@@ -161,10 +185,10 @@ The per-coach dossiers follow. Each ends with its own confidence rating and gap 
 
 TOP:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | Honor / outcome | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Barrick Nealy (not Bush's group) | QB | 2005 | Pro (UDFA/other) | 6 AA/POY |  | 2005 Southland Player of the Year; UDFA Vikings as WR 2006; CFL Calgary 2006–10 | https://en.wikipedia.org/wiki/Barrick_Nealy |
-| 2 | Markee White (6-7, 205, Long Beach CA) | WR | 2005 | Pro (UDFA/other) | 5 1st team |  | First-team All-Southland 2005; UDFA St. Louis Rams 2007; long Arena/AFL career | https://lionsports.net/news/2005/11/22/95785016 ; https://en.wikipedia.org/wiki/Markee_White |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | Honor / outcome | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Barrick Nealy (not Bush's group) | QB | 2005 | Pro (UDFA/other) | 6 AA/POY |  |  | 2005 Southland Player of the Year; UDFA Vikings as WR 2006; CFL Calgary 2006–10 | https://en.wikipedia.org/wiki/Barrick_Nealy |
+| 2 | Markee White (6-7, 205, Long Beach CA) | WR | 2005 | Pro (UDFA/other) | 5 1st team |  | Long Beach Polytechnic, Long Beach, CA | First-team All-Southland 2005; UDFA St. Louis Rams 2007; long Arena/AFL career | https://lionsports.net/news/2005/11/22/95785016 ; https://en.wikipedia.org/wiki/Markee_White |
 
 LOW:
 
@@ -176,13 +200,13 @@ none documented (thin). 2004 and 2006 All-SLC lists not retrieved.
 
 TOP:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | Honor / outcome | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Cameron Luke | WR | 2008 |  | 6 AA/POY |  | AP 3rd-team All-American; 1st-team All-SLC; 73 rec, 1,268 yds, 17 TD (4th in FCS); school single-season rec/yds records; SLC career TD-reception record; career 142-2,431-32 | https://txst.com/news/2008/12/17/121708aaa_632 ; https://txst.com/news/2008/11/26/112608aag_904 |
-| 2 | Bradley George | QB | 2006–09 |  | 6 AA/POY |  | 2009 Southland Offensive Player of the Year (3,121 yds, 23 TD, 63%, 6th nationally in pass efficiency); school career passing leader; HM All-SLC 2008 & 2009; TXST Hall of Honor 2022 | https://txst.com/news/2009/11/24/112409aaa_91 ; https://txst.com/news/2022/11/25/-t-association-states-up-bradley-george |
-| 3 | Karrington Bush | RB/RS | 2008–09 |  | 5 1st team |  | 1st-team All-SLC RB 2008 (soph); 2nd-team return specialist 2009 | https://txst.com/news/2008/11/26/112608aag_904 ; https://txst.com/news/2009/11/24/112409aaa_91 |
-| 4 | Blake Burton / Jeff Bowen | FB / C | 2008 |  | 5 1st team |  | 1st-team All-SLC (2008 SLC champions, FCS playoffs; 9 Bobcats all-conference) | https://txst.com/news/2008/11/26/112608aag_904 |
-| 5 | Da'Marcus Griggs | WR | 2007–09 (roster years unverified) |  | 5 1st team |  | 2010 preseason 1st-team All-SLC | https://www.southland.org/news/2010/7/28/34127.aspx |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | Honor / outcome | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Cameron Luke | WR | 2008 |  | 6 AA/POY |  |  | AP 3rd-team All-American; 1st-team All-SLC; 73 rec, 1,268 yds, 17 TD (4th in FCS); school single-season rec/yds records; SLC career TD-reception record; career 142-2,431-32 | https://txst.com/news/2008/12/17/121708aaa_632 ; https://txst.com/news/2008/11/26/112608aag_904 |
+| 2 | Bradley George | QB | 2006–09 |  | 6 AA/POY |  | Canyon, New Braunfels, TX · HS (enrolled Jan 2005 after ~4 years pursuing professional baseball) | 2009 Southland Offensive Player of the Year (3,121 yds, 23 TD, 63%, 6th nationally in pass efficiency); school career passing leader; HM All-SLC 2008 & 2009; TXST Hall of Honor 2022 | https://txst.com/news/2009/11/24/112409aaa_91 ; https://txst.com/news/2022/11/25/-t-association-states-up-bradley-george |
+| 3 | Karrington Bush | RB/RS | 2008–09 |  | 5 1st team |  |  | 1st-team All-SLC RB 2008 (soph); 2nd-team return specialist 2009 | https://txst.com/news/2008/11/26/112608aag_904 ; https://txst.com/news/2009/11/24/112409aaa_91 |
+| 4 | Blake Burton / Jeff Bowen | FB / C | 2008 |  | 5 1st team |  |  | 1st-team All-SLC (2008 SLC champions, FCS playoffs; 9 Bobcats all-conference) | https://txst.com/news/2008/11/26/112608aag_904 |
+| 5 | Da'Marcus Griggs | WR | 2007–09 (roster years unverified) |  | 5 1st team |  | TX · HS (presumed; prep bio in txst roster) | 2010 preseason 1st-team All-SLC | https://www.southland.org/news/2010/7/28/34127.aspx |
 
 LOW:
 
@@ -194,62 +218,62 @@ none documented. No QB-competition or transfer case surfaced for 2007–09.
 
 TOP:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | Honor / outcome | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Eric Soza | QB | 2011 (soph) |  | 2 record/led team |  | 2,148 yds and 14 TD, 9th-best single season in UTSA history at the time; opener: 237 pass yds + 108 rush yds; career 46 TD 2011–13 | https://en.wikipedia.org/wiki/UTSA_Roadrunners_football_statistical_leaders ; https://static.goutsa.com/stats/football/2011/game01.htm |
-| 2 | David Glasco II | RB | 2011 |  |  |  | Primary rusher in box scores; no honor found | https://static.goutsa.com/stats/football/2011/game10.htm |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | Honor / outcome | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Eric Soza | QB | 2011 (soph) |  | 2 record/led team |  | class 2009 · A.C. Jones (Beeville Jones), Beeville, TX · 6-1/185 · transfer (from Texas State; signed with Texas State out of HS in 2009, redshirted, transferred to UTSA for 2010 practice year) · HS: 4-year starter: 8,052 pass yds, 86 pass TD; 1,598 rush yds, 29 rush TD (career) | 2,148 yds and 14 TD, 9th-best single season in UTSA history at the time; opener: 237 pass yds + 108 rush yds; career 46 TD 2011–13 | https://en.wikipedia.org/wiki/UTSA_Roadrunners_football_statistical_leaders ; https://static.goutsa.com/stats/football/2011/game01.htm |
+| 2 | David Glasco II | RB | 2011 |  |  |  | Wagner, San Antonio, TX · HS (member of UTSA's original recruiting class) · HS: 3-year starter: 4,096 rush yds, 37 TD (career) | Primary rusher in box scores; no honor found | https://static.goutsa.com/stats/football/2011/game10.htm |
 
 LOW:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | What happened | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Ryan Polite | QB | 2011–12 |  | 1 stats |  | RS-freshman spot starter for injured Soza in 2011; set school single-game record (302 yds) in 2012, then left for Trinity Valley CC and Southeastern Oklahoma State (timing/reason not documented; weak "low" case) | https://goutsa.com/sports/football/roster/player/ryan-polite ; https://goutsa.com/news/2012/10/20/san-jose-state-overwhelms-utsa-on-saturday-52-24 ; https://gosoutheastern.com/roster.aspx?rp_id=1745 |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | What happened | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Ryan Polite | QB | 2011–12 |  | 1 stats |  | class 2011 · DeSoto, DeSoto, TX · HS · HS: career 10,000+ passing yds (9th player in Texas prep history to reach 10,000) | RS-freshman spot starter for injured Soza in 2011; set school single-game record (302 yds) in 2012, then left for Trinity Valley CC and Southeastern Oklahoma State (timing/reason not documented; weak "low" case) | https://goutsa.com/sports/football/roster/player/ryan-polite ; https://goutsa.com/news/2012/10/20/san-jose-state-overwhelms-utsa-on-saturday-52-24 ; https://gosoutheastern.com/roster.aspx?rp_id=1745 |
 
 #### Houston RBs (Game 1) then OC/QBs, 2012
 
 TOP:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | Honor / outcome | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Charles Sims | RB | 2012 | NFL | 5 1st team |  | 2nd-team All-C-USA; 1,224 scrimmage yds, 14 TD; grad-transferred to West Virginia (1st-team All-Big 12, Big 12 Newcomer of the Year 2013); Tampa Bay 3rd round, No. 69, 2014 | https://en.wikipedia.org/wiki/Charles_Sims_(American_football ; https://www.sports-reference.com/cfb/players/charles-sims-1.html ; https://wvusports.com/news/2014/5/9/25764_131465985597442354 |
-| 2 | Deontay Greenberry | WR | 2012 (Fr) |  | 4 2nd team/FOY |  | C-USA All-Freshman team; 47 rec/569 yds led league freshmen; former long-time Notre Dame commit who flipped to UH | https://uhcougars.com/news/2012/12/4/Houston_Places_13_on_Conference_USA_All_Conference_Teams ; https://mauth.cbssports.com/college-football/news/cbs-2012-preseason-all-conference-usa-team/ |
-| 3 | Larry McDuffey | WR | 2012 (Fr) |  | 4 2nd team/FOY |  | C-USA All-Freshman team (28 rec, 382 yds, 4 TD); UH placed 13 on All-C-USA teams | https://uhcougars.com/news/2012/12/4/Houston_Places_13_on_Conference_USA_All_Conference_Teams |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | Honor / outcome | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Charles Sims | RB | 2012 | NFL | 5 1st team |  | 3★ 0.8500 · class 2009 · Westbury, Houston, TX · 6-0/? · HS · HS: junior: 1,018 rush yds, 17 TD | 2nd-team All-C-USA; 1,224 scrimmage yds, 14 TD; grad-transferred to West Virginia (1st-team All-Big 12, Big 12 Newcomer of the Year 2013); Tampa Bay 3rd round, No. 69, 2014 | https://en.wikipedia.org/wiki/Charles_Sims_(American_football ; https://www.sports-reference.com/cfb/players/charles-sims-1.html ; https://wvusports.com/news/2014/5/9/25764_131465985597442354 |
+| 2 | Deontay Greenberry | WR | 2012 (Fr) |  | 4 2nd team/FOY |  | class 2012 · Washington Union, Fresno, CA · HS (long-time Notre Dame commit, flipped to Houston on signing day) · HS: senior (2011): 109 rec, 2,165 yds (California single-season record per Wikipedia; MaxPreps CA leaderboard lists 2,108), 14 TD; junior (2010): 1,208 rec yds (MaxPreps) | C-USA All-Freshman team; 47 rec/569 yds led league freshmen; former long-time Notre Dame commit who flipped to UH | https://uhcougars.com/news/2012/12/4/Houston_Places_13_on_Conference_USA_All_Conference_Teams ; https://mauth.cbssports.com/college-football/news/cbs-2012-preseason-all-conference-usa-team/ |
+| 3 | Larry McDuffey | WR | 2012 (Fr) |  | 4 2nd team/FOY |  | class 2012 · North Shore, Galena Park (Houston), TX · 5-10/162 · HS · HS: senior: 28 rec, 587 yds, 9 TD | C-USA All-Freshman team (28 rec, 382 yds, 4 TD); UH placed 13 on All-C-USA teams | https://uhcougars.com/news/2012/12/4/Houston_Places_13_on_Conference_USA_All_Conference_Teams |
 
 LOW:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | What happened | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | David Piland | QB | 2012–13 |  | 1 stats |  | Incumbent starter; benched for final two games of 2012, lost job to Crawford Jones; regained job in 2013 preseason but freshman O'Korn started most of 2013; Rivals wrote he "will not be the guy" (transfer unverified) | https://thedailycougar.com/2013/04/15/piland-takes-challenge-of-regaining-starting-spot/ ; https://houston.rivals.com/news/future-forecast-quarterbacks |
-| 2 | Charles Sims (departure) | RB | 2012 |  |  |  | Left UH after Bush's one season as his RB coach/OC for WVU (graduate transfer; not a performance failure) | https://en.wikipedia.org/wiki/Charles_Sims_(American_football |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | What happened | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | David Piland | QB | 2012–13 |  | 1 stats |  | class 2010 · Southlake Carroll, Southlake, TX · 6-2/175 · HS | Incumbent starter; benched for final two games of 2012, lost job to Crawford Jones; regained job in 2013 preseason but freshman O'Korn started most of 2013; Rivals wrote he "will not be the guy" (transfer unverified) | https://thedailycougar.com/2013/04/15/piland-takes-challenge-of-regaining-starting-spot/ ; https://houston.rivals.com/news/future-forecast-quarterbacks |
+| 2 | Charles Sims (departure) | RB | 2012 |  |  |  | 3★ 0.8500 · class 2009 · Westbury, Houston, TX · 6-0/? · HS · HS: junior: 1,018 rush yds, 17 TD | Left UH after Bush's one season as his RB coach/OC for WVU (graduate transfer; not a performance failure) | https://en.wikipedia.org/wiki/Charles_Sims_(American_football |
 
 #### Houston asst HC / co-OC / QBs 2013; OC / QBs 2014
 
 TOP:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | Honor / outcome | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Deontay Greenberry | WR | 2013–14 | Pro (UDFA/other) | 5 1st team | 67.4 (2014 receiving) | 1st-team All-AAC 2013 (76 rec, led league at 100.5 ypg); 2nd-team All-AAC 2014; Biletnikoff watch list; UDFA 2015 | https://uhcougars.com/news/2013/12/11/Seven_Cougars_Earn_Honors_from_The_American_Athletic_Conference ; https://uhcougars.com/news/2014/12/10/Seven_Named_to_The_American_All_Conference_Team ; https://en.wikipedia.org/wiki/Deontay_Greenberry |
-| 2 | Demarcus Ayers | KR/WR | 2013 (Fr) |  | 5 1st team |  | 1st-team All-AAC KR | https://uhcougars.com/news/2013/12/11/Seven_Cougars_Earn_Honors_from_The_American_Athletic_Conference |
-| 3 | John O'Korn | QB | 2013 (Fr) |  | 4 2nd team/FOY |  | AAC Rookie of the Year; 3,117 yds, 28 TD; 8-5, BBVA Compass Bowl; offense 15th nationally (479.6 ypg, 32.4 ppg) | https://en.wikipedia.org/wiki/John_O%27Korn ; https://www.foxnews.com/sports/ncaa-football-preview-houston-cougars |
-| 4 | Kenneth Farrow | RB | 2014 |  | 2 record/led team | 84.9 (2014 rushing) | 12 rushing TD (2nd-best single season in AAC history then), six 100-yd games | https://uhcougars.com/news/2014/12/6/Postgame_Notes_Cincinnati_38_Houston_31 |
-| 5 | Greg Ward Jr. | QB (converted WR) | 2014 (Soph) |  | 1 stats | 75.8 (2014 passing) | Took over for O'Korn midseason; 29/33 vs Temple; 360 pass + 84 rush vs Cincinnati; UH 7-5, Armed Forces Bowl | https://uhcougars.com/news/2014/10/18/Postgame_Notes_Houston_31_Temple_10 ; https://uhcougars.com/news/2014/12/6/Postgame_Notes_Cincinnati_38_Houston_31 |
-| 6 | Daniel Spencer | WR | 2013–14 |  | 1 stats | 62.8 (2014 receiving) | 13 games/11 starts 2013; 2014 Biletnikoff watch list; no all-conference found | https://uhcougars.com/news/2014/7/15/Houston_Duo_Named_to_Biletnikoff_Award_Watch_List |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | Honor / outcome | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Deontay Greenberry | WR | 2013–14 | Pro (UDFA/other) | 5 1st team | 67.4 (2014 receiving) | class 2012 · Washington Union, Fresno, CA · HS (long-time Notre Dame commit, flipped to Houston on signing day) · HS: senior (2011): 109 rec, 2,165 yds (California single-season record per Wikipedia; MaxPreps CA leaderboard lists 2,108), 14 TD; junior (2010): 1,208 rec yds (MaxPreps) | 1st-team All-AAC 2013 (76 rec, led league at 100.5 ypg); 2nd-team All-AAC 2014; Biletnikoff watch list; UDFA 2015 | https://uhcougars.com/news/2013/12/11/Seven_Cougars_Earn_Honors_from_The_American_Athletic_Conference ; https://uhcougars.com/news/2014/12/10/Seven_Named_to_The_American_All_Conference_Team ; https://en.wikipedia.org/wiki/Deontay_Greenberry |
+| 2 | Demarcus Ayers | KR/WR | 2013 (Fr) |  | 5 1st team |  | 3★ · class 2013 · Lancaster, Lancaster, TX · 5-11/170 · HS (originally a Washington State commit under Mike Leach; flipped and signed with Houston 2/5/2013) | 1st-team All-AAC KR | https://uhcougars.com/news/2013/12/11/Seven_Cougars_Earn_Honors_from_The_American_Athletic_Conference |
+| 3 | John O'Korn | QB | 2013 (Fr) |  | 4 2nd team/FOY |  | 3★ · class 2013 · St. Thomas Aquinas, Fort Lauderdale, FL · 6-3/210 · HS (committed Houston June 2012 over Louisville, North Carolina, Wisconsin, Syracuse; enrolled 2/6/2013) | AAC Rookie of the Year; 3,117 yds, 28 TD; 8-5, BBVA Compass Bowl; offense 15th nationally (479.6 ypg, 32.4 ppg) | https://en.wikipedia.org/wiki/John_O%27Korn ; https://www.foxnews.com/sports/ncaa-football-preview-houston-cougars |
+| 4 | Kenneth Farrow | RB | 2014 |  | 2 record/led team | 84.9 (2014 rushing) | 3★ · class 2011 · L.D. Bell, Hurst, TX · 5-10/205 · HS (signed Houston Feb 2011; redshirted 2011) | 12 rushing TD (2nd-best single season in AAC history then), six 100-yd games | https://uhcougars.com/news/2014/12/6/Postgame_Notes_Cincinnati_38_Houston_31 |
+| 5 | Greg Ward Jr. | QB (converted WR) | 2014 (Soph) |  | 1 stats | 75.8 (2014 passing) | 3★ 0.8450 · class 2013 · John Tyler, Tyler, TX · 5-10/160 · HS (committed Houston 6/20/2012 as an ATH over Memphis and Rice; recruited as WR/DB, played QB in HS) · HS: senior (2012): 4,202 pass yds, 39 pass TD; 861 rush yds, 13 rush TD | Took over for O'Korn midseason; 29/33 vs Temple; 360 pass + 84 rush vs Cincinnati; UH 7-5, Armed Forces Bowl | https://uhcougars.com/news/2014/10/18/Postgame_Notes_Houston_31_Temple_10 ; https://uhcougars.com/news/2014/12/6/Postgame_Notes_Cincinnati_38_Houston_31 |
+| 6 | Daniel Spencer | WR | 2013–14 |  | 1 stats | 62.8 (2014 receiving) | 2★ · class 2011 · Grandview, Grandview, TX · 6-0/185 · HS (committed Houston 6/4/2010, signed 2/2/2011; recruited by Clarence McKinney as ATH/CB, signed as RB per AP list, played WR) · HS: senior (2010): 2,568 total offense yds, 42 TD; team 32-5 over his three varsity seasons | 13 games/11 starts 2013; 2014 Biletnikoff watch list; no all-conference found | https://uhcougars.com/news/2014/7/15/Houston_Duo_Named_to_Biletnikoff_Award_Watch_List |
 
 LOW:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | What happened | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | John O'Korn | QB | 2014 |  | 1 stats | 45.5 (2014 passing) | Benched five games in (≈50% comp, 6 TD/8 INT) for Ward; Wikipedia blames scheme change after Meacham left; GoCoogs (opinion) blames Bush's 15-lb muscle plan; transferred to Michigan Feb 5, 2015 | https://en.wikipedia.org/wiki/John_O%27Korn ; https://www.si.com/college/2015/01/08/john-okorn-houston-cougars-transferring ; https://thedailycougar.com/2015/02/05/okorn-announces-transfer-to-michigan/ ; https://gocoogs.com/?p=15368 |
-| 2 | Offense as a whole | — | 2014 |  | 1 stats |  | 29.3 ppg, 59th nationally (vs 32.4/15th in 2013); staff fired Dec 8, 2014 | https://www.foxnews.com/sports/ncaa-football-preview-houston-cougars ; https://en.wikipedia.org/wiki/Tony_Levine |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | What happened | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | John O'Korn | QB | 2014 |  | 1 stats | 45.5 (2014 passing) | 3★ · class 2013 · St. Thomas Aquinas, Fort Lauderdale, FL · 6-3/210 · HS (committed Houston June 2012 over Louisville, North Carolina, Wisconsin, Syracuse; enrolled 2/6/2013) | Benched five games in (≈50% comp, 6 TD/8 INT) for Ward; Wikipedia blames scheme change after Meacham left; GoCoogs (opinion) blames Bush's 15-lb muscle plan; transferred to Michigan Feb 5, 2015 | https://en.wikipedia.org/wiki/John_O%27Korn ; https://www.si.com/college/2015/01/08/john-okorn-houston-cougars-transferring ; https://thedailycougar.com/2015/02/05/okorn-announces-transfer-to-michigan/ ; https://gocoogs.com/?p=15368 |
+| 2 | Offense as a whole | — | 2014 |  | 1 stats |  |  | 29.3 ppg, 59th nationally (vs 32.4/15th in 2013); staff fired Dec 8, 2014 | https://www.foxnews.com/sports/ncaa-football-preview-houston-cougars ; https://en.wikipedia.org/wiki/Tony_Levine |
 
 #### Buffalo Bills RB room, 2015 (attribution weak: fellowship/offensive assistant under RB coach Anthony Lynn)
 
 TOP:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | Honor / outcome | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | LeSean McCoy | RB | 2015 | NFL | 2 record/led team |  | Pro Bowl (4th career); team-high 895 rush yds; 22 broken tackles on 132 carries midseason | https://www.buffalorumblings.com/2015/12/22/10655876/buffalo-bills-lesean-mccoy-selected-to-pro-bowl ; https://www.pff.com/news/pro-bills-find-balance-in-backfield-with-mccoy-and-williams |
-| 2 | Karlos Williams | RB | 2015 (5th-rd rookie) | NFL | 1 stats |  | TD in each of first six NFL games (tied record); 517 yds, 7 rush TD + 2 rec TD, 5.8 ypc | https://www.buffalobills.com/news/karlos-williams-carving-out-spot-in-record-books-16286863 ; https://www.nfl.com/_amp/lesean-mccoy-karlos-williams-duo-fueling-bills-o-0ap3000000578966 |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | Honor / outcome | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | LeSean McCoy | RB | 2015 | NFL | 2 record/led team |  | class 2007 · Milford Academy (prep; previously Bishop McDevitt, Harrisburg PA), New Berlin, NY · 5-11/204 · pro (acquired by Bills via trade from Eagles, March 2015); college: HS/prep signee at Pitt, signed 1/15/2007 | Pro Bowl (4th career); team-high 895 rush yds; 22 broken tackles on 132 carries midseason | https://www.buffalorumblings.com/2015/12/22/10655876/buffalo-bills-lesean-mccoy-selected-to-pro-bowl ; https://www.pff.com/news/pro-bills-find-balance-in-backfield-with-mccoy-and-williams |
+| 2 | Karlos Williams | RB | 2015 (5th-rd rookie) | NFL | 1 stats |  | 5★ · class 2011 · Ridge Community, Davenport, FL · 6-2/210 · pro (Bills 5th-round pick, 2015 NFL Draft); college: HS signee at Florida State 2011 (safety; moved to RB 2013) | TD in each of first six NFL games (tied record); 517 yds, 7 rush TD + 2 rec TD, 5.8 ypc | https://www.buffalobills.com/news/karlos-williams-carving-out-spot-in-record-books-16286863 ; https://www.nfl.com/_amp/lesean-mccoy-karlos-williams-duo-fueling-bills-o-0ap3000000578966 |
 
 LOW:
 
@@ -273,9 +297,9 @@ no named signees found; program outcomes only (2018 district title, 2020 shared 
 
 TOP:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | Honor / outcome | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Deuce Adams | QB | 2022 (Jr) |  | 1 stats |  | 66.9%, 3,007 yds, 34 TD, 6 INT, 290 rush yds; Rivals No. 29 QB / No. 97 in Texas; committed Louisville Apr 2023; played senior year at Vandegrift after family moved; 2026 Wisconsin roster (single source) | https://n.rivals.com/news/louisville-lands-central-texas-playmaker-qb-deuce-adams ; https://herald-zeitung.com/sports/cougars-rout-titans-55-29-in-victoria/article_4423e3b2-2c96-11ed-9691-5bf0c67272cf.html ; https://www.texasfootball.com/article/2023/04/30/hot-100-qb-and-twin-brother-join-state-championship-contender |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | Honor / outcome | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Deuce Adams | QB | 2022 (Jr) |  | 1 stats |  | 3★ · class 2024 · Vandegrift (senior; junior year at Canyon, New Braunfels), Austin, TX · 6-2/175 · HS (committed Louisville 4/5/2023, lead recruiter Brian Brohm; signed Dec 2023; redshirted 2024; entered portal after 2025, now on Wisconsin 2026 roster) · HS: junior (Canyon 2022): 66.9%, 3,007 pass yds, 34 TD, 6 INT, 290 rush yds; senior (Vandegrift 2023): 152/218 (69.7%), 2,133 yds, 27 TD, 1 INT, 4 rush TD, team 10-1 | 66.9%, 3,007 yds, 34 TD, 6 INT, 290 rush yds; Rivals No. 29 QB / No. 97 in Texas; committed Louisville Apr 2023; played senior year at Vandegrift after family moved; 2026 Wisconsin roster (single source) | https://n.rivals.com/news/louisville-lands-central-texas-playmaker-qb-deuce-adams ; https://herald-zeitung.com/sports/cougars-rout-titans-55-29-in-victoria/article_4423e3b2-2c96-11ed-9691-5bf0c67272cf.html ; https://www.texasfootball.com/article/2023/04/30/hot-100-qb-and-twin-brother-join-state-championship-contender |
 
 LOW:
 
@@ -287,12 +311,12 @@ Note: Canyon's April 2021 signees (Gomez–Concordia NE, Payne–Hardin-Simmons,
 
 TOP:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | Honor / outcome | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Eddie Lee Marburger | QB | 2025 (Sr) |  | 6 AA/POY |  | 1st-team All-SLC; SLC Newcomer of the Year; Phil Steele SLC OPOY; DCTF Texas Non-FBS OPOY; 2,780 yds, 31 pass TD, 4 rush TD, 7 INT | https://www.southland.org/news/2025/11/25/southland-announces-2025-all-conference-football-team-and-superlatives.aspx ; https://goutrgv.com/news/2025/12/22/football-marburger-named-dctf-texas-non-fbs-offensive-player-of-the-year.aspx |
-| 2 | Tony Diaz | WR | 2025 (Fr) |  | 6 AA/POY |  | 1st-team All-SLC; SLC Freshman of the Year; FCS Football Central Freshman All-American | https://goutrgv.com/news/2025/12/8/utrgv-leads-2025-fcs-football-central-freshman-all-american-team-with-four-selections.aspx |
-| 3 | Nick Hughes | OL | 2025 (Fr) |  | 6 AA/POY |  | 2nd-team All-SLC, started all 12; Freshman All-American | not found |
-| 4 | Nathaniel Wallace-Dilling | P | 2025 |  | 4 2nd team/FOY |  | 2nd-team All-SLC | https://goutrgv.com/news/2025/11/25/football-marburger-diaz-earn-major-southland-awards.aspx |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | Honor / outcome | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Eddie Lee Marburger | QB | 2025 (Sr) |  | 6 AA/POY |  | 3★ 0.8411 · class 2021 · Sharyland Pioneer, Mission, TX · 6-1/195 · transfer-down (from UTSA; entered portal 12/10/2024). HS path: committed UTSA Apr 2020, signed 12/16/2020 · HS: junior (2019): 66.1%, 4,505 pass yds, 58 TD; 1,009 rush yds, 16 rush TD; senior (2020): 363.1 pass ypg (No. 2 in Texas, No. 6 nationally per MaxPreps) | 1st-team All-SLC; SLC Newcomer of the Year; Phil Steele SLC OPOY; DCTF Texas Non-FBS OPOY; 2,780 yds, 31 pass TD, 4 rush TD, 7 INT | https://www.southland.org/news/2025/11/25/southland-announces-2025-all-conference-football-team-and-superlatives.aspx ; https://goutrgv.com/news/2025/12/22/football-marburger-named-dctf-texas-non-fbs-offensive-player-of-the-year.aspx |
+| 2 | Tony Diaz | WR | 2025 (RS-Fr; enrolled 2024) |  | 6 AA/POY |  | 0★ · class 2024 · San Marcos, San Marcos, TX · 5-11/176 · HS (signed with UTRGV's inaugural 2024 class; redshirted 2024; transferred to Iowa Jan 2026) · HS: career (San Marcos, coach John Walsh): 95 rec, 2,216 yds, 29 TD | 1st-team All-SLC; SLC Freshman of the Year; FCS Football Central Freshman All-American | https://goutrgv.com/news/2025/12/8/utrgv-leads-2025-fcs-football-central-freshman-all-american-team-with-four-selections.aspx |
+| 3 | Nick Hughes | OL | 2025 (RS-Fr; signed Dec 2023) |  | 6 AA/POY |  | class 2024 · Central Catholic, San Antonio, TX · HS (one of UTRGV's first 10 signees, early signing period Dec 20, 2023) · HS: did not allow a sack in three years as a varsity starter | 2nd-team All-SLC, started all 12; Freshman All-American | not found |
+| 4 | Nathaniel Wallace-Dilling | P | 2025 |  | 4 2nd team/FOY |  | class 2022 · St. Francis DeSales, Columbus, OH · 6-2/195 · transfer-down (from UConn, portal 12/9/2024); path: Ohio State 2022 (redshirt) -> Riverside City College 2023 (JUCO) -> UConn 2024 -> UTRGV 2025 | 2nd-team All-SLC | https://goutrgv.com/news/2025/11/25/football-marburger-diaz-earn-major-southland-awards.aspx |
 
 LOW:
 
@@ -366,14 +390,14 @@ not found (all-LSC/all-Southland lists for 2010–17 could not be retrieved befo
 
 TOP:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | Honor / outcome | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Trey Baldwin | LB | 2020 |  | 4 2nd team/FOY | 72.3 (2020 defense) | 2nd-team All-C-USA, Phil Steele 3rd team; 85 tackles, team-best 53 solo | https://www.pressreader.com/usa/el-dorado-news-times/20210416/281947430677804 |
-| 2 | Tyler Grubbs | LB | 2020 (Fr.) |  | 4 2nd team/FOY | 68.3 (2020 defense) | 2nd-team All-C-USA, Phil Steele 2nd team, C-USA All-Freshman; team-best 99 tackles (one La Tech release says 1st team — disagreement) | https://latechsports.com/news/2021/1/5/football-louisiana-tech-has-12-bulldogs-represented-on-phil-steele-all-conference-usa-teams.aspx ; https://www.pressreader.com/usa/el-dorado-news-times/20210416/281947430677804 |
-| 3 | Ezekiel Barnett | LB | by 2020 |  | 3 HM/3rd | 76.0 (2020 defense) | HM All-C-USA; Burlsworth Trophy nominee (walk-on award) | https://www.pressreader.com/usa/el-dorado-news-times/20210416/281947430677804 |
-| 4 | Connor Taylor | LB | 2018–20 |  | 3 HM/3rd | 74.5 (2019 defense) | HM All-C-USA (season unspecified) | https://txst.com/sports/football/roster/coaches/brian-gamble/1619 |
-| 5 | Willie Baker | LB | 2018–20 |  | 3 HM/3rd | 74.4 (2018 defense) | HM All-C-USA (season unspecified) | https://txst.com/sports/football/roster/coaches/brian-gamble/1619 |
-| 6 | Collin Scott | LB | 2018–19 |  | 3 HM/3rd | 69.7 (2018 defense) | HM All-C-USA 2018 and 2019; 12 starts, 65 tackles in 2019 | https://latechsports.com/roster.aspx?rp_id=2865 |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | Honor / outcome | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Trey Baldwin | LB | 2020 |  | 4 2nd team/FOY | 72.3 (2020 defense) | 3★ 0.8444 · class 2016 · Cy Falls, Houston, TX · 6-2/225 · transfer-down (from Missouri) | 2nd-team All-C-USA, Phil Steele 3rd team; 85 tackles, team-best 53 solo | https://www.pressreader.com/usa/el-dorado-news-times/20210416/281947430677804 |
+| 2 | Tyler Grubbs | LB | 2020 (Fr.) |  | 4 2nd team/FOY | 68.3 (2020 defense) | 3★ 0.8179 · class 2020 · Holy Cross, New Orleans, LA · HS | 2nd-team All-C-USA, Phil Steele 2nd team, C-USA All-Freshman; team-best 99 tackles (one La Tech release says 1st team — disagreement) | https://latechsports.com/news/2021/1/5/football-louisiana-tech-has-12-bulldogs-represented-on-phil-steele-all-conference-usa-teams.aspx ; https://www.pressreader.com/usa/el-dorado-news-times/20210416/281947430677804 |
+| 3 | Ezekiel Barnett | LB | by 2020 |  | 3 HM/3rd | 76.0 (2020 defense) | class 2016 · Benton, Benton, LA · 6-2/? · walk-on | HM All-C-USA; Burlsworth Trophy nominee (walk-on award) | https://www.pressreader.com/usa/el-dorado-news-times/20210416/281947430677804 |
+| 4 | Connor Taylor | LB | 2018–20 |  | 3 HM/3rd | 74.5 (2019 defense) | 3★ 0.8267 · class 2018 · Davis (HS); Snow College (JUCO), Kaysville, UT · 6-0/223 · JUCO (Snow College 2016-17; HS class 2016 Davis HS) · HS: HS career: 270 tackles, 10 FF, 4 INT (Davis HS); Snow College 2017: NJCAA-leading 139 tackles | HM All-C-USA (season unspecified) | https://txst.com/sports/football/roster/coaches/brian-gamble/1619 |
+| 5 | Willie Baker | LB | 2018–20 |  | 3 HM/3rd | 74.4 (2018 defense) | 3★ 0.8547 · class 2016 · Livonia, Livonia, LA · 6-2/238 · HS | HM All-C-USA (season unspecified) | https://txst.com/sports/football/roster/coaches/brian-gamble/1619 |
+| 6 | Collin Scott | LB | 2018–19 |  | 3 HM/3rd | 69.7 (2018 defense) | 3★ 0.8007 · class 2015 · Manvel, Manvel, TX · HS | HM All-C-USA 2018 and 2019; 12 starts, 65 tackles in 2019 | https://latechsports.com/roster.aspx?rp_id=2865 |
 
 LOW:
 
@@ -383,28 +407,26 @@ not found
 
 TOP:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | Honor / outcome | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | (Jordan Revels) | OLB | 2022 |  | 3 HM/3rd |  | HM All-Sun Belt, Phil Steele 4th team — note: OLB, likely not Gamble's room | https://txst.com/news/2022/12/1/football-bell-hergel-named-all-sun-belt-4-others-pick-up-honorable-mention.aspx |
-| 2 | Brian Holloway | ILB | 2022 |  | 1 stats | 74.1 (2022 defense) | SMU transfer; 49 tackles, 5.0 TFL, 1.0 sack; one of two starting ILBs in a front seven described as among Sun Belt's best; graduated | https://txst.com/news/2023/3/31/athletics-states-up-podcast-brian-holloway.aspx ; https://collegefootballnetwork.com/texas-state-recruiting-big-12-commits/ |
-| 3 | Dan Foster | ILB | 2022 |  |  |  | Starting ILB alongside Holloway | https://collegefootballnetwork.com/texas-state-recruiting-big-12-commits/ |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | Honor / outcome | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | (Jordan Revels) | OLB | 2022 |  | 3 HM/3rd |  |  | HM All-Sun Belt, Phil Steele 4th team — note: OLB, likely not Gamble's room | https://txst.com/news/2022/12/1/football-bell-hergel-named-all-sun-belt-4-others-pick-up-honorable-mention.aspx |
+| 2 | Brian Holloway | ILB | 2022 |  | 1 stats | 74.1 (2022 defense) | 2★ 0.7800 · class 2019 · Kilgore College, Houston, TX · 6-0/205 · transfer-down (from SMU); originally JUCO (Kilgore College 2018) · HS: senior 2017 (Clear Lake): 37 tkl, 3.0 sacks, 1 INT, 1 FR; Kilgore 2018: 45 tkl, 4.0 TFL, 1.5 sacks in 12 games, led team in fumble recoveries | SMU transfer; 49 tackles, 5.0 TFL, 1.0 sack; one of two starting ILBs in a front seven described as among Sun Belt's best; graduated | https://txst.com/news/2023/3/31/athletics-states-up-podcast-brian-holloway.aspx ; https://collegefootballnetwork.com/texas-state-recruiting-big-12-commits/ |
 
 LOW:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | What happened | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Dan Foster | ILB | 2022 |  |  |  | Transferred to Louisville after being a starter (exact offseason unverified) | https://collegefootballnetwork.com/texas-state-recruiting-big-12-commits/ |
-| 2 | Jordan Smith | LB | ~2023 (unverified) |  |  |  | Navarro JUCO transfer who left after spring ball for the portal — may postdate Gamble's departure; unverified | https://collegefootballnetwork.com/texas-state-recruiting-big-12-commits/ |
+not found
+
+Correction (Oct 22 recruiting pass): Dan Foster Jr. (Marshall 2019-22, Texas State 2023, Louisville 2024) and Jordan 'Bam' Smith (Navarro JUCO, Texas State spring 2024) both arrived after Gamble's 2021-22 tenure and were removed from this room. The LOW list for this stop is therefore empty; the only documented Gamble-era ILB producer is Brian Holloway (2022 addition).
 
 #### UTRGV, 2025 (DC/LB)
 
 TOP:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | Honor / outcome | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Jaiden Haygood | LB | 2025 (So.) |  | 6 AA/POY |  | Team-high 102 tackles; Freshman All-American (FCS Football Central, Stats Perform, Phil Steele); Phil Steele 3rd-team All-Conf; Jerry Rice Award watch list; 2026 Phil Steele preseason 1st team | https://goutrgv.com/news/2025/12/8/utrgv-leads-2025-fcs-football-central-freshman-all-american-team-with-four-selections.aspx ; https://www.krgv.com/news/utrgv-linebacker-jaiden-haygood-on-the-jerry-rice-award-watch-list ; https://goutrgv.com/news/2026/8/3/football-places-12-on-phil-steele-preseason-all-conference-teams.aspx |
-| 2 | Alijah Prosser | DB | 2025 (Fr.) |  | 6 AA/POY |  | FCS Football Central Freshman AA; 2 INT, 1 sack, 2 FF | https://goutrgv.com/news/2025/12/8/utrgv-leads-2025-fcs-football-central-freshman-all-american-team-with-four-selections.aspx |
-| 3 | Ian Box | DE | 2025 (Jr.) |  | 4 2nd team/FOY |  | 2nd-team All-Southland (defense-wide, under Gamble as DC) | https://goutrgv.com/news/2025/11/25/football-marburger-diaz-earn-major-southland-awards.aspx |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | Honor / outcome | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Jaiden Haygood | LB | 2025 (So.) |  | 6 AA/POY |  | class 2024 · Judson, Converse, TX · 6-0/215 · HS · HS: HS career (Judson): 270 tackles, 8.0 sacks | Team-high 102 tackles; Freshman All-American (FCS Football Central, Stats Perform, Phil Steele); Phil Steele 3rd-team All-Conf; Jerry Rice Award watch list; 2026 Phil Steele preseason 1st team | https://goutrgv.com/news/2025/12/8/utrgv-leads-2025-fcs-football-central-freshman-all-american-team-with-four-selections.aspx ; https://www.krgv.com/news/utrgv-linebacker-jaiden-haygood-on-the-jerry-rice-award-watch-list ; https://goutrgv.com/news/2026/8/3/football-places-12-on-phil-steele-preseason-all-conference-teams.aspx |
+| 2 | Alijah Prosser | DB | 2025 (Fr.) |  | 6 AA/POY |  | class 2024 · Manor, Manor, TX · HS | FCS Football Central Freshman AA; 2 INT, 1 sack, 2 FF | https://goutrgv.com/news/2025/12/8/utrgv-leads-2025-fcs-football-central-freshman-all-american-team-with-four-selections.aspx |
+| 3 | Ian Box | DE | 2025 (Jr.) |  | 4 2nd team/FOY |  | class 2022 · Seguin, Seguin, TX · 6-3/236 · transfer (from Lamar, FCS lateral; first transfer in UTRGV history) · HS: HS: 165 total tackles in 31 games over 3 varsity seasons (2018-21) | 2nd-team All-Southland (defense-wide, under Gamble as DC) | https://goutrgv.com/news/2025/11/25/football-marburger-diaz-earn-major-southland-awards.aspx |
 
 LOW:
 
@@ -473,11 +495,11 @@ not found. LOW: not found.
 
 TOP:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | Honor / outcome | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Larry Joubert | OL | 2016 |  | 5 1st team |  | 1st-team all-conference; signed with Oklahoma State | https://nsudemons.com/sports/football/roster/coaches/jeff-bowen/1060 |
-| 2 | Sammy Bernard | OL | 2016 |  | 5 1st team |  | 1st-team all-conference; signed with New Mexico | https://nsudemons.com/sports/football/roster/coaches/jeff-bowen/1060 |
-| 3 | (two more unnamed) | OL | 2016 |  | 1 stats |  | 4 of 5 sophomore OL signed with FBS programs | not found |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | Honor / outcome | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Larry Joubert | OL | 2016 |  | 5 1st team |  | JUCO (NEO A&M) | 1st-team all-conference; signed with Oklahoma State | https://nsudemons.com/sports/football/roster/coaches/jeff-bowen/1060 |
+| 2 | Sammy Bernard | OL | 2016 |  | 5 1st team |  | 6-5/280 · JUCO (NEO A&M) -> New Mexico mid-year 2017 signee | 1st-team all-conference; signed with New Mexico | https://nsudemons.com/sports/football/roster/coaches/jeff-bowen/1060 |
+| 3 | (two more unnamed) | OL | 2016 |  | 1 stats |  |  | 4 of 5 sophomore OL signed with FBS programs | not found |
 
 LOW:
 
@@ -499,9 +521,9 @@ none; no SFA tight end on the 2018 All-Southland teams (https://www.southland.or
 
 TOP:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | Honor / outcome | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Madison Wrather | OL | 2019–21 |  | 6 AA/POY |  | HM All-MIAA 2021; CoSIDA Academic All-America 1st team; 24 consecutive starts; 11 starts in 2019 | https://goriverhawksgo.com/sports/football/roster/madison-wrather/3948 ; https://goriverhawksgo.com/news/2021/9/15/football-northeastern-state-hosts-pitt-state-saturday.aspx |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | Honor / outcome | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Madison Wrather | OL | 2019–21 |  | 6 AA/POY |  | class 2017 · Yukon, Yukon, OK · HS | HM All-MIAA 2021; CoSIDA Academic All-America 1st team; 24 consecutive starts; 11 starts in 2019 | https://goriverhawksgo.com/sports/football/roster/madison-wrather/3948 ; https://goriverhawksgo.com/news/2021/9/15/football-northeastern-state-hosts-pitt-state-saturday.aspx |
 
 LOW:
 
@@ -513,12 +535,12 @@ Note: 2022 NSU all-MIAA list (6 players) contained no offensive linemen (https:/
 
 TOP:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | Honor / outcome | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Nick Hughes | OL | 2025 (Fr.) |  | 6 AA/POY |  | 2nd-team All-Southland; FCS Football Central Freshman All-American; 2026 Phil Steele preseason 1st team | https://goutrgv.com/news/2025/11/25/football-marburger-diaz-earn-major-southland-awards.aspx ; https://goutrgv.com/news/2025/12/8/utrgv-leads-2025-fcs-football-central-freshman-all-american-team-with-four-selections.aspx |
-| 2 | Eddie Lee Marburger | QB (unit outcome) | 2025 |  | 6 AA/POY |  | Walter Payton Award finalist behind Bowen's line | https://goutrgv.com/news/2025/12/2/bowen-named-footballscoop-fcs-coordinator-of-the-year-finalist.aspx |
-| 3 | Wes Thompson | OL | 2025 (Sr. in 2026) |  | 5 1st team |  | 2026 Phil Steele preseason 1st-team All-Southland | https://goutrgv.com/news/2026/8/3/football-places-12-on-phil-steele-preseason-all-conference-teams.aspx |
-| 4 | Abram Nicklas | OL | 2025 (5th-yr in 2026) |  | 4 2nd team/FOY |  | 2026 Phil Steele preseason 2nd-team All-Southland | not found |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | Honor / outcome | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Nick Hughes | OL | 2025 (Fr.) |  | 6 AA/POY |  | class 2024 · Central Catholic, San Antonio, TX · HS (one of UTRGV's first 10 signees, early signing period Dec 20, 2023) · HS: did not allow a sack in three years as a varsity starter | 2nd-team All-Southland; FCS Football Central Freshman All-American; 2026 Phil Steele preseason 1st team | https://goutrgv.com/news/2025/11/25/football-marburger-diaz-earn-major-southland-awards.aspx ; https://goutrgv.com/news/2025/12/8/utrgv-leads-2025-fcs-football-central-freshman-all-american-team-with-four-selections.aspx |
+| 2 | Eddie Lee Marburger | QB (unit outcome) | 2025 |  | 6 AA/POY |  | 3★ 0.8411 · class 2021 · Sharyland Pioneer, Mission, TX · 6-1/195 · transfer-down (from UTSA; entered portal 12/10/2024). HS path: committed UTSA Apr 2020, signed 12/16/2020 · HS: junior (2019): 66.1%, 4,505 pass yds, 58 TD; 1,009 rush yds, 16 rush TD; senior (2020): 363.1 pass ypg (No. 2 in Texas, No. 6 nationally per MaxPreps) | Walter Payton Award finalist behind Bowen's line | https://goutrgv.com/news/2025/12/2/bowen-named-footballscoop-fcs-coordinator-of-the-year-finalist.aspx |
+| 3 | Wes Thompson | OL | 2025 (Sr. in 2026) |  | 5 1st team |  | class 2023 · Muscle Shoals, Muscle Shoals, AL · 6-5/335 · JUCO (East Mississippi CC 2024) after redshirt at Tennessee Tech 2023 | 2026 Phil Steele preseason 1st-team All-Southland | https://goutrgv.com/news/2026/8/3/football-places-12-on-phil-steele-preseason-all-conference-teams.aspx |
+| 4 | Abram Nicklas | OL | 2025 (5th-yr in 2026) |  | 4 2nd team/FOY |  | Tomball, Tomball, TX · 6-3/272 · JUCO (Blinn College 2023-24) | 2026 Phil Steele preseason 2nd-team All-Southland | not found |
 
 LOW:
 
@@ -577,9 +599,9 @@ not found
 
 TOP:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | Honor / outcome | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Delanie Walker | WR (college) | 2004-05 | NFL | 1 stats |  | 2006 NFL Draft (49ers); Pro Bowl TE with Titans; Aych was his position coach | https://okstate.com/sports/football/roster/coaches/theron-aych/3569 |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | Honor / outcome | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Delanie Walker | WR (college) | 2004-05 | NFL | 1 stats |  | class 2002 · Pomona, Pomona, CA · JUCO (Mt. San Antonio College 2002-03; originally committed to UTEP as a TE out of Pomona HS, enrolled at Mt. SAC for academics) · HS: HS numbers not found; JUCO career 86 rec, 1,312 yds, 13 TD (Mt. SAC); Central Missouri 2004-05: 113-1,347-10 | 2006 NFL Draft (49ers); Pro Bowl TE with Titans; Aych was his position coach | https://okstate.com/sports/football/roster/coaches/theron-aych/3569 |
 
 LOW:
 
@@ -589,9 +611,9 @@ not found
 
 TOP:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | Honor / outcome | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Kyle Washington | QB | 2012-15 |  | 6 AA/POY |  | 2x LSC Offensive POY (2014, 2015); 3x All-LSC; Harlon Hill semifinalist 2014; ASU single-season record 3,691 pass yds + 27 TD + 831 rush yds (2015); 2014 LSC title | https://angelosports.com/sports/football/roster/kyle-washington/3305 ; https://muleriderathletics.com/staff-directory/kyle-washington/1301 ; https://goutrgv.com/news/2026/1/15/football-hires-theron-aych-as-co-offensive-coordinator.aspx |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | Honor / outcome | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Kyle Washington | QB | 2012-15 |  | 6 AA/POY |  | class 2011 · Humble, Humble, TX · 6-6/225 · HS · HS: senior: 2,159 pass yds, 495 rush yds, led Humble to 12-2 (per Angelo State bio) | 2x LSC Offensive POY (2014, 2015); 3x All-LSC; Harlon Hill semifinalist 2014; ASU single-season record 3,691 pass yds + 27 TD + 831 rush yds (2015); 2014 LSC title | https://angelosports.com/sports/football/roster/kyle-washington/3305 ; https://muleriderathletics.com/staff-directory/kyle-washington/1301 ; https://goutrgv.com/news/2026/1/15/football-hires-theron-aych-as-co-offensive-coordinator.aspx |
 
 LOW:
 
@@ -615,20 +637,20 @@ unit caught 21 TD, most since 2010 (https://arizonawildcats.com/news/2017/2/25/f
 
 TOP:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | Honor / outcome | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Shawn Poindexter | WR (6-5 "late bloomer") | 2017-18 | Pro (UDFA/other) | 2 record/led team | 83.7 (2018 receiving) | Led team in rec. yds 2018, tied school record 11 TD; 67-1,135-12 career; UDFA 49ers 2019 | https://www.azdesertswarm.com/football/2019/4/27/18520286/shawn-poindexter-49ers-undrafted-free-agent-nfl-draft-arizona-wildcats-wide-receiver-contract ; https://tucson.com/sports/arizonawildcats/football/arizona-wildcats-battle-for-playing-time-at-receiver-is-wide/article_c95aeca1-3d2a-51c5-90f9-818694abc4d4.html |
-| 2 | Stanley Berryhill III | WR | 2018-20 |  | 2 record/led team | 70.6 (2020 receiving) | Walk-on awarded scholarship 2018; led team 23 rec 2020 | https://tucson.com/sports/arizonawildcats/football/ex-arizona-receiver-stanley-berryhill-says-hes-transferring-to-ball-state/article_6ebe891e-4972-11eb-ba71-37f548c21b53.html |
-| 3 | Jamarye Joiner | WR (converted QB) | 2019-20 |  | 2 record/led team | 64.7 (2019 receiving) | Led team 552 yds, 5 TD in 2019 | https://tucson.com/sports/arizonawildcats/football/it-s-about-the-team-the-motivation-behind-jamarye-joiner/article_81f858e5-8b6a-52ff-b109-eb9b8d3a8b3b.html |
-| 4 | Shun Brown, Tony Ellison, Cedric Peterson (+Poindexter) | WR | 2017-18 |  | 1 stats |  | Starters; combined 108-1,522-12 in 2017; unit led Pac-12 in yds/reception 2018 | https://goutrgv.com/sports/football/roster/coaches/theron-aych/4367 |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | Honor / outcome | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Shawn Poindexter | WR (6-5 "late bloomer") | 2017-18 | Pro (UDFA/other) | 2 record/led team | 83.7 (2018 receiving) | class 2016 · Centennial, Peoria, AZ · 6-5/? · JUCO (Glendale Community College, AZ, 2015 season); did not play HS football — varsity volleyball at Peoria Centennial, signed with Cal Baptist for volleyball, withdrew for financial reasons · HS: none (volleyball only in HS); one JUCO football season at Glendale CC in 2015 (numbers not found) | Led team in rec. yds 2018, tied school record 11 TD; 67-1,135-12 career; UDFA 49ers 2019 | https://www.azdesertswarm.com/football/2019/4/27/18520286/shawn-poindexter-49ers-undrafted-free-agent-nfl-draft-arizona-wildcats-wide-receiver-contract ; https://tucson.com/sports/arizonawildcats/football/arizona-wildcats-battle-for-playing-time-at-receiver-is-wide/article_c95aeca1-3d2a-51c5-90f9-818694abc4d4.html |
+| 2 | Stanley Berryhill III | WR | 2018-20 |  | 2 record/led team | 70.6 (2020 receiving) | 2★ 0.7483 · class 2017 · Orange Lutheran (began at Mountain View, Tucson), Orange, CA · walk-on (zero scholarship offers; family friend arranged the Arizona walk-on spot; full scholarship awarded Aug 2018) | Walk-on awarded scholarship 2018; led team 23 rec 2020 | https://tucson.com/sports/arizonawildcats/football/ex-arizona-receiver-stanley-berryhill-says-hes-transferring-to-ball-state/article_6ebe891e-4972-11eb-ba71-37f548c21b53.html |
+| 3 | Jamarye Joiner | WR (converted QB) | 2019-20 |  | 2 record/led team | 64.7 (2019 receiving) | 3★ 0.8734 · class 2018 · Cienega, Tucson, AZ · 6-1/180 · HS (committed to Arizona as a junior QB in 2016; started HS at Salpointe Catholic, expelled, missed 2015, transferred to Cienega) · HS: led Cienega to the 2016 state final (numbers not found) | Led team 552 yds, 5 TD in 2019 | https://tucson.com/sports/arizonawildcats/football/it-s-about-the-team-the-motivation-behind-jamarye-joiner/article_81f858e5-8b6a-52ff-b109-eb9b8d3a8b3b.html |
+| 4 | Shun Brown, Tony Ellison, Cedric Peterson (+Poindexter) | WR | 2017-18 |  | 1 stats |  | 3★ · class 2015 · Calvary Baptist Academy, Shreveport, LA · 5-8.5/161 · HS (recruited as a cornerback; committed Oct 2014 as Arizona's 24th 2015 commit; played WR at Arizona 2015-18) | Starters; combined 108-1,522-12 in 2017; unit led Pac-12 in yds/reception 2018 | https://goutrgv.com/sports/football/roster/coaches/theron-aych/4367 |
 
 LOW:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | What happened | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Stanley Berryhill III | WR | 2018-20 |  | 1 stats | 70.6 (2020 receiving) | Announced transfer to Ball State Dec 2020 (later status unverified) | not found |
-| 2 | Jamarye Joiner | WR | 2019-20 |  | 1 stats | 64.7 (2019 receiving) | Said he was leaving program Dec 2020; a 2022 article has him entering portal again (conflict) | https://tucson.com/sports/arizonawildcats/football/arizona-wildcats-receiver-jamarye-joiner-says-hes-leaving-football-program/article_c50020bc-3ff9-11eb-b3d1-e3e1d6b48eca.html |
-| 3 | Boobie Curry | WR | 2019-20 |  | 1 stats | 55.4 (2019 receiving) | "Projected to have a breakout season," 16 rec/157 yds in two years; entered portal Dec 2020 | https://wildcat.arizona.edu/121815/sports/starting-quarterback-grant-gunnell-wide-receiver-boobie-curry-enter-transfer-portal/ |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | What happened | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Stanley Berryhill III | WR | 2018-20 |  | 1 stats | 70.6 (2020 receiving) | 2★ 0.7483 · class 2017 · Orange Lutheran (began at Mountain View, Tucson), Orange, CA · walk-on (zero scholarship offers; family friend arranged the Arizona walk-on spot; full scholarship awarded Aug 2018) | Announced transfer to Ball State Dec 2020 (later status unverified) | not found |
+| 2 | Jamarye Joiner | WR | 2019-20 |  | 1 stats | 64.7 (2019 receiving) | 3★ 0.8734 · class 2018 · Cienega, Tucson, AZ · 6-1/180 · HS (committed to Arizona as a junior QB in 2016; started HS at Salpointe Catholic, expelled, missed 2015, transferred to Cienega) · HS: led Cienega to the 2016 state final (numbers not found) | Said he was leaving program Dec 2020; a 2022 article has him entering portal again (conflict) | https://tucson.com/sports/arizonawildcats/football/arizona-wildcats-receiver-jamarye-joiner-says-hes-leaving-football-program/article_c50020bc-3ff9-11eb-b3d1-e3e1d6b48eca.html |
+| 3 | Boobie Curry | WR | 2019-20 |  | 1 stats | 55.4 (2019 receiving) | 4★ · class 2019 · St. Pius X, Houston, TX · HS (signed Dec 2018; transferred to St. Pius X after sophomore year) · HS: 2017: set Texas state record with 26 receptions in a single game | "Projected to have a breakout season," 16 rec/157 yds in two years; entered portal Dec 2020 | https://wildcat.arizona.edu/121815/sports/starting-quarterback-grant-gunnell-wide-receiver-boobie-curry-enter-transfer-portal/ |
 
 (all after Sumlin's Dec 2020 firing, so attribution to Aych is weak):
 
@@ -636,11 +658,11 @@ LOW:
 
 TOP:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | Honor / outcome | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Jacob Cowing | WR | 2021 |  | 5 1st team | 90.3 (2021 receiving) | First-team All-C-USA; 69-1,354-7 (whether he was in Aych's inside group: unverified) | https://en.wikipedia.org/wiki/Jacob_Cowing |
-| 2 | Justin Garrett | WR (JUCO, Los Angeles) | 2021 |  | 3 HM/3rd | 73.2 (2021 receiving) | 50-685; HM All-C-USA 2019-20 (pre-Aych) | https://utepminers.com/sports/football/roster/justin-garrett/9764 |
-| 3 | Tyrin Smith | WR | 2021 |  | 1 stats | 68.0 (2021 receiving) | 33-570 | https://www.sports-reference.com/cfb/schools/texas-el-paso/2021-roster.html |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | Honor / outcome | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Jacob Cowing | WR | 2021 |  | 5 1st team | 90.3 (2021 receiving) | 2★ 0.7683 · class 2019 · Maricopa, Maricopa, AZ · 5-11/175 · HS (UTEP was his only FBS offer; signed on National Signing Day 2019) · HS: senior: 872 rec yds, 15 TD, 372 KR yds; career: 89 rec, 2,065 yds, 21 TD | First-team All-C-USA; 69-1,354-7 (whether he was in Aych's inside group: unverified) | https://en.wikipedia.org/wiki/Jacob_Cowing |
+| 2 | Justin Garrett | WR (JUCO, Los Angeles) | 2021 |  | 3 HM/3rd | 73.2 (2021 receiving) | 3★ 0.8111 · class 2016 · Richard Gahr, Cerritos, CA · JUCO (Cerritos College 2016-17; redshirted at UTEP 2018, played 2019-21) · HS: three varsity seasons at Gahr as a two-way player; two 100+ yd rushing games, career-best 191 vs Artesia; JUCO 2017: 38 rec, 592 yds, 5 TD (led Cerritos) | 50-685; HM All-C-USA 2019-20 (pre-Aych) | https://utepminers.com/sports/football/roster/justin-garrett/9764 |
+| 3 | Tyrin Smith | WR | 2021 |  | 1 stats | 68.0 (2021 receiving) | class 2021 · Cisco College, Cisco, TX · JUCO (Cisco College 2020; unranked by Rivals out of HS with no known offers) · HS: HS numbers not found; Cisco College 2020: 7 games, 13 rec, 267 yds, 2 TD (one outlet says 13-167-3) | 33-570 | https://www.sports-reference.com/cfb/schools/texas-el-paso/2021-roster.html |
 
 LOW:
 
@@ -652,16 +674,16 @@ Cowing transferred to Arizona Jan 2022, but Aych had already left for TSU (https
 
 TOP:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | Honor / outcome | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Draylen Ellis | QB | 2022-23 |  | 1 stats |  | 2022 preseason All-OVC (earned pre-Aych); 2022: 153-279, 1,807 yds, 8 TD in 10 starts | https://tsutigers.com/sports/football/roster/draylen-ellis/4786 |
-| 2 | Devon Starling | RB | 2022 |  | 1 stats |  | 540 rush yds, 207 vs Eastern Washington; OVC Co-Freshman of Year 2021 (pre-Aych) | https://hbcugameday.com/2022/09/04/tennessee-state-displays-potent-offense-in-loss-to-no-12-eastern-washington/ |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | Honor / outcome | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Draylen Ellis | QB | 2022-23 |  | 1 stats |  | 3★ 0.8053 · class 2020 · Kirby, Memphis, TN · 6-1/178 · transfer (from Austin Peay, FCS; committed to TSU May 2022) · HS: senior: 2,300 pass yds, 25 TD | 2022 preseason All-OVC (earned pre-Aych); 2022: 153-279, 1,807 yds, 8 TD in 10 starts | https://tsutigers.com/sports/football/roster/draylen-ellis/4786 |
+| 2 | Devon Starling | RB | 2022 |  | 1 stats |  | 2★ 0.7683 · class 2019 · Cane Ridge, Antioch, TN · transfer-down (from Memphis, 2019 signee; later transferred TSU -> Northern Arizona for 2023) · HS: described as 'one of the most productive running backs in the state' as a junior (numbers not found) | 540 rush yds, 207 vs Eastern Washington; OVC Co-Freshman of Year 2021 (pre-Aych) | https://hbcugameday.com/2022/09/04/tennessee-state-displays-potent-offense-in-loss-to-no-12-eastern-washington/ |
 
 LOW:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | What happened | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Devon Starling | RB | 2022 |  | 1 stats |  | Transferred to Northern Arizona Dec 2022 after a down year (540 yds) | https://www.thebluebloodscfb.com/former-tennessee-state-rb-devon-starling-transfers-to-northern-arizona/ |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | What happened | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Devon Starling | RB | 2022 |  | 1 stats |  | 2★ 0.7683 · class 2019 · Cane Ridge, Antioch, TN · transfer-down (from Memphis, 2019 signee; later transferred TSU -> Northern Arizona for 2023) · HS: described as 'one of the most productive running backs in the state' as a junior (numbers not found) | Transferred to Northern Arizona Dec 2022 after a down year (540 yds) | https://www.thebluebloodscfb.com/former-tennessee-state-rb-devon-starling-transfers-to-northern-arizona/ |
 
 2022 All-OVC and 2023 All-BS-OVC lists: not found.
 
@@ -768,10 +790,10 @@ No position-group attribution; no players documented.
 
 TOP:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | Honor / outcome | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Malik Sonnier | S (Sr.) | 2021 |  | 1 stats |  | All-LSC defensive honors; 2021 team 7-3, LSC champion | https://msumustangs.com/news/2021/11/18/football-sterling-cole-march-lead-midwestern-state-contingent-on-all-lone-star-conference-teams.aspx |
-| 2 | Dylon Davis | CB (Fr.) | 2021 |  |  |  | All-LSC defensive honors as a freshman | not found |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | Honor / outcome | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Malik Sonnier | S (Sr.) | 2021 |  | 1 stats |  | class 2017 · Clear Brook, Friendswood, TX · transfer-down (from Northwestern State, FCS; 8 games at safety in 2017) | All-LSC defensive honors; 2021 team 7-3, LSC champion | https://msumustangs.com/news/2021/11/18/football-sterling-cole-march-lead-midwestern-state-contingent-on-all-lone-star-conference-teams.aspx |
+| 2 | Dylon Davis | CB (Fr.) | 2021 |  |  |  | class 2020 · Abilene Cooper, Abilene, TX · HS (committed to Midwestern State, per Texas Football April 2020 senior spotlight) | All-LSC defensive honors as a freshman | not found |
 
 LOW:
 
@@ -783,12 +805,12 @@ not found
 
 TOP:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | Honor / outcome | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Alijah Prosser | S/nickel ("star"), Fr. | 2025 |  | 6 AA/POY |  | FCS Football Central Freshman All-American; 52-yd pick-six vs Texas Wesleyan; key returner 2026 | https://goutrgv.com/sports/football/roster/coaches/adrian-mcdonald/4354 ; https://ditvsports.com/2026-spring-football-guide/ |
-| 2 | Elijah Graham | DB, Sr. (#8) | 2025 |  | 6 AA/POY |  | Phil Steele FCS Midseason All-American; declared for NFL draft | https://goutrgv.com/sports/football/roster/coaches/adrian-mcdonald/4354 ; https://rgvsports.com/utrgv-vaqueros-set-to-kick-off-spring-ball-monday/ |
-| 3 | Logic Hudgens | DB | 2025 |  | 3 HM/3rd |  | Phil Steele All-Southland 4th team | https://goutrgv.com/sports/football/roster/logic-hudgens/12599 |
-| 4 | TJ Neal | position unverified | 2025 |  |  |  | Southland Defensive Player of the Week | https://www.krgv.com/news/utrgv-s-tj-neal-named-southland-conference-defensive-player-of-the-week |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | Honor / outcome | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Alijah Prosser | S/nickel ("star"), Fr. | 2025 |  | 6 AA/POY |  | class 2024 · Manor, Manor, TX · HS | FCS Football Central Freshman All-American; 52-yd pick-six vs Texas Wesleyan; key returner 2026 | https://goutrgv.com/sports/football/roster/coaches/adrian-mcdonald/4354 ; https://ditvsports.com/2026-spring-football-guide/ |
+| 2 | Elijah Graham | DB, Sr. (#8) | 2025 |  | 6 AA/POY |  | class 2021 · Federal Way, Federal Way, WA · transfer (from Mercyhurst, D2, 2024; earlier Colorado State 2021 spring game, Morehead State 2023) · HS: 15 games at Federal Way: 54 tkl, 20 PD, 8 INT (per UTRGV bio) | Phil Steele FCS Midseason All-American; declared for NFL draft | https://goutrgv.com/sports/football/roster/coaches/adrian-mcdonald/4354 ; https://rgvsports.com/utrgv-vaqueros-set-to-kick-off-spring-ball-monday/ |
+| 3 | Logic Hudgens | DB | 2025 |  | 3 HM/3rd |  | class 2020 · Archbishop Spalding, Severn, MD · 6-0/185 · transfer (from Florida Atlantic, 2024 DNP; began at Buffalo 2020-21 as a HS signee; a Monroe College JUCO stop in between is suggested by the local 247 record but unverified) | Phil Steele All-Southland 4th team | https://goutrgv.com/sports/football/roster/logic-hudgens/12599 |
+| 4 | TJ Neal | position unverified | 2025 |  |  |  | class 2022 · Wichita South, Wichita, KS · transfer (from Washburn, D2; redshirted 2022, safety on 2023 Washburn roster) | Southland Defensive Player of the Week | https://www.krgv.com/news/utrgv-s-tj-neal-named-southland-conference-defensive-player-of-the-week |
 
 LOW:
 
@@ -835,16 +857,16 @@ not found
 
 TOP:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | Honor / outcome | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Tony Diaz | WR (true Fr) | 2025 |  | 6 AA/POY |  | 1st Team All-Southland; Southland Freshman of the Year; AP FCS All-America Honorable Mention; FCS Football Central, Stats Perform and Phil Steele Freshman All-American; 68 rec / 875 yds / 11 TD (KRGV) vs 67 / 881 / 11 (SI) — sources differ; entered portal Dec 2025, committed to Iowa Jan 9, 2026 (Baylor also offered) | https://goutrgv.com/news/2025/11/25/football-marburger-diaz-earn-major-southland-awards.aspx ; https://goutrgv.com/news/2025/12/17/football-diaz-named-ap-all-american-honorable-mention.aspx ; https://www.krgv.com/news/former-utrgv-star-receiver-tony-diaz-transfers-to-iowa ; https://www.si.com/college/baylor/football/baylor-offers-the-southland-freshman-of-the-year-in-the-transfer-portal-tony-diaz |
-| 2 | Xavyion (Xayvion) Noland | WR | 2025 |  | 4 2nd team/FOY |  | 2nd Team All-Southland (per Oregon State roster bio; confirm on Southland release); 831 yds / 7 TD; 2 rec 126 yds 2 TD in opener; committed to Oregon State Jan 2026 | https://osubeavers.com/sports/football/roster/xavyion-noland/12217 ; https://en.wikipedia.org/wiki/2025_UT_Rio_Grande_Valley_Vaqueros_football_team ; https://www.krgv.com/news/former-utrgv-star-receiver-tony-diaz-transfers-to-iowa |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | Honor / outcome | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Tony Diaz | WR (true Fr) | 2025 |  | 6 AA/POY |  | 0★ · class 2024 · San Marcos, San Marcos, TX · 5-11/176 · HS (signed with UTRGV's inaugural 2024 class; redshirted 2024; transferred to Iowa Jan 2026) · HS: career (San Marcos, coach John Walsh): 95 rec, 2,216 yds, 29 TD | 1st Team All-Southland; Southland Freshman of the Year; AP FCS All-America Honorable Mention; FCS Football Central, Stats Perform and Phil Steele Freshman All-American; 68 rec / 875 yds / 11 TD (KRGV) vs 67 / 881 / 11 (SI) — sources differ; entered portal Dec 2025, committed to Iowa Jan 9, 2026 (Baylor also offered) | https://goutrgv.com/news/2025/11/25/football-marburger-diaz-earn-major-southland-awards.aspx ; https://goutrgv.com/news/2025/12/17/football-diaz-named-ap-all-american-honorable-mention.aspx ; https://www.krgv.com/news/former-utrgv-star-receiver-tony-diaz-transfers-to-iowa ; https://www.si.com/college/baylor/football/baylor-offers-the-southland-freshman-of-the-year-in-the-transfer-portal-tony-diaz |
+| 2 | Xavyion (Xayvion) Noland | WR | 2025 |  | 4 2nd team/FOY |  |  | 2nd Team All-Southland (per Oregon State roster bio; confirm on Southland release); 831 yds / 7 TD; 2 rec 126 yds 2 TD in opener; committed to Oregon State Jan 2026 | https://osubeavers.com/sports/football/roster/xavyion-noland/12217 ; https://en.wikipedia.org/wiki/2025_UT_Rio_Grande_Valley_Vaqueros_football_team ; https://www.krgv.com/news/former-utrgv-star-receiver-tony-diaz-transfers-to-iowa |
 
 LOW:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | What happened | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | none documented | — | — |  | 1 stats |  | No source documents a UTRGV WR who was highly rated and failed to produce. The opposite problem: Diaz, Noland and TE Smith Flores (24 of 33 passing TDs) all left for FBS after one season; a converted North Texas safety, Jaydon Smith, was added via portal | https://www.krgv.com/news/former-utrgv-star-receiver-tony-diaz-transfers-to-iowa |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | What happened | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | none documented | — | — |  | 1 stats |  |  | No source documents a UTRGV WR who was highly rated and failed to produce. The opposite problem: Diaz, Noland and TE Smith Flores (24 of 33 passing TDs) all left for FBS after one season; a converted North Texas safety, Jaydon Smith, was added via portal | https://www.krgv.com/news/former-utrgv-star-receiver-tony-diaz-transfers-to-iowa |
 
 ---
 
@@ -894,10 +916,10 @@ LOW:
 
 TOP:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | Honor / outcome | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Michael Bowie | OT | 2012 | NFL | 6 AA/POY |  | All-MIAA 2nd Team; D2Football.com All-America HM; no sacks allowed, 47 knockdowns; drafted 7th rd (No. 242) 2013 by Seattle; Super Bowl XLVIII; Oklahoma State transfer | https://goriverhawksgo.com/news/2013/4/27/FB_0427131225.aspx ; https://en.wikipedia.org/wiki/Michael_Bowie |
-| 2 | unnamed | RB/OL | 2012 |  | 1 stats |  | Line with five new starters produced a 1,000-yd rusher and two all-conference OL (names not found) | https://goriverhawksgo.com/sports/football/roster/coaches/mike-barela/51 |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | Honor / outcome | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Michael Bowie | OT | 2012 | NFL | 6 AA/POY |  | class 2009 · Charles Page, Sand Springs, OK · transfer-down (from Oklahoma State; JUCO Navarro College 2009–10 before OSU) | All-MIAA 2nd Team; D2Football.com All-America HM; no sacks allowed, 47 knockdowns; drafted 7th rd (No. 242) 2013 by Seattle; Super Bowl XLVIII; Oklahoma State transfer | https://goriverhawksgo.com/news/2013/4/27/FB_0427131225.aspx ; https://en.wikipedia.org/wiki/Michael_Bowie |
+| 2 | unnamed | RB/OL | 2012 |  | 1 stats |  |  | Line with five new starters produced a 1,000-yd rusher and two all-conference OL (names not found) | https://goriverhawksgo.com/sports/football/roster/coaches/mike-barela/51 |
 
 LOW:
 
@@ -909,10 +931,10 @@ none documented (team went 4-6, 2-9).
 
 TOP:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | Honor / outcome | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Cole Wick | TE | 2015 | NFL | 5 1st team |  | 1st Team All-Southland; 30 rec, 364 yds, 2 TD; UDFA Detroit Lions 2016 (6 NFL games), later 49ers/Titans/Saints PS | https://en.wikipedia.org/wiki/2015_Incarnate_Word_Cardinals_football_team ; https://en.wikipedia.org/wiki/Cole_Wick |
-| 2 | TE group | TE | 2017 |  | 1 stats |  | 36 catches, 321 yds, 7 TD combined (no individual All-Southland TE in 2016–17) | https://uiwcardinals.com/sports/football/roster/coaches/mike-barela/733 |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | Honor / outcome | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Cole Wick | TE | 2015 | NFL | 5 1st team |  | class 2012 · Sacred Heart Catholic, Hallettsville, TX · HS | 1st Team All-Southland; 30 rec, 364 yds, 2 TD; UDFA Detroit Lions 2016 (6 NFL games), later 49ers/Titans/Saints PS | https://en.wikipedia.org/wiki/2015_Incarnate_Word_Cardinals_football_team ; https://en.wikipedia.org/wiki/Cole_Wick |
+| 2 | TE group | TE | 2017 |  | 1 stats |  |  | 36 catches, 321 yds, 7 TD combined (no individual All-Southland TE in 2016–17) | https://uiwcardinals.com/sports/football/roster/coaches/mike-barela/733 |
 
 LOW:
 
@@ -922,9 +944,9 @@ not found
 
 TOP:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | Honor / outcome | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Caelan Keenan | C | 2021 |  | 3 HM/3rd |  | All-RMAC 2nd Team; D2CCA All-Region 2nd Team; team 8-2 | https://cmumavericks.com/sports/football/roster/caelan-keenan/16831 |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | Honor / outcome | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Caelan Keenan | C | 2021 |  | 3 HM/3rd |  | Boerne, Boerne, TX · transfer-down (from Northern Colorado, one season) | All-RMAC 2nd Team; D2CCA All-Region 2nd Team; team 8-2 | https://cmumavericks.com/sports/football/roster/caelan-keenan/16831 |
 
 LOW:
 
@@ -936,9 +958,9 @@ TE honors 2018–19: not found. LOW: none documented.
 
 TOP:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | Honor / outcome | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Devin Hannan | OL | 2023 |  | 6 AA/POY |  | AFCA All-America 1st Team; AP D2 All-America 2nd Team; D2CCA All-Region 2nd; Gene Upshaw nominee; started every game, VSU 12-2, shared GSC title | https://gscsports.org/news/2023/12/12/gsc-football-trio-named-ap-all-americans.aspx |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | Honor / outcome | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Devin Hannan | OL | 2023 |  | 6 AA/POY |  | 3★ · class 2015 · Belle Vernon Area, Belle Vernon, PA · transfer-down (from Kutztown; originally Old Dominion 2015–) | AFCA All-America 1st Team; AP D2 All-America 2nd Team; D2CCA All-Region 2nd; Gene Upshaw nominee; started every game, VSU 12-2, shared GSC title | https://gscsports.org/news/2023/12/12/gsc-football-trio-named-ap-all-americans.aspx |
 
 LOW:
 
@@ -950,9 +972,9 @@ not found
 
 TOP:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | Honor / outcome | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Ismael Smith Flores | TE (RS-So, 6-5) | 2025 |  | 1 stats |  | 9 starts, 20 rec / 244 yds / 6 TD (7th SLC in rec TD); former 3-star Nebraska signee (Arlington Martin) who played defense at Nebraska; transferred to East Carolina Jan 2026 | https://goutrgv.com/staff-directory/mike-barela/784 ; https://www.krgv.com/news/former-utrgv-tight-end-ismael-smith-flores-announces-commitment-to-east-carolina/ ; https://ecupirates.com/sports/football/roster/ismael-flores/14300 |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | Honor / outcome | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Ismael Smith Flores | TE (RS-So, 6-5) | 2025 |  | 1 stats |  | 3★ 0.8722 · class 2023 · Martin, Arlington, TX · 6-5/210 · transfer-down (from Nebraska) | 9 starts, 20 rec / 244 yds / 6 TD (7th SLC in rec TD); former 3-star Nebraska signee (Arlington Martin) who played defense at Nebraska; transferred to East Carolina Jan 2026 | https://goutrgv.com/staff-directory/mike-barela/784 ; https://www.krgv.com/news/former-utrgv-tight-end-ismael-smith-flores-announces-commitment-to-east-carolina/ ; https://ecupirates.com/sports/football/roster/ismael-flores/14300 |
 
 LOW:
 
@@ -1039,18 +1061,18 @@ not found
 
 TOP:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | Honor / outcome | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Nathan Denney | RB (grad transfer from Yale) | 2025 |  | 4 2nd team/FOY |  | 884 rush yds, 4.68 ypc, 73.8 ypg (2nd SLC, 36th FCS); Phil Steele 2nd Team All-Southland; SLC Offensive Player of the Week Sept 8; departed after season (graduate) | https://goutrgv.com/sports/football/roster/nathan-denney/12585 ; https://www.southland.org/news/2025/9/8/utrgvs-denney-lamars-pugh-and-woodard-earn-southland-football-players-of-the-week.aspx ; https://goutrgv.com/news/2025/11/24/football-denney-earns-slc-offensive-player-of-the-week-honorable-mention.aspx |
-| 2 | TJ Dement | RB (Fr) | 2025 |  | 1 stats |  | 5 rushing TD as a freshman; returning starter candidate 2026 | https://goutrgv.com/staff-directory/marco-regalado/780 ; https://www.krgv.com/news/utrgv-running-backs-group-looking-strong-ahead-of-2026-season/ |
-| 3 | Djouvensky Schlenbaker | RB (RS-Jr) | 2025 |  | 1 stats |  | Scored first rushing TD in program history (Aug 30 vs Sul Ross); season stats not found | https://en.wikipedia.org/wiki/2025_UT_Rio_Grande_Valley_Vaqueros_football_team |
-| 4 | Fabian Garcia, Brennan Carroll | RB | 2025 |  | 1 stats |  | Rotation backs; Garcia returning 2026; no honors found | https://www.smdailyjournal.com/sports/marburger-utrgv-dominate-naia-member-texas-wesleyan-in-61-13-win/article_23aef303-1aeb-5438-a60c-5a325ed4a84b.html |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | Honor / outcome | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Nathan Denney | RB (grad transfer from Yale) | 2025 |  | 4 2nd team/FOY |  | class 2021 · Georgetown, Georgetown, TX · 5-10/205 · transfer-down (grad transfer from Yale) · HS: senior (2020, 6 games): 88 car, 928 yds, 12 TD; 7 rec, 76 yds, 1 TD; career 4,188 yds, 39 TD | 884 rush yds, 4.68 ypc, 73.8 ypg (2nd SLC, 36th FCS); Phil Steele 2nd Team All-Southland; SLC Offensive Player of the Week Sept 8; departed after season (graduate) | https://goutrgv.com/sports/football/roster/nathan-denney/12585 ; https://www.southland.org/news/2025/9/8/utrgvs-denney-lamars-pugh-and-woodard-earn-southland-football-players-of-the-week.aspx ; https://goutrgv.com/news/2025/11/24/football-denney-earns-slc-offensive-player-of-the-week-honorable-mention.aspx |
+| 2 | TJ Dement | RB (Fr) | 2025 |  | 1 stats |  | class 2024 · Boerne, Boerne, TX · 5-7/175 · HS · HS: career 2,715 rush yds, 32 TD; 2023 vs Flour Bluff: 23 car, 176 yds; led Boerne to 2022 state championship game | 5 rushing TD as a freshman; returning starter candidate 2026 | https://goutrgv.com/staff-directory/marco-regalado/780 ; https://www.krgv.com/news/utrgv-running-backs-group-looking-strong-ahead-of-2026-season/ |
+| 3 | Djouvensky Schlenbaker | RB (RS-Jr) | 2025 |  | 1 stats |  | 3★ 0.8644 · class 2022 · Squalicum, Bellingham, WA · 6-1/215 · transfer-down (from Washington State) · HS: junior (spring 2021, 5 games): 1,068 rush yds, 14 TD, 7.3 ypc; 3,430 career yds entering senior year; senior 2021: vs Highline 14 car, 231 yds, 6 TD; career >4,000 yds (Squalicum record) | Scored first rushing TD in program history (Aug 30 vs Sul Ross); season stats not found | https://en.wikipedia.org/wiki/2025_UT_Rio_Grande_Valley_Vaqueros_football_team |
+| 4 | Fabian Garcia, Brennan Carroll | RB | 2025 |  | 1 stats |  | class 2024 · San Benito, San Benito, TX · 5-7/175 · HS · HS: junior (2022): 221 car, 2,230 yds, 10.1 ypc, 29 TD (313 yds vs Taft); career 594 car, 5,193 yds, 61 TD (San Benito all-time leading rusher, 3-yr starter) | Rotation backs; Garcia returning 2026; no honors found | https://www.smdailyjournal.com/sports/marburger-utrgv-dominate-naia-member-texas-wesleyan-in-61-13-win/article_23aef303-1aeb-5438-a60c-5a325ed4a84b.html |
 
 LOW:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | What happened | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | none documented | — | — |  | 1 stats |  | No source reports a UTRGV RB losing a job, transferring out for lack of production, or being dismissed. 2026 adds LSU transfer Malachi Lane | https://www.krgv.com/news/utrgv-running-backs-group-looking-strong-ahead-of-2026-season/ |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | What happened | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | none documented | — | — |  | 1 stats |  |  | No source reports a UTRGV RB losing a job, transferring out for lack of production, or being dismissed. 2026 adds LSU transfer Malachi Lane | https://www.krgv.com/news/utrgv-running-backs-group-looking-strong-ahead-of-2026-season/ |
 
 **Archetype read**
 
@@ -1092,10 +1114,10 @@ LOW:
 
 TOP:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | Honor / outcome | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Tyree Wilson | Edge/DE | 2022 | NFL | 5 1st team | 75.1 (2022 defense) | 1st-team All-Big 12 (13.5 TFL, 7.0 sacks); No. 7 overall pick, 2023 NFL Draft (Raiders) | https://texastech.com/sports/football/roster/tyree-wilson/10326 |
-| 2 | Jesiah Pierre | OLB (2022) / ILB (2023) | 2022-23 |  | 3 HM/3rd | 60.1 (2022 defense) | 7.0 TFL, 4.5 sacks at OLB in 2022; HM All-Big 12 at LB 2023 | https://ucfknights.com/sports/football/roster/player/jesiah-pierre |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | Honor / outcome | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Tyree Wilson | Edge/DE | 2022 | NFL | 5 1st team | 75.1 (2022 defense) | 3★ 0.8813 · class 2018 · West Rusk, New London, TX · 6-6/230 · transfer (from Texas A&M, 2020; lateral P5, not transfer-down) · HS: senior 2017: 123 tkl, 39 TFL, 5 sacks, 5 FF, 5 FR (247Sports); Wikipedia variant 126 tkl, 38 TFL; junior: 4 sacks | 1st-team All-Big 12 (13.5 TFL, 7.0 sacks); No. 7 overall pick, 2023 NFL Draft (Raiders) | https://texastech.com/sports/football/roster/tyree-wilson/10326 |
+| 2 | Jesiah Pierre | OLB (2022) / ILB (2023) | 2022-23 |  | 3 HM/3rd | 60.1 (2022 defense) | 3★ 0.8719 · class 2019 · Mount Dora Christian Academy, Mount Dora, FL · 6-2/220 · transfer (from Florida, 2021) · HS: sophomore+junior combined (as of July 2018): 131 tkl, 4.5 sacks, 7 FF, 6 FR; also ran the ball in single-wing offense; no senior-only line found | 7.0 TFL, 4.5 sacks at OLB in 2022; HM All-Big 12 at LB 2023 | https://ucfknights.com/sports/football/roster/player/jesiah-pierre |
 
 LOW:
 
@@ -1105,11 +1127,11 @@ not found
 
 TOP:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | Honor / outcome | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Jaiden Haygood | LB | 2025 |  | 6 AA/POY |  | Phil Steele Freshman All-American 1st team; FCS Football Central Freshman AA; 2026 Phil Steele preseason All-SLC 1st team (unit assignment ILB vs OLB unverified) | https://goutrgv.com/news/2025/12/29/football-places-five-on-phil-steele-freshman-all-american-teams.aspx |
-| 2 | Ian Box | DE/edge, 6-3 236, R-Jr., Seguin TX, Lamar transfer | 2025 |  | 1 stats |  | All-Southland 2nd team (Phil Steele 2nd team); 8.0 TFL, 5.5 sacks (5 vs. HCU); UTRGV bio credits Lockhart with his development | https://goutrgv.com/sports/football/roster/ian-box/12113 ; https://goutrgv.com/staff-directory/james-lockhart-iv/788 ; https://www.krgv.com/news/first-utrgv-football-transfer-de-ian-box-to-face-his-former-team/ |
-| 3 | Percy Jackson III | Edge | 2025 |  | 1 stats |  | 24 tkl, 6.5 TFL, 2 sacks, 2 FF, 1 FR (no all-conference honor found) | https://rgvsports.com/utrgv-football-kicks-off-fall-camp-thursday/ |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | Honor / outcome | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Jaiden Haygood | LB | 2025 |  | 6 AA/POY |  | class 2024 · Judson, Converse, TX · 6-0/215 · HS · HS: HS career (Judson): 270 tackles, 8.0 sacks | Phil Steele Freshman All-American 1st team; FCS Football Central Freshman AA; 2026 Phil Steele preseason All-SLC 1st team (unit assignment ILB vs OLB unverified) | https://goutrgv.com/news/2025/12/29/football-places-five-on-phil-steele-freshman-all-american-teams.aspx |
+| 2 | Ian Box | DE/edge, 6-3 236, R-Jr., Seguin TX, Lamar transfer | 2025 |  | 1 stats |  | class 2022 · Seguin, Seguin, TX · 6-3/236 · transfer (from Lamar, FCS lateral; first transfer in UTRGV history) · HS: HS: 165 total tackles in 31 games over 3 varsity seasons (2018-21) | All-Southland 2nd team (Phil Steele 2nd team); 8.0 TFL, 5.5 sacks (5 vs. HCU); UTRGV bio credits Lockhart with his development | https://goutrgv.com/sports/football/roster/ian-box/12113 ; https://goutrgv.com/staff-directory/james-lockhart-iv/788 ; https://www.krgv.com/news/first-utrgv-football-transfer-de-ian-box-to-face-his-former-team/ |
+| 3 | Percy Jackson III | Edge | 2025 |  | 1 stats |  | Venice, Los Angeles, CA · unknown (likely transfer: listed R-Jr/R-Sr at a program whose first roster was 2024; prior school not found) | 24 tkl, 6.5 TFL, 2 sacks, 2 FF, 1 FR (no all-conference honor found) | https://rgvsports.com/utrgv-football-kicks-off-fall-camp-thursday/ |
 
 LOW:
 
@@ -1182,12 +1204,12 @@ Records: 2021 2-7 (MaxPreps: 2-8), 2022 6-5, 2023 2-7; 2021 was the program's fi
 
 TOP:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | Honor / outcome | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Ja'Marcus Anderson | DL (R-So./So., class listing disputed) | 2025 |  | 6 AA/POY |  | Phil Steele FCS Freshman All-American 2nd team; All-Southland 3rd team; 29 tkl, 4.5 TFL, 2 sacks, 5 QBH, 1 FF in 11 games/2 starts | https://goutrgv.com/news/2025/12/29/football-places-five-on-phil-steele-freshman-all-american-teams.aspx ; https://goutrgv.com/sports/football/roster/ja-marcus-anderson/12898 |
-| 2 | Ian Box | DE, 6-3 236, Seguin TX, Lamar transfer | 2025 |  | 1 stats |  | All-Southland 2nd team; 8.0 TFL, 5.5 sacks (also credited to Lockhart; see above) | https://goutrgv.com/sports/football/roster/ian-box/12113 ; https://www.southland.org/news/2025/11/25/southland-announces-2025-all-conference-football-team-and-superlatives.aspx |
-| 3 | Nathan Huerta | NT, grad transfer from Texas State | 2025 |  | 1 stats |  | 11 starts at nose; returns 2026 | https://rgvsports.com/utrgv-d-line-looks-to-set-tone-for-vaqueros-in-year-2/ |
-| 4 | Percy Jackson III | Edge/DL | 2025 |  | 1 stats |  | 24 tkl, 6.5 TFL, 2 sacks, 2 FF | https://rgvsports.com/utrgv-football-kicks-off-fall-camp-thursday/ |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | Honor / outcome | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Ja'Marcus Anderson | DL (R-So./So., class listing disputed) | 2025 |  | 6 AA/POY |  | class 2024 · Dickinson, Dickinson, TX · HS · HS: per UTRGV bio (span not specified, likely career): 134 tkl (54 solo), 20 TFL, 14.5 sacks | Phil Steele FCS Freshman All-American 2nd team; All-Southland 3rd team; 29 tkl, 4.5 TFL, 2 sacks, 5 QBH, 1 FF in 11 games/2 starts | https://goutrgv.com/news/2025/12/29/football-places-five-on-phil-steele-freshman-all-american-teams.aspx ; https://goutrgv.com/sports/football/roster/ja-marcus-anderson/12898 |
+| 2 | Ian Box | DE, 6-3 236, Seguin TX, Lamar transfer | 2025 |  | 1 stats |  | class 2022 · Seguin, Seguin, TX · 6-3/236 · transfer (from Lamar, FCS lateral; first transfer in UTRGV history) · HS: HS: 165 total tackles in 31 games over 3 varsity seasons (2018-21) | All-Southland 2nd team; 8.0 TFL, 5.5 sacks (also credited to Lockhart; see above) | https://goutrgv.com/sports/football/roster/ian-box/12113 ; https://www.southland.org/news/2025/11/25/southland-announces-2025-all-conference-football-team-and-superlatives.aspx |
+| 3 | Nathan Huerta | NT (Harlingen HS; signed Southwestern Univ. D3 out of HS; Texas State grad-transfer claim NOT supported by any source) | 2025 |  | 1 stats |  | Harlingen, Harlingen, TX · transfer (signed with Southwestern University, D3, out of HS; Southwestern-to-UTRGV path inferred from timeline — Texas State grad-transfer claim NOT supported by any source) | 11 starts at nose in 2025; returns 2026. Correction: no source supports the earlier 'grad transfer from Texas State' line; UTRGV roster lists Harlingen HS and RGVSports has him signing with Southwestern (D3) out of HS. | https://rgvsports.com/utrgv-d-line-looks-to-set-tone-for-vaqueros-in-year-2/ |
+| 4 | Percy Jackson III | Edge/DL | 2025 |  | 1 stats |  | Venice, Los Angeles, CA · unknown (likely transfer: listed R-Jr/R-Sr at a program whose first roster was 2024; prior school not found) | 24 tkl, 6.5 TFL, 2 sacks, 2 FF | https://rgvsports.com/utrgv-football-kicks-off-fall-camp-thursday/ |
 
 LOW:
 
@@ -1243,9 +1265,9 @@ not found. (Nicholas Fernandez, an Arizona DL transfer in the 2025 class, and DE
 
 TOP:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | Honor / outcome | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Tavares Garner | DB | 2015 |  | 5 1st team |  | 1st-team All-GAC; team 11-2, D2 playoffs | https://goutrgv.com/sports/football/roster/coaches/josh-jones/4374 |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | Honor / outcome | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Tavares Garner | DB | 2015 |  | 5 1st team |  | class 2013 · Manvel, Manvel, TX · transfer-down (from Texas A&M) · HS: senior 2012: 35 tkl, 5 INT, 9 PBU | 1st-team All-GAC; team 11-2, D2 playoffs | https://goutrgv.com/sports/football/roster/coaches/josh-jones/4374 |
 
 LOW:
 
@@ -1255,10 +1277,10 @@ not found
 
 TOP:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | Honor / outcome | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Tremon Smith | CB | 2016-17 (at UCA 2014-17) | NFL | 5 1st team |  | 1st-team All-Southland 2015-17 (UCA page lists 2015-16); 37 career passes defensed (10 INT); 6th round, No. 196, 2018 NFL Draft (Chiefs); later Texans | https://en.wikipedia.org/wiki/Tremon_Smith ; https://ucasports.com/sports/football/roster/tremon-smith/4950 |
-| 2 | Tyler Williams | CB, 6-1 194, Norcross GA, Hutchinson CC transfer | 2016 (senior) |  | 6 AA/POY |  | UTRGV/UCA bio: All-Southland and "multiple All-American teams after leading the nation in pass break-ups" — year/team not independently verified | https://ucasports.com/sports/football/roster/coaches/josh-jones/649 ; https://ucasports.com/sports/football/roster/tyler-williams/3504 |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | Honor / outcome | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Tremon Smith | CB | 2016-17 (at UCA 2014-17) | NFL | 5 1st team |  | class 2014 · Saks, Anniston, AL · HS | 1st-team All-Southland 2015-17 (UCA page lists 2015-16); 37 career passes defensed (10 INT); 6th round, No. 196, 2018 NFL Draft (Chiefs); later Texans | https://en.wikipedia.org/wiki/Tremon_Smith ; https://ucasports.com/sports/football/roster/tremon-smith/4950 |
+| 2 | Tyler Williams | CB, 6-1 194, Norcross GA, Hutchinson CC transfer | 2016 (senior) |  | 6 AA/POY |  | class 2012 · Greater Atlanta Christian, Norcross, GA · 6-1/194 · JUCO (Hutchinson CC, 2 seasons; previously redshirted one season at West Georgia) | UTRGV/UCA bio: All-Southland and "multiple All-American teams after leading the nation in pass break-ups" — year/team not independently verified | https://ucasports.com/sports/football/roster/coaches/josh-jones/649 ; https://ucasports.com/sports/football/roster/tyler-williams/3504 |
 
 LOW:
 
@@ -1268,11 +1290,11 @@ not found
 
 TOP:
 
-| # | Player | Pos | Years | NFL | Production | PFF best | Honor / outcome | Source |
-|---|---|---|---|---|---|---|---|---|
-| 1 | Jalen Thompson | CB/flex | 2018-20 |  | 3 HM/3rd | 72.2 (2019 defense) | Program all-time INT leader (9); PFF 3rd-team All-Sun Belt (flex) 2019 | https://usajaguars.com/staff-directory/josh-jones/445 ; https://www.pff.com/news/college-football-2019-pff-all-sun-belt-team |
-| 2 | Darian Mills | CB | 2018 (year unverified) |  | 1 stats | 70.1 (2018 defense) | All-Sun Belt; 2nd in conference in PBU | https://usajaguars.com/staff-directory/josh-jones/445 |
-| 3 | Devin Rockette | CB | 2019 |  | 1 stats | 62.9 (2019 defense) | PFF All-Sun Belt HM; 6 PBU, 1 INT in first season as starter | https://www.pff.com/news/college-football-2019-pff-all-sun-belt-team ; https://usajaguars.com/staff-directory/josh-jones/445 |
+| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | Honor / outcome | Source |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | Jalen Thompson | CB/flex | 2018-20 |  | 3 HM/3rd | 72.2 (2019 defense) | class 2016 · St. Paul's Episcopal, Mobile, AL · HS | Program all-time INT leader (9); PFF 3rd-team All-Sun Belt (flex) 2019 | https://usajaguars.com/staff-directory/josh-jones/445 ; https://www.pff.com/news/college-football-2019-pff-all-sun-belt-team |
+| 2 | Darian Mills | CB | 2018 (year unverified) |  | 1 stats | 70.1 (2018 defense) | 2★ 0.7593 · class 2014 · Winter Haven, Winter Haven, FL · HS | All-Sun Belt; 2nd in conference in PBU | https://usajaguars.com/staff-directory/josh-jones/445 |
+| 3 | Devin Rockette | CB | 2019 |  | 1 stats | 62.9 (2019 defense) | 3★ 0.8497 · class 2017 · Oxford, Oxford, MS · 5-11/190 · JUCO (Northwest Mississippi CC, 2017-18; originally committed to Ole Miss June 2016) · 40 4.38 (hand-timed 40 cited by Oxford Eagle at Ole Miss offer, June 2016) · HS: junior 2015: 1 INT, 1 FR, 1 blocked FG; senior line not found | PFF All-Sun Belt HM; 6 PBU, 1 INT in first season as starter | https://www.pff.com/news/college-football-2019-pff-all-sun-belt-team ; https://usajaguars.com/staff-directory/josh-jones/445 |
 
 LOW:
 

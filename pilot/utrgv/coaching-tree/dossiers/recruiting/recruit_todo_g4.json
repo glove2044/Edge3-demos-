@@ -1,0 +1,138 @@
+[
+ {
+  "coach": "Gunnar Henderson",
+  "stop": "UTRGV wide receivers, 2025 (GA in 2024 — no attributable production)",
+  "tier": "TOP",
+  "player": "Xavyion Noland",
+  "pos": "WR",
+  "years": "2025",
+  "known": {},
+  "status": "no local match",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "2nd Team All-Southland (per Oregon State roster bio; confirm on Southland release); 831 yds / 7 TD; 2 rec 126 yds 2 TD in opener; committed "
+ },
+ {
+  "coach": "Mike Barela",
+  "stop": "Northeastern State OL / run game, 2012–13",
+  "tier": "TOP",
+  "player": "Michael Bowie",
+  "pos": "OT",
+  "years": "2012",
+  "known": {},
+  "status": "no local match",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "All-MIAA 2nd Team; D2Football.com All-America HM; no sacks allowed, 47 knockdowns; drafted 7th rd (No. 242) 2013 by Seattle; Super Bowl XLVI"
+ },
+ {
+  "coach": "Mike Barela",
+  "stop": "Incarnate Word TE / run game, 2015–17",
+  "tier": "TOP",
+  "player": "Cole Wick",
+  "pos": "TE",
+  "years": "2015",
+  "known": {},
+  "status": "no local match",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "1st Team All-Southland; 30 rec, 364 yds, 2 TD; UDFA Detroit Lions 2016 (6 NFL games), later 49ers/Titans/Saints PS"
+ },
+ {
+  "coach": "Mike Barela",
+  "stop": "Colorado Mesa TE (2018–19) / OL (2020–21)",
+  "tier": "TOP",
+  "player": "Caelan Keenan",
+  "pos": "C",
+  "years": "2021",
+  "known": {},
+  "status": "no local match",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "All-RMAC 2nd Team; D2CCA All-Region 2nd Team; team 8-2"
+ },
+ {
+  "coach": "Mike Barela",
+  "stop": "Valdosta State OL, 2022–23",
+  "tier": "TOP",
+  "player": "Devin Hannan",
+  "pos": "OL",
+  "years": "2023",
+  "known": {},
+  "status": "no local match",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "AFCA All-America 1st Team; AP D2 All-America 2nd Team; D2CCA All-Region 2nd; Gene Upshaw nominee; started every game, VSU 12-2, shared GSC t"
+ },
+ {
+  "coach": "Mike Barela",
+  "stop": "UTRGV tight ends, 2025 (program's first season)",
+  "tier": "TOP",
+  "player": "Ismael Smith Flores",
+  "pos": "TE (RS-So, 6-5)",
+  "years": "2025",
+  "known": {
+   "class_year": 2023,
+   "stars_247": 3,
+   "composite_247": 0.8722,
+   "hs_name": "Martin",
+   "hs_city": "Arlington",
+   "hs_state": "TX",
+   "committed_to": "Nebraska"
+  },
+  "status": "verified (commit school or HS matches the record)",
+  "need": "HS profile (height/weight at signing, HS stats), combine/camp numbers; confirm 247 rating",
+  "context": "9 starts, 20 rec / 244 yds / 6 TD (7th SLC in rec TD); former 3-star Nebraska signee (Arlington Martin) who played defense at Nebraska; tran"
+ },
+ {
+  "coach": "Marco Regalado",
+  "stop": "UTRGV running backs, 2025",
+  "tier": "TOP",
+  "player": "Nathan Denney",
+  "pos": "RB (grad transfer from Yale)",
+  "years": "2025",
+  "known": {},
+  "status": "no local match",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "884 rush yds, 4.68 ypc, 73.8 ypg (2nd SLC, 36th FCS); Phil Steele 2nd Team All-Southland; SLC Offensive Player of the Week Sept 8; departed "
+ },
+ {
+  "coach": "Marco Regalado",
+  "stop": "UTRGV running backs, 2025",
+  "tier": "TOP",
+  "player": "TJ Dement",
+  "pos": "RB (Fr)",
+  "years": "2025",
+  "known": {},
+  "status": "no local match",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "5 rushing TD as a freshman; returning starter candidate 2026"
+ },
+ {
+  "coach": "Marco Regalado",
+  "stop": "UTRGV running backs, 2025",
+  "tier": "TOP",
+  "player": "Djouvensky Schlenbaker",
+  "pos": "RB (RS-Jr)",
+  "years": "2025",
+  "known": {
+   "class_year": 2022,
+   "stars_247": 3,
+   "composite_247": 0.8644,
+   "hs_name": "Squalicum",
+   "hs_city": "Bellingham",
+   "hs_state": "WA",
+   "committed_to": "Washington State"
+  },
+  "status": "verified (commit school or HS matches the record)",
+  "need": "HS profile (height/weight at signing, HS stats), combine/camp numbers; confirm 247 rating",
+  "context": "Scored first rushing TD in program history (Aug 30 vs Sul Ross); season stats not found"
+ },
+ {
+  "coach": "Marco Regalado",
+  "stop": "UTRGV running backs, 2025",
+  "tier": "TOP",
+  "player": "Fabian Garcia, Brennan Carroll",
+  "pos": "RB",
+  "years": "2025",
+  "known": {},
+  "status": "no local match",
+  "need": "247/Rivals rating + class, HS name/city/state, height/weight at signing, HS stats, combine/camp numbers",
+  "context": "Rotation backs; Garcia returning 2026; no honors found"
+ }
+]
