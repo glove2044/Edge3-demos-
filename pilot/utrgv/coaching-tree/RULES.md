@@ -21,6 +21,16 @@ Every position coach is mapped to the players he coached at each stop, in two li
 
 A player is LOW only when a source documents the outcome (benched, transferred out after a down year, dismissed, an "expected breakout" that did not produce). Never label a player low on judgment alone. Never train on the LOW set; it is a list of documented failure modes to check a recruit against.
 
+## Rule 4. Match every mapped player to his recruiting rating, high school profile and testing
+
+Every player in a coach's tree is matched to what he looked like as a recruit, so the archetype can be read in the same terms the staff recruits in:
+
+1. **Recruiting rating.** 247Sports Composite (stars, composite score, national, position and state rank) with Rivals and On3 where they differ; recruiting class year; the school he committed to.
+2. **High school profile.** School, city, state; height and weight at signing; senior and junior production from MaxPreps or press; all-district, all-state and other HS honors; origin into the program (high school direct, JUCO, transfer down, walk-on, international).
+3. **Testing.** Combine, camp or Nike Opening numbers (40, shuttle, vertical, broad jump, bench) with the event named. These are often missing for older or lightly recruited players; a blank is the honest answer, never an estimate.
+
+Local tables come first (edge3-model: 247 composite proxy, CFBD recruits, rosters), then 247Sports, Rivals, On3, ESPN, MaxPreps, Hudl and signing-day releases. Same-name collisions are common, so a local match is "verified" only when the commit school or high school agrees with the player's documented path; otherwise it is confirmed on the web or left labeled unverified. The archetype read then adds the recruiting view: what rating band, size band and origin the coach's producers came from, and whether the lows came from a different band.
+
 ## Rule 3. Every row carries its source
 
 Every timeline row and every player row carries the URL it came from. Anything that could not be confirmed is marked unverified or not found, never guessed. Disagreements between sources are reported, not silently resolved.

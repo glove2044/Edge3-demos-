@@ -16,12 +16,43 @@ def pff(p):
     b = p.get("pff_best")
     return f"{b['grade']:.1f} ({b['season']} {b['source']})" if b else ""
 
+def recruit(p):
+    r = p.get("recruit_profile") or {}
+    if not any(r.get(k) not in (None, "") for k in ("stars_247", "composite_247", "hs_name", "height_signing", "origin")):
+        return ""
+    bits = []
+    if r.get("stars_247") not in (None, ""):
+        bits.append(f"{r['stars_247']}★" + (f" {r['composite_247']:.4f}" if isinstance(r.get("composite_247"), (int, float)) else ""))
+    elif isinstance(r.get("composite_247"), (int, float)):
+        bits.append(f"{r['composite_247']:.4f}")
+    if r.get("class_year"):
+        bits.append(f"class {r['class_year']}")
+    hs = ", ".join(str(x) for x in (r.get("hs_name"), r.get("hs_city"), r.get("hs_state")) if x not in (None, "", "nan"))
+    if hs:
+        bits.append(hs)
+    if r.get("height_signing") or r.get("weight_signing"):
+        bits.append(f"{r.get('height_signing') or '?'}/{r.get('weight_signing') or '?'}")
+    if r.get("origin"):
+        bits.append(str(r["origin"]))
+    cb = r.get("combine") if isinstance(r.get("combine"), dict) else {}
+    tests = [f"40 {cb['forty']}" if cb.get("forty") else "", f"SH {cb['shuttle']}" if cb.get("shuttle") else "",
+             f"VJ {cb['vertical']}" if cb.get("vertical") else "", f"BJ {cb['broad']}" if cb.get("broad") else ""]
+    tests = [t for t in tests if t]
+    if tests:
+        bits.append("; ".join(tests) + (f" ({cb['source']})" if cb.get("source") else ""))
+    if r.get("hs_stats"):
+        bits.append(f"HS: {r['hs_stats']}")
+    st = str(r.get("match_status", ""))
+    if "unverified" in st and "web pass" not in st:
+        bits.append("[unverified match]")
+    return " · ".join(bits)
+
 def table(rows, last_col):
     if not rows:
         return "not found\n"
-    s = f"| # | Player | Pos | Years | NFL | Production | PFF best | {last_col} | Source |\n|---|---|---|---|---|---|---|---|---|\n"
+    s = f"| # | Player | Pos | Years | NFL | Production | PFF best | Recruiting / HS profile | {last_col} | Source |\n|---|---|---|---|---|---|---|---|---|---|\n"
     for p in rows:
-        s += f"| {p['rank']} | {p['player']} | {p['pos']} | {p['years']} | {NFL.get(p['nfl_level'], '')} | {PROD.get(p['honor_level'], '')} | {pff(p)} | {p['outcome']} | {src(p['sources'])} |\n"
+        s += f"| {p['rank']} | {p['player']} | {p['pos']} | {p['years']} | {NFL.get(p['nfl_level'], '')} | {PROD.get(p['honor_level'], '')} | {pff(p)} | {recruit(p)} | {p['outcome']} | {src(p['sources'])} |\n"
     return s
 
 parts = []
