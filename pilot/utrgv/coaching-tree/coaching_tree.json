@@ -7,7 +7,9 @@
     "method": "Web research from official school bios, conference releases and news; every row carries source URLs. Items marked unverified or not found could not be confirmed.",
     "coach_count": 11,
     "player_rows": 103,
-    "timeline_rows": 108
+    "timeline_rows": 108,
+    "ranking_rule": "Within each stop, TOP and LOW lists are sorted highest to lowest by: (1) NFL outcome (3 = drafted, NFL roster or NFL honors; 2 = UDFA, camp, practice squad or other pro league; 0 = none), (2) production (6 = All-American or conference/national player of the year; 5 = first-team all-conference; 4 = second-team, freshman/newcomer/rookie of the year; 3 = third-team, honorable mention, all-region or academic; 2 = records or team-leading stats; 1 = stats only), (3) best PFF season grade during the coach's years at that stop (FBS 2014 to 2025 only; blank means no PFF row, which is expected for FCS, D2, JUCO, HS and pre-2014 stops).",
+    "pff_source": "edge3-model/edge3-pff-integration/data/pff/ncaa/pff_{passing,receiving,rushing,blocking,defense}_2014_2025.csv"
   },
   "coaches": [
     {
@@ -186,6 +188,24 @@
           "stop": "Texas State WRs, 2004–06",
           "top": [
             {
+              "player": "Barrick Nealy (not Bush's group)",
+              "pos": "QB",
+              "years": "2005",
+              "outcome": "2005 Southland Player of the Year; UDFA Vikings as WR 2006; CFL Calgary 2006–10",
+              "sources": [
+                "https://en.wikipedia.org/wiki/Barrick_Nealy"
+              ],
+              "nfl_level": 2,
+              "honor_level": 6,
+              "pff_best": null,
+              "rank_key": [
+                2,
+                6,
+                -1
+              ],
+              "rank": 1
+            },
+            {
               "player": "Markee White (6-7, 205, Long Beach CA)",
               "pos": "WR",
               "years": "2005",
@@ -193,16 +213,16 @@
               "sources": [
                 "https://lionsports.net/news/2005/11/22/95785016",
                 "https://en.wikipedia.org/wiki/Markee_White"
-              ]
-            },
-            {
-              "player": "Barrick Nealy (not Bush's group)",
-              "pos": "QB",
-              "years": "2005",
-              "outcome": "2005 Southland Player of the Year; UDFA Vikings as WR 2006; CFL Calgary 2006–10",
-              "sources": [
-                "https://en.wikipedia.org/wiki/Barrick_Nealy"
-              ]
+              ],
+              "nfl_level": 2,
+              "honor_level": 5,
+              "pff_best": null,
+              "rank_key": [
+                2,
+                5,
+                -1
+              ],
+              "rank": 2
             }
           ],
           "low": [],
@@ -221,7 +241,16 @@
               "sources": [
                 "https://txst.com/news/2008/12/17/121708aaa_632",
                 "https://txst.com/news/2008/11/26/112608aag_904"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 6,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                6,
+                -1
+              ],
+              "rank": 1
             },
             {
               "player": "Bradley George",
@@ -231,7 +260,16 @@
               "sources": [
                 "https://txst.com/news/2009/11/24/112409aaa_91",
                 "https://txst.com/news/2022/11/25/-t-association-states-up-bradley-george"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 6,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                6,
+                -1
+              ],
+              "rank": 2
             },
             {
               "player": "Karrington Bush",
@@ -241,7 +279,16 @@
               "sources": [
                 "https://txst.com/news/2008/11/26/112608aag_904",
                 "https://txst.com/news/2009/11/24/112409aaa_91"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 5,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                5,
+                -1
+              ],
+              "rank": 3
             },
             {
               "player": "Blake Burton / Jeff Bowen",
@@ -250,7 +297,16 @@
               "outcome": "1st-team All-SLC (2008 SLC champions, FCS playoffs; 9 Bobcats all-conference)",
               "sources": [
                 "https://txst.com/news/2008/11/26/112608aag_904"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 5,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                5,
+                -1
+              ],
+              "rank": 4
             },
             {
               "player": "Da'Marcus Griggs",
@@ -259,7 +315,16 @@
               "outcome": "2010 preseason 1st-team All-SLC",
               "sources": [
                 "https://www.southland.org/news/2010/7/28/34127.aspx"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 5,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                5,
+                -1
+              ],
+              "rank": 5
             }
           ],
           "low": [],
@@ -278,7 +343,16 @@
               "sources": [
                 "https://en.wikipedia.org/wiki/UTSA_Roadrunners_football_statistical_leaders",
                 "https://static.goutsa.com/stats/football/2011/game01.htm"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 2,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                2,
+                -1
+              ],
+              "rank": 1
             },
             {
               "player": "David Glasco II",
@@ -287,7 +361,16 @@
               "outcome": "Primary rusher in box scores; no honor found",
               "sources": [
                 "https://static.goutsa.com/stats/football/2011/game10.htm"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 0,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                0,
+                -1
+              ],
+              "rank": 2
             }
           ],
           "low": [
@@ -300,7 +383,16 @@
                 "https://goutsa.com/sports/football/roster/player/ryan-polite",
                 "https://goutsa.com/news/2012/10/20/san-jose-state-overwhelms-utsa-on-saturday-52-24",
                 "https://gosoutheastern.com/roster.aspx?rp_id=1745"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 1,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                1,
+                -1
+              ],
+              "rank": 1
             }
           ],
           "notes": []
@@ -317,7 +409,16 @@
                 "https://en.wikipedia.org/wiki/Charles_Sims_(American_football",
                 "https://www.sports-reference.com/cfb/players/charles-sims-1.html",
                 "https://wvusports.com/news/2014/5/9/25764_131465985597442354"
-              ]
+              ],
+              "nfl_level": 3,
+              "honor_level": 5,
+              "pff_best": null,
+              "rank_key": [
+                3,
+                5,
+                -1
+              ],
+              "rank": 1
             },
             {
               "player": "Deontay Greenberry",
@@ -327,7 +428,16 @@
               "sources": [
                 "https://uhcougars.com/news/2012/12/4/Houston_Places_13_on_Conference_USA_All_Conference_Teams",
                 "https://mauth.cbssports.com/college-football/news/cbs-2012-preseason-all-conference-usa-team/"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 4,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                4,
+                -1
+              ],
+              "rank": 2
             },
             {
               "player": "Larry McDuffey",
@@ -336,7 +446,16 @@
               "outcome": "C-USA All-Freshman team (28 rec, 382 yds, 4 TD); UH placed 13 on All-C-USA teams",
               "sources": [
                 "https://uhcougars.com/news/2012/12/4/Houston_Places_13_on_Conference_USA_All_Conference_Teams"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 4,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                4,
+                -1
+              ],
+              "rank": 3
             }
           ],
           "low": [
@@ -348,7 +467,16 @@
               "sources": [
                 "https://thedailycougar.com/2013/04/15/piland-takes-challenge-of-regaining-starting-spot/",
                 "https://houston.rivals.com/news/future-forecast-quarterbacks"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 1,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                1,
+                -1
+              ],
+              "rank": 1
             },
             {
               "player": "Charles Sims (departure)",
@@ -357,7 +485,16 @@
               "outcome": "Left UH after Bush's one season as his RB coach/OC for WVU (graduate transfer; not a performance failure)",
               "sources": [
                 "https://en.wikipedia.org/wiki/Charles_Sims_(American_football"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 0,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                0,
+                -1
+              ],
+              "rank": 2
             }
           ],
           "notes": []
@@ -365,16 +502,6 @@
         {
           "stop": "Houston asst HC / co-OC / QBs 2013; OC / QBs 2014",
           "top": [
-            {
-              "player": "John O'Korn",
-              "pos": "QB",
-              "years": "2013 (Fr)",
-              "outcome": "AAC Rookie of the Year; 3,117 yds, 28 TD; 8-5, BBVA Compass Bowl; offense 15th nationally (479.6 ypg, 32.4 ppg)",
-              "sources": [
-                "https://en.wikipedia.org/wiki/John_O%27Korn",
-                "https://www.foxnews.com/sports/ncaa-football-preview-houston-cougars"
-              ]
-            },
             {
               "player": "Deontay Greenberry",
               "pos": "WR",
@@ -384,7 +511,22 @@
                 "https://uhcougars.com/news/2013/12/11/Seven_Cougars_Earn_Honors_from_The_American_Athletic_Conference",
                 "https://uhcougars.com/news/2014/12/10/Seven_Named_to_The_American_All_Conference_Team",
                 "https://en.wikipedia.org/wiki/Deontay_Greenberry"
-              ]
+              ],
+              "nfl_level": 2,
+              "honor_level": 5,
+              "pff_best": {
+                "grade": 67.4,
+                "season": 2014,
+                "team": "HOUSTON",
+                "pos": "WR",
+                "source": "receiving"
+              },
+              "rank_key": [
+                2,
+                5,
+                67.4
+              ],
+              "rank": 1
             },
             {
               "player": "Demarcus Ayers",
@@ -393,7 +535,59 @@
               "outcome": "1st-team All-AAC KR",
               "sources": [
                 "https://uhcougars.com/news/2013/12/11/Seven_Cougars_Earn_Honors_from_The_American_Athletic_Conference"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 5,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                5,
+                -1
+              ],
+              "rank": 2
+            },
+            {
+              "player": "John O'Korn",
+              "pos": "QB",
+              "years": "2013 (Fr)",
+              "outcome": "AAC Rookie of the Year; 3,117 yds, 28 TD; 8-5, BBVA Compass Bowl; offense 15th nationally (479.6 ypg, 32.4 ppg)",
+              "sources": [
+                "https://en.wikipedia.org/wiki/John_O%27Korn",
+                "https://www.foxnews.com/sports/ncaa-football-preview-houston-cougars"
+              ],
+              "nfl_level": 0,
+              "honor_level": 4,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                4,
+                -1
+              ],
+              "rank": 3
+            },
+            {
+              "player": "Kenneth Farrow",
+              "pos": "RB",
+              "years": "2014",
+              "outcome": "12 rushing TD (2nd-best single season in AAC history then), six 100-yd games",
+              "sources": [
+                "https://uhcougars.com/news/2014/12/6/Postgame_Notes_Cincinnati_38_Houston_31"
+              ],
+              "nfl_level": 0,
+              "honor_level": 2,
+              "pff_best": {
+                "grade": 84.9,
+                "season": 2014,
+                "team": "HOUSTON",
+                "pos": "HB",
+                "source": "rushing"
+              },
+              "rank_key": [
+                0,
+                2,
+                84.9
+              ],
+              "rank": 4
             },
             {
               "player": "Greg Ward Jr.",
@@ -403,16 +597,22 @@
               "sources": [
                 "https://uhcougars.com/news/2014/10/18/Postgame_Notes_Houston_31_Temple_10",
                 "https://uhcougars.com/news/2014/12/6/Postgame_Notes_Cincinnati_38_Houston_31"
-              ]
-            },
-            {
-              "player": "Kenneth Farrow",
-              "pos": "RB",
-              "years": "2014",
-              "outcome": "12 rushing TD (2nd-best single season in AAC history then), six 100-yd games",
-              "sources": [
-                "https://uhcougars.com/news/2014/12/6/Postgame_Notes_Cincinnati_38_Houston_31"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 1,
+              "pff_best": {
+                "grade": 75.8,
+                "season": 2014,
+                "team": "HOUSTON",
+                "pos": "QB",
+                "source": "passing"
+              },
+              "rank_key": [
+                0,
+                1,
+                75.8
+              ],
+              "rank": 5
             },
             {
               "player": "Daniel Spencer",
@@ -421,7 +621,22 @@
               "outcome": "13 games/11 starts 2013; 2014 Biletnikoff watch list; no all-conference found",
               "sources": [
                 "https://uhcougars.com/news/2014/7/15/Houston_Duo_Named_to_Biletnikoff_Award_Watch_List"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 1,
+              "pff_best": {
+                "grade": 62.8,
+                "season": 2014,
+                "team": "HOUSTON",
+                "pos": "WR",
+                "source": "receiving"
+              },
+              "rank_key": [
+                0,
+                1,
+                62.8
+              ],
+              "rank": 6
             }
           ],
           "low": [
@@ -435,7 +650,22 @@
                 "https://www.si.com/college/2015/01/08/john-okorn-houston-cougars-transferring",
                 "https://thedailycougar.com/2015/02/05/okorn-announces-transfer-to-michigan/",
                 "https://gocoogs.com/?p=15368"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 1,
+              "pff_best": {
+                "grade": 45.5,
+                "season": 2014,
+                "team": "HOUSTON",
+                "pos": "QB",
+                "source": "passing"
+              },
+              "rank_key": [
+                0,
+                1,
+                45.5
+              ],
+              "rank": 1
             },
             {
               "player": "Offense as a whole",
@@ -445,7 +675,16 @@
               "sources": [
                 "https://www.foxnews.com/sports/ncaa-football-preview-houston-cougars",
                 "https://en.wikipedia.org/wiki/Tony_Levine"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 1,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                1,
+                -1
+              ],
+              "rank": 2
             }
           ],
           "notes": []
@@ -461,7 +700,16 @@
               "sources": [
                 "https://www.buffalorumblings.com/2015/12/22/10655876/buffalo-bills-lesean-mccoy-selected-to-pro-bowl",
                 "https://www.pff.com/news/pro-bills-find-balance-in-backfield-with-mccoy-and-williams"
-              ]
+              ],
+              "nfl_level": 3,
+              "honor_level": 2,
+              "pff_best": null,
+              "rank_key": [
+                3,
+                2,
+                -1
+              ],
+              "rank": 1
             },
             {
               "player": "Karlos Williams",
@@ -471,7 +719,16 @@
               "sources": [
                 "https://www.buffalobills.com/news/karlos-williams-carving-out-spot-in-record-books-16286863",
                 "https://www.nfl.com/_amp/lesean-mccoy-karlos-williams-duo-fueling-bills-o-0ap3000000578966"
-              ]
+              ],
+              "nfl_level": 3,
+              "honor_level": 1,
+              "pff_best": null,
+              "rank_key": [
+                3,
+                1,
+                -1
+              ],
+              "rank": 2
             }
           ],
           "low": [],
@@ -500,7 +757,16 @@
                 "https://n.rivals.com/news/louisville-lands-central-texas-playmaker-qb-deuce-adams",
                 "https://herald-zeitung.com/sports/cougars-rout-titans-55-29-in-victoria/article_4423e3b2-2c96-11ed-9691-5bf0c67272cf.html",
                 "https://www.texasfootball.com/article/2023/04/30/hot-100-qb-and-twin-brother-join-state-championship-contender"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 1,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                1,
+                -1
+              ],
+              "rank": 1
             }
           ],
           "low": [],
@@ -520,7 +786,16 @@
               "sources": [
                 "https://www.southland.org/news/2025/11/25/southland-announces-2025-all-conference-football-team-and-superlatives.aspx",
                 "https://goutrgv.com/news/2025/12/22/football-marburger-named-dctf-texas-non-fbs-offensive-player-of-the-year.aspx"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 6,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                6,
+                -1
+              ],
+              "rank": 1
             },
             {
               "player": "Tony Diaz",
@@ -529,14 +804,32 @@
               "outcome": "1st-team All-SLC; SLC Freshman of the Year; FCS Football Central Freshman All-American",
               "sources": [
                 "https://goutrgv.com/news/2025/12/8/utrgv-leads-2025-fcs-football-central-freshman-all-american-team-with-four-selections.aspx"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 6,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                6,
+                -1
+              ],
+              "rank": 2
             },
             {
               "player": "Nick Hughes",
               "pos": "OL",
               "years": "2025 (Fr)",
               "outcome": "2nd-team All-SLC, started all 12; Freshman All-American",
-              "sources": []
+              "sources": [],
+              "nfl_level": 0,
+              "honor_level": 6,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                6,
+                -1
+              ],
+              "rank": 3
             },
             {
               "player": "Nathaniel Wallace-Dilling",
@@ -545,7 +838,16 @@
               "outcome": "2nd-team All-SLC",
               "sources": [
                 "https://goutrgv.com/news/2025/11/25/football-marburger-diaz-earn-major-southland-awards.aspx"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 4,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                4,
+                -1
+              ],
+              "rank": 4
             }
           ],
           "low": [],
@@ -685,13 +987,28 @@
           "stop": "Louisiana Tech, 2018–20 (LB)",
           "top": [
             {
-              "player": "Collin Scott",
+              "player": "Trey Baldwin",
               "pos": "LB",
-              "years": "2018–19",
-              "outcome": "HM All-C-USA 2018 and 2019; 12 starts, 65 tackles in 2019",
+              "years": "2020",
+              "outcome": "2nd-team All-C-USA, Phil Steele 3rd team; 85 tackles, team-best 53 solo",
               "sources": [
-                "https://latechsports.com/roster.aspx?rp_id=2865"
-              ]
+                "https://www.pressreader.com/usa/el-dorado-news-times/20210416/281947430677804"
+              ],
+              "nfl_level": 0,
+              "honor_level": 4,
+              "pff_best": {
+                "grade": 72.3,
+                "season": 2020,
+                "team": "LA TECH",
+                "pos": "LB",
+                "source": "defense"
+              },
+              "rank_key": [
+                0,
+                4,
+                72.3
+              ],
+              "rank": 1
             },
             {
               "player": "Tyler Grubbs",
@@ -701,34 +1018,22 @@
               "sources": [
                 "https://latechsports.com/news/2021/1/5/football-louisiana-tech-has-12-bulldogs-represented-on-phil-steele-all-conference-usa-teams.aspx",
                 "https://www.pressreader.com/usa/el-dorado-news-times/20210416/281947430677804"
-              ]
-            },
-            {
-              "player": "Trey Baldwin",
-              "pos": "LB",
-              "years": "2020",
-              "outcome": "2nd-team All-C-USA, Phil Steele 3rd team; 85 tackles, team-best 53 solo",
-              "sources": [
-                "https://www.pressreader.com/usa/el-dorado-news-times/20210416/281947430677804"
-              ]
-            },
-            {
-              "player": "Connor Taylor",
-              "pos": "LB",
-              "years": "2018–20",
-              "outcome": "HM All-C-USA (season unspecified)",
-              "sources": [
-                "https://txst.com/sports/football/roster/coaches/brian-gamble/1619"
-              ]
-            },
-            {
-              "player": "Willie Baker",
-              "pos": "LB",
-              "years": "2018–20",
-              "outcome": "HM All-C-USA (season unspecified)",
-              "sources": [
-                "https://txst.com/sports/football/roster/coaches/brian-gamble/1619"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 4,
+              "pff_best": {
+                "grade": 68.3,
+                "season": 2020,
+                "team": "LA TECH",
+                "pos": "LB",
+                "source": "defense"
+              },
+              "rank_key": [
+                0,
+                4,
+                68.3
+              ],
+              "rank": 2
             },
             {
               "player": "Ezekiel Barnett",
@@ -737,7 +1042,94 @@
               "outcome": "HM All-C-USA; Burlsworth Trophy nominee (walk-on award)",
               "sources": [
                 "https://www.pressreader.com/usa/el-dorado-news-times/20210416/281947430677804"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 3,
+              "pff_best": {
+                "grade": 76.0,
+                "season": 2020,
+                "team": "LA TECH",
+                "pos": "LB",
+                "source": "defense"
+              },
+              "rank_key": [
+                0,
+                3,
+                76.0
+              ],
+              "rank": 3
+            },
+            {
+              "player": "Connor Taylor",
+              "pos": "LB",
+              "years": "2018–20",
+              "outcome": "HM All-C-USA (season unspecified)",
+              "sources": [
+                "https://txst.com/sports/football/roster/coaches/brian-gamble/1619"
+              ],
+              "nfl_level": 0,
+              "honor_level": 3,
+              "pff_best": {
+                "grade": 74.5,
+                "season": 2019,
+                "team": "LA TECH",
+                "pos": "LB",
+                "source": "defense"
+              },
+              "rank_key": [
+                0,
+                3,
+                74.5
+              ],
+              "rank": 4
+            },
+            {
+              "player": "Willie Baker",
+              "pos": "LB",
+              "years": "2018–20",
+              "outcome": "HM All-C-USA (season unspecified)",
+              "sources": [
+                "https://txst.com/sports/football/roster/coaches/brian-gamble/1619"
+              ],
+              "nfl_level": 0,
+              "honor_level": 3,
+              "pff_best": {
+                "grade": 74.4,
+                "season": 2018,
+                "team": "LA TECH",
+                "pos": "ED",
+                "source": "defense"
+              },
+              "rank_key": [
+                0,
+                3,
+                74.4
+              ],
+              "rank": 5
+            },
+            {
+              "player": "Collin Scott",
+              "pos": "LB",
+              "years": "2018–19",
+              "outcome": "HM All-C-USA 2018 and 2019; 12 starts, 65 tackles in 2019",
+              "sources": [
+                "https://latechsports.com/roster.aspx?rp_id=2865"
+              ],
+              "nfl_level": 0,
+              "honor_level": 3,
+              "pff_best": {
+                "grade": 69.7,
+                "season": 2018,
+                "team": "LA TECH",
+                "pos": "LB",
+                "source": "defense"
+              },
+              "rank_key": [
+                0,
+                3,
+                69.7
+              ],
+              "rank": 6
             }
           ],
           "low": [],
@@ -749,6 +1141,24 @@
           "stop": "Texas State, 2021–22 (ILB)",
           "top": [
             {
+              "player": "(Jordan Revels)",
+              "pos": "OLB",
+              "years": "2022",
+              "outcome": "HM All-Sun Belt, Phil Steele 4th team — note: OLB, likely not Gamble's room",
+              "sources": [
+                "https://txst.com/news/2022/12/1/football-bell-hergel-named-all-sun-belt-4-others-pick-up-honorable-mention.aspx"
+              ],
+              "nfl_level": 0,
+              "honor_level": 3,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                3,
+                -1
+              ],
+              "rank": 1
+            },
+            {
               "player": "Brian Holloway",
               "pos": "ILB",
               "years": "2022",
@@ -756,7 +1166,22 @@
               "sources": [
                 "https://txst.com/news/2023/3/31/athletics-states-up-podcast-brian-holloway.aspx",
                 "https://collegefootballnetwork.com/texas-state-recruiting-big-12-commits/"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 1,
+              "pff_best": {
+                "grade": 74.1,
+                "season": 2022,
+                "team": "TEXAS ST",
+                "pos": "LB",
+                "source": "defense"
+              },
+              "rank_key": [
+                0,
+                1,
+                74.1
+              ],
+              "rank": 2
             },
             {
               "player": "Dan Foster",
@@ -765,16 +1190,16 @@
               "outcome": "Starting ILB alongside Holloway",
               "sources": [
                 "https://collegefootballnetwork.com/texas-state-recruiting-big-12-commits/"
-              ]
-            },
-            {
-              "player": "(Jordan Revels)",
-              "pos": "OLB",
-              "years": "2022",
-              "outcome": "HM All-Sun Belt, Phil Steele 4th team — note: OLB, likely not Gamble's room",
-              "sources": [
-                "https://txst.com/news/2022/12/1/football-bell-hergel-named-all-sun-belt-4-others-pick-up-honorable-mention.aspx"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 0,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                0,
+                -1
+              ],
+              "rank": 3
             }
           ],
           "low": [
@@ -785,7 +1210,16 @@
               "outcome": "Transferred to Louisville after being a starter (exact offseason unverified)",
               "sources": [
                 "https://collegefootballnetwork.com/texas-state-recruiting-big-12-commits/"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 0,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                0,
+                -1
+              ],
+              "rank": 1
             },
             {
               "player": "Jordan Smith",
@@ -794,7 +1228,16 @@
               "outcome": "Navarro JUCO transfer who left after spring ball for the portal — may postdate Gamble's departure; unverified",
               "sources": [
                 "https://collegefootballnetwork.com/texas-state-recruiting-big-12-commits/"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 0,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                0,
+                -1
+              ],
+              "rank": 2
             }
           ],
           "notes": []
@@ -811,16 +1254,16 @@
                 "https://goutrgv.com/news/2025/12/8/utrgv-leads-2025-fcs-football-central-freshman-all-american-team-with-four-selections.aspx",
                 "https://www.krgv.com/news/utrgv-linebacker-jaiden-haygood-on-the-jerry-rice-award-watch-list",
                 "https://goutrgv.com/news/2026/8/3/football-places-12-on-phil-steele-preseason-all-conference-teams.aspx"
-              ]
-            },
-            {
-              "player": "Ian Box",
-              "pos": "DE",
-              "years": "2025 (Jr.)",
-              "outcome": "2nd-team All-Southland (defense-wide, under Gamble as DC)",
-              "sources": [
-                "https://goutrgv.com/news/2025/11/25/football-marburger-diaz-earn-major-southland-awards.aspx"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 6,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                6,
+                -1
+              ],
+              "rank": 1
             },
             {
               "player": "Alijah Prosser",
@@ -829,7 +1272,34 @@
               "outcome": "FCS Football Central Freshman AA; 2 INT, 1 sack, 2 FF",
               "sources": [
                 "https://goutrgv.com/news/2025/12/8/utrgv-leads-2025-fcs-football-central-freshman-all-american-team-with-four-selections.aspx"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 6,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                6,
+                -1
+              ],
+              "rank": 2
+            },
+            {
+              "player": "Ian Box",
+              "pos": "DE",
+              "years": "2025 (Jr.)",
+              "outcome": "2nd-team All-Southland (defense-wide, under Gamble as DC)",
+              "sources": [
+                "https://goutrgv.com/news/2025/11/25/football-marburger-diaz-earn-major-southland-awards.aspx"
+              ],
+              "nfl_level": 0,
+              "honor_level": 4,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                4,
+                -1
+              ],
+              "rank": 3
             }
           ],
           "low": [],
@@ -987,7 +1457,16 @@
               "outcome": "1st-team all-conference; signed with Oklahoma State",
               "sources": [
                 "https://nsudemons.com/sports/football/roster/coaches/jeff-bowen/1060"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 5,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                5,
+                -1
+              ],
+              "rank": 1
             },
             {
               "player": "Sammy Bernard",
@@ -996,14 +1475,32 @@
               "outcome": "1st-team all-conference; signed with New Mexico",
               "sources": [
                 "https://nsudemons.com/sports/football/roster/coaches/jeff-bowen/1060"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 5,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                5,
+                -1
+              ],
+              "rank": 2
             },
             {
               "player": "(two more unnamed)",
               "pos": "OL",
               "years": "2016",
               "outcome": "4 of 5 sophomore OL signed with FBS programs",
-              "sources": []
+              "sources": [],
+              "nfl_level": 0,
+              "honor_level": 1,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                1,
+                -1
+              ],
+              "rank": 3
             }
           ],
           "low": [],
@@ -1031,7 +1528,16 @@
               "sources": [
                 "https://goriverhawksgo.com/sports/football/roster/madison-wrather/3948",
                 "https://goriverhawksgo.com/news/2021/9/15/football-northeastern-state-hosts-pitt-state-saturday.aspx"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 6,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                6,
+                -1
+              ],
+              "rank": 1
             }
           ],
           "low": [],
@@ -1051,23 +1557,16 @@
               "sources": [
                 "https://goutrgv.com/news/2025/11/25/football-marburger-diaz-earn-major-southland-awards.aspx",
                 "https://goutrgv.com/news/2025/12/8/utrgv-leads-2025-fcs-football-central-freshman-all-american-team-with-four-selections.aspx"
-              ]
-            },
-            {
-              "player": "Wes Thompson",
-              "pos": "OL",
-              "years": "2025 (Sr. in 2026)",
-              "outcome": "2026 Phil Steele preseason 1st-team All-Southland",
-              "sources": [
-                "https://goutrgv.com/news/2026/8/3/football-places-12-on-phil-steele-preseason-all-conference-teams.aspx"
-              ]
-            },
-            {
-              "player": "Abram Nicklas",
-              "pos": "OL",
-              "years": "2025 (5th-yr in 2026)",
-              "outcome": "2026 Phil Steele preseason 2nd-team All-Southland",
-              "sources": []
+              ],
+              "nfl_level": 0,
+              "honor_level": 6,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                6,
+                -1
+              ],
+              "rank": 1
             },
             {
               "player": "Eddie Lee Marburger",
@@ -1076,7 +1575,50 @@
               "outcome": "Walter Payton Award finalist behind Bowen's line",
               "sources": [
                 "https://goutrgv.com/news/2025/12/2/bowen-named-footballscoop-fcs-coordinator-of-the-year-finalist.aspx"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 6,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                6,
+                -1
+              ],
+              "rank": 2
+            },
+            {
+              "player": "Wes Thompson",
+              "pos": "OL",
+              "years": "2025 (Sr. in 2026)",
+              "outcome": "2026 Phil Steele preseason 1st-team All-Southland",
+              "sources": [
+                "https://goutrgv.com/news/2026/8/3/football-places-12-on-phil-steele-preseason-all-conference-teams.aspx"
+              ],
+              "nfl_level": 0,
+              "honor_level": 5,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                5,
+                -1
+              ],
+              "rank": 3
+            },
+            {
+              "player": "Abram Nicklas",
+              "pos": "OL",
+              "years": "2025 (5th-yr in 2026)",
+              "outcome": "2026 Phil Steele preseason 2nd-team All-Southland",
+              "sources": [],
+              "nfl_level": 0,
+              "honor_level": 4,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                4,
+                -1
+              ],
+              "rank": 4
             }
           ],
           "low": [],
@@ -1272,7 +1814,16 @@
               "outcome": "2006 NFL Draft (49ers); Pro Bowl TE with Titans; Aych was his position coach",
               "sources": [
                 "https://okstate.com/sports/football/roster/coaches/theron-aych/3569"
-              ]
+              ],
+              "nfl_level": 3,
+              "honor_level": 1,
+              "pff_best": null,
+              "rank_key": [
+                3,
+                1,
+                -1
+              ],
+              "rank": 1
             }
           ],
           "low": [],
@@ -1292,7 +1843,16 @@
                 "https://angelosports.com/sports/football/roster/kyle-washington/3305",
                 "https://muleriderathletics.com/staff-directory/kyle-washington/1301",
                 "https://goutrgv.com/news/2026/1/15/football-hires-theron-aych-as-co-offensive-coordinator.aspx"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 6,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                6,
+                -1
+              ],
+              "rank": 1
             }
           ],
           "low": [],
@@ -1321,25 +1881,22 @@
               "sources": [
                 "https://www.azdesertswarm.com/football/2019/4/27/18520286/shawn-poindexter-49ers-undrafted-free-agent-nfl-draft-arizona-wildcats-wide-receiver-contract",
                 "https://tucson.com/sports/arizonawildcats/football/arizona-wildcats-battle-for-playing-time-at-receiver-is-wide/article_c95aeca1-3d2a-51c5-90f9-818694abc4d4.html"
-              ]
-            },
-            {
-              "player": "Shun Brown, Tony Ellison, Cedric Peterson (+Poindexter)",
-              "pos": "WR",
-              "years": "2017-18",
-              "outcome": "Starters; combined 108-1,522-12 in 2017; unit led Pac-12 in yds/reception 2018",
-              "sources": [
-                "https://goutrgv.com/sports/football/roster/coaches/theron-aych/4367"
-              ]
-            },
-            {
-              "player": "Jamarye Joiner",
-              "pos": "WR (converted QB)",
-              "years": "2019-20",
-              "outcome": "Led team 552 yds, 5 TD in 2019",
-              "sources": [
-                "https://tucson.com/sports/arizonawildcats/football/it-s-about-the-team-the-motivation-behind-jamarye-joiner/article_81f858e5-8b6a-52ff-b109-eb9b8d3a8b3b.html"
-              ]
+              ],
+              "nfl_level": 2,
+              "honor_level": 2,
+              "pff_best": {
+                "grade": 83.7,
+                "season": 2018,
+                "team": "ARIZONA",
+                "pos": "WR",
+                "source": "receiving"
+              },
+              "rank_key": [
+                2,
+                2,
+                83.7
+              ],
+              "rank": 1
             },
             {
               "player": "Stanley Berryhill III",
@@ -1348,25 +1905,88 @@
               "outcome": "Walk-on awarded scholarship 2018; led team 23 rec 2020",
               "sources": [
                 "https://tucson.com/sports/arizonawildcats/football/ex-arizona-receiver-stanley-berryhill-says-hes-transferring-to-ball-state/article_6ebe891e-4972-11eb-ba71-37f548c21b53.html"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 2,
+              "pff_best": {
+                "grade": 70.6,
+                "season": 2020,
+                "team": "ARIZONA",
+                "pos": "WR",
+                "source": "receiving"
+              },
+              "rank_key": [
+                0,
+                2,
+                70.6
+              ],
+              "rank": 2
+            },
+            {
+              "player": "Jamarye Joiner",
+              "pos": "WR (converted QB)",
+              "years": "2019-20",
+              "outcome": "Led team 552 yds, 5 TD in 2019",
+              "sources": [
+                "https://tucson.com/sports/arizonawildcats/football/it-s-about-the-team-the-motivation-behind-jamarye-joiner/article_81f858e5-8b6a-52ff-b109-eb9b8d3a8b3b.html"
+              ],
+              "nfl_level": 0,
+              "honor_level": 2,
+              "pff_best": {
+                "grade": 64.7,
+                "season": 2019,
+                "team": "ARIZONA",
+                "pos": "WR",
+                "source": "receiving"
+              },
+              "rank_key": [
+                0,
+                2,
+                64.7
+              ],
+              "rank": 3
+            },
+            {
+              "player": "Shun Brown, Tony Ellison, Cedric Peterson (+Poindexter)",
+              "pos": "WR",
+              "years": "2017-18",
+              "outcome": "Starters; combined 108-1,522-12 in 2017; unit led Pac-12 in yds/reception 2018",
+              "sources": [
+                "https://goutrgv.com/sports/football/roster/coaches/theron-aych/4367"
+              ],
+              "nfl_level": 0,
+              "honor_level": 1,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                1,
+                -1
+              ],
+              "rank": 4
             }
           ],
           "low": [
-            {
-              "player": "Boobie Curry",
-              "pos": "WR",
-              "years": "2019-20",
-              "outcome": "\"Projected to have a breakout season,\" 16 rec/157 yds in two years; entered portal Dec 2020",
-              "sources": [
-                "https://wildcat.arizona.edu/121815/sports/starting-quarterback-grant-gunnell-wide-receiver-boobie-curry-enter-transfer-portal/"
-              ]
-            },
             {
               "player": "Stanley Berryhill III",
               "pos": "WR",
               "years": "2018-20",
               "outcome": "Announced transfer to Ball State Dec 2020 (later status unverified)",
-              "sources": []
+              "sources": [],
+              "nfl_level": 0,
+              "honor_level": 1,
+              "pff_best": {
+                "grade": 70.6,
+                "season": 2020,
+                "team": "ARIZONA",
+                "pos": "WR",
+                "source": "receiving"
+              },
+              "rank_key": [
+                0,
+                1,
+                70.6
+              ],
+              "rank": 1
             },
             {
               "player": "Jamarye Joiner",
@@ -1375,7 +1995,46 @@
               "outcome": "Said he was leaving program Dec 2020; a 2022 article has him entering portal again (conflict)",
               "sources": [
                 "https://tucson.com/sports/arizonawildcats/football/arizona-wildcats-receiver-jamarye-joiner-says-hes-leaving-football-program/article_c50020bc-3ff9-11eb-b3d1-e3e1d6b48eca.html"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 1,
+              "pff_best": {
+                "grade": 64.7,
+                "season": 2019,
+                "team": "ARIZONA",
+                "pos": "WR",
+                "source": "receiving"
+              },
+              "rank_key": [
+                0,
+                1,
+                64.7
+              ],
+              "rank": 2
+            },
+            {
+              "player": "Boobie Curry",
+              "pos": "WR",
+              "years": "2019-20",
+              "outcome": "\"Projected to have a breakout season,\" 16 rec/157 yds in two years; entered portal Dec 2020",
+              "sources": [
+                "https://wildcat.arizona.edu/121815/sports/starting-quarterback-grant-gunnell-wide-receiver-boobie-curry-enter-transfer-portal/"
+              ],
+              "nfl_level": 0,
+              "honor_level": 1,
+              "pff_best": {
+                "grade": 55.4,
+                "season": 2019,
+                "team": "ARIZONA",
+                "pos": "WR",
+                "source": "receiving"
+              },
+              "rank_key": [
+                0,
+                1,
+                55.4
+              ],
+              "rank": 3
             }
           ],
           "notes": [
@@ -1392,7 +2051,22 @@
               "outcome": "First-team All-C-USA; 69-1,354-7 (whether he was in Aych's inside group: unverified)",
               "sources": [
                 "https://en.wikipedia.org/wiki/Jacob_Cowing"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 5,
+              "pff_best": {
+                "grade": 90.3,
+                "season": 2021,
+                "team": "UTEP",
+                "pos": "WR",
+                "source": "receiving"
+              },
+              "rank_key": [
+                0,
+                5,
+                90.3
+              ],
+              "rank": 1
             },
             {
               "player": "Justin Garrett",
@@ -1401,7 +2075,22 @@
               "outcome": "50-685; HM All-C-USA 2019-20 (pre-Aych)",
               "sources": [
                 "https://utepminers.com/sports/football/roster/justin-garrett/9764"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 3,
+              "pff_best": {
+                "grade": 73.2,
+                "season": 2021,
+                "team": "UTEP",
+                "pos": "WR",
+                "source": "receiving"
+              },
+              "rank_key": [
+                0,
+                3,
+                73.2
+              ],
+              "rank": 2
             },
             {
               "player": "Tyrin Smith",
@@ -1410,7 +2099,22 @@
               "outcome": "33-570",
               "sources": [
                 "https://www.sports-reference.com/cfb/schools/texas-el-paso/2021-roster.html"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 1,
+              "pff_best": {
+                "grade": 68.0,
+                "season": 2021,
+                "team": "UTEP",
+                "pos": "WR",
+                "source": "receiving"
+              },
+              "rank_key": [
+                0,
+                1,
+                68.0
+              ],
+              "rank": 3
             }
           ],
           "low": [],
@@ -1428,7 +2132,16 @@
               "outcome": "2022 preseason All-OVC (earned pre-Aych); 2022: 153-279, 1,807 yds, 8 TD in 10 starts",
               "sources": [
                 "https://tsutigers.com/sports/football/roster/draylen-ellis/4786"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 1,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                1,
+                -1
+              ],
+              "rank": 1
             },
             {
               "player": "Devon Starling",
@@ -1437,7 +2150,16 @@
               "outcome": "540 rush yds, 207 vs Eastern Washington; OVC Co-Freshman of Year 2021 (pre-Aych)",
               "sources": [
                 "https://hbcugameday.com/2022/09/04/tennessee-state-displays-potent-offense-in-loss-to-no-12-eastern-washington/"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 1,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                1,
+                -1
+              ],
+              "rank": 2
             }
           ],
           "low": [
@@ -1448,7 +2170,16 @@
               "outcome": "Transferred to Northern Arizona Dec 2022 after a down year (540 yds)",
               "sources": [
                 "https://www.thebluebloodscfb.com/former-tennessee-state-rb-devon-starling-transfers-to-northern-arizona/"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 1,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                1,
+                -1
+              ],
+              "rank": 1
             }
           ],
           "notes": [
@@ -1592,14 +2323,32 @@
               "outcome": "All-LSC defensive honors; 2021 team 7-3, LSC champion",
               "sources": [
                 "https://msumustangs.com/news/2021/11/18/football-sterling-cole-march-lead-midwestern-state-contingent-on-all-lone-star-conference-teams.aspx"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 1,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                1,
+                -1
+              ],
+              "rank": 1
             },
             {
               "player": "Dylon Davis",
               "pos": "CB (Fr.)",
               "years": "2021",
               "outcome": "All-LSC defensive honors as a freshman",
-              "sources": []
+              "sources": [],
+              "nfl_level": 0,
+              "honor_level": 0,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                0,
+                -1
+              ],
+              "rank": 2
             }
           ],
           "low": [],
@@ -1619,7 +2368,16 @@
               "sources": [
                 "https://goutrgv.com/sports/football/roster/coaches/adrian-mcdonald/4354",
                 "https://ditvsports.com/2026-spring-football-guide/"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 6,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                6,
+                -1
+              ],
+              "rank": 1
             },
             {
               "player": "Elijah Graham",
@@ -1629,7 +2387,16 @@
               "sources": [
                 "https://goutrgv.com/sports/football/roster/coaches/adrian-mcdonald/4354",
                 "https://rgvsports.com/utrgv-vaqueros-set-to-kick-off-spring-ball-monday/"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 6,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                6,
+                -1
+              ],
+              "rank": 2
             },
             {
               "player": "Logic Hudgens",
@@ -1638,7 +2405,16 @@
               "outcome": "Phil Steele All-Southland 4th team",
               "sources": [
                 "https://goutrgv.com/sports/football/roster/logic-hudgens/12599"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 3,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                3,
+                -1
+              ],
+              "rank": 3
             },
             {
               "player": "TJ Neal",
@@ -1647,7 +2423,16 @@
               "outcome": "Southland Defensive Player of the Week",
               "sources": [
                 "https://www.krgv.com/news/utrgv-s-tj-neal-named-southland-conference-defensive-player-of-the-week"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 0,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                0,
+                -1
+              ],
+              "rank": 4
             }
           ],
           "low": [],
@@ -1762,7 +2547,16 @@
                 "https://goutrgv.com/news/2025/12/17/football-diaz-named-ap-all-american-honorable-mention.aspx",
                 "https://www.krgv.com/news/former-utrgv-star-receiver-tony-diaz-transfers-to-iowa",
                 "https://www.si.com/college/baylor/football/baylor-offers-the-southland-freshman-of-the-year-in-the-transfer-portal-tony-diaz"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 6,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                6,
+                -1
+              ],
+              "rank": 1
             },
             {
               "player": "Xavyion (Xayvion) Noland",
@@ -1773,7 +2567,16 @@
                 "https://osubeavers.com/sports/football/roster/xavyion-noland/12217",
                 "https://en.wikipedia.org/wiki/2025_UT_Rio_Grande_Valley_Vaqueros_football_team",
                 "https://www.krgv.com/news/former-utrgv-star-receiver-tony-diaz-transfers-to-iowa"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 4,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                4,
+                -1
+              ],
+              "rank": 2
             }
           ],
           "low": [
@@ -1784,7 +2587,16 @@
               "outcome": "No source documents a UTRGV WR who was highly rated and failed to produce. The opposite problem: Diaz, Noland and TE Smith Flores (24 of 33 passing TDs) all left for FBS after one season; a converted North Texas safety, Jaydon Smith, was added via portal",
               "sources": [
                 "https://www.krgv.com/news/former-utrgv-star-receiver-tony-diaz-transfers-to-iowa"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 1,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                1,
+                -1
+              ],
+              "rank": 1
             }
           ],
           "notes": [
@@ -1950,7 +2762,16 @@
               "sources": [
                 "https://goriverhawksgo.com/news/2013/4/27/FB_0427131225.aspx",
                 "https://en.wikipedia.org/wiki/Michael_Bowie"
-              ]
+              ],
+              "nfl_level": 3,
+              "honor_level": 6,
+              "pff_best": null,
+              "rank_key": [
+                3,
+                6,
+                -1
+              ],
+              "rank": 1
             },
             {
               "player": "unnamed",
@@ -1959,7 +2780,16 @@
               "outcome": "Line with five new starters produced a 1,000-yd rusher and two all-conference OL (names not found)",
               "sources": [
                 "https://goriverhawksgo.com/sports/football/roster/coaches/mike-barela/51"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 1,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                1,
+                -1
+              ],
+              "rank": 2
             }
           ],
           "low": [],
@@ -1978,7 +2808,16 @@
               "sources": [
                 "https://en.wikipedia.org/wiki/2015_Incarnate_Word_Cardinals_football_team",
                 "https://en.wikipedia.org/wiki/Cole_Wick"
-              ]
+              ],
+              "nfl_level": 3,
+              "honor_level": 5,
+              "pff_best": null,
+              "rank_key": [
+                3,
+                5,
+                -1
+              ],
+              "rank": 1
             },
             {
               "player": "TE group",
@@ -1987,7 +2826,16 @@
               "outcome": "36 catches, 321 yds, 7 TD combined (no individual All-Southland TE in 2016–17)",
               "sources": [
                 "https://uiwcardinals.com/sports/football/roster/coaches/mike-barela/733"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 1,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                1,
+                -1
+              ],
+              "rank": 2
             }
           ],
           "low": [],
@@ -2005,7 +2853,16 @@
               "outcome": "All-RMAC 2nd Team; D2CCA All-Region 2nd Team; team 8-2",
               "sources": [
                 "https://cmumavericks.com/sports/football/roster/caelan-keenan/16831"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 3,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                3,
+                -1
+              ],
+              "rank": 1
             }
           ],
           "low": [],
@@ -2023,7 +2880,16 @@
               "outcome": "AFCA All-America 1st Team; AP D2 All-America 2nd Team; D2CCA All-Region 2nd; Gene Upshaw nominee; started every game, VSU 12-2, shared GSC title",
               "sources": [
                 "https://gscsports.org/news/2023/12/12/gsc-football-trio-named-ap-all-americans.aspx"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 6,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                6,
+                -1
+              ],
+              "rank": 1
             }
           ],
           "low": [],
@@ -2043,7 +2909,16 @@
                 "https://goutrgv.com/staff-directory/mike-barela/784",
                 "https://www.krgv.com/news/former-utrgv-tight-end-ismael-smith-flores-announces-commitment-to-east-carolina/",
                 "https://ecupirates.com/sports/football/roster/ismael-flores/14300"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 1,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                1,
+                -1
+              ],
+              "rank": 1
             }
           ],
           "low": [],
@@ -2188,7 +3063,16 @@
                 "https://goutrgv.com/sports/football/roster/nathan-denney/12585",
                 "https://www.southland.org/news/2025/9/8/utrgvs-denney-lamars-pugh-and-woodard-earn-southland-football-players-of-the-week.aspx",
                 "https://goutrgv.com/news/2025/11/24/football-denney-earns-slc-offensive-player-of-the-week-honorable-mention.aspx"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 4,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                4,
+                -1
+              ],
+              "rank": 1
             },
             {
               "player": "TJ Dement",
@@ -2198,7 +3082,16 @@
               "sources": [
                 "https://goutrgv.com/staff-directory/marco-regalado/780",
                 "https://www.krgv.com/news/utrgv-running-backs-group-looking-strong-ahead-of-2026-season/"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 1,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                1,
+                -1
+              ],
+              "rank": 2
             },
             {
               "player": "Djouvensky Schlenbaker",
@@ -2207,7 +3100,16 @@
               "outcome": "Scored first rushing TD in program history (Aug 30 vs Sul Ross); season stats not found",
               "sources": [
                 "https://en.wikipedia.org/wiki/2025_UT_Rio_Grande_Valley_Vaqueros_football_team"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 1,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                1,
+                -1
+              ],
+              "rank": 3
             },
             {
               "player": "Fabian Garcia, Brennan Carroll",
@@ -2216,7 +3118,16 @@
               "outcome": "Rotation backs; Garcia returning 2026; no honors found",
               "sources": [
                 "https://www.smdailyjournal.com/sports/marburger-utrgv-dominate-naia-member-texas-wesleyan-in-61-13-win/article_23aef303-1aeb-5438-a60c-5a325ed4a84b.html"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 1,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                1,
+                -1
+              ],
+              "rank": 4
             }
           ],
           "low": [
@@ -2227,7 +3138,16 @@
               "outcome": "No source reports a UTRGV RB losing a job, transferring out for lack of production, or being dismissed. 2026 adds LSU transfer Malachi Lane",
               "sources": [
                 "https://www.krgv.com/news/utrgv-running-backs-group-looking-strong-ahead-of-2026-season/"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 1,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                1,
+                -1
+              ],
+              "rank": 1
             }
           ],
           "notes": []
@@ -2336,7 +3256,22 @@
               "outcome": "1st-team All-Big 12 (13.5 TFL, 7.0 sacks); No. 7 overall pick, 2023 NFL Draft (Raiders)",
               "sources": [
                 "https://texastech.com/sports/football/roster/tyree-wilson/10326"
-              ]
+              ],
+              "nfl_level": 3,
+              "honor_level": 5,
+              "pff_best": {
+                "grade": 75.1,
+                "season": 2022,
+                "team": "TEXAS TECH",
+                "pos": "ED",
+                "source": "defense"
+              },
+              "rank_key": [
+                3,
+                5,
+                75.1
+              ],
+              "rank": 1
             },
             {
               "player": "Jesiah Pierre",
@@ -2345,7 +3280,22 @@
               "outcome": "7.0 TFL, 4.5 sacks at OLB in 2022; HM All-Big 12 at LB 2023",
               "sources": [
                 "https://ucfknights.com/sports/football/roster/player/jesiah-pierre"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 3,
+              "pff_best": {
+                "grade": 60.1,
+                "season": 2022,
+                "team": "TEXAS TECH",
+                "pos": "ED",
+                "source": "defense"
+              },
+              "rank_key": [
+                0,
+                3,
+                60.1
+              ],
+              "rank": 2
             }
           ],
           "low": [],
@@ -2357,6 +3307,24 @@
           "stop": "UTRGV, 2024–present (2024 was a no-games prep year; first season 2025)",
           "top": [
             {
+              "player": "Jaiden Haygood",
+              "pos": "LB",
+              "years": "2025",
+              "outcome": "Phil Steele Freshman All-American 1st team; FCS Football Central Freshman AA; 2026 Phil Steele preseason All-SLC 1st team (unit assignment ILB vs OLB unverified)",
+              "sources": [
+                "https://goutrgv.com/news/2025/12/29/football-places-five-on-phil-steele-freshman-all-american-teams.aspx"
+              ],
+              "nfl_level": 0,
+              "honor_level": 6,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                6,
+                -1
+              ],
+              "rank": 1
+            },
+            {
               "player": "Ian Box",
               "pos": "DE/edge, 6-3 236, R-Jr., Seguin TX, Lamar transfer",
               "years": "2025",
@@ -2365,7 +3333,16 @@
                 "https://goutrgv.com/sports/football/roster/ian-box/12113",
                 "https://goutrgv.com/staff-directory/james-lockhart-iv/788",
                 "https://www.krgv.com/news/first-utrgv-football-transfer-de-ian-box-to-face-his-former-team/"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 1,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                1,
+                -1
+              ],
+              "rank": 2
             },
             {
               "player": "Percy Jackson III",
@@ -2374,16 +3351,16 @@
               "outcome": "24 tkl, 6.5 TFL, 2 sacks, 2 FF, 1 FR (no all-conference honor found)",
               "sources": [
                 "https://rgvsports.com/utrgv-football-kicks-off-fall-camp-thursday/"
-              ]
-            },
-            {
-              "player": "Jaiden Haygood",
-              "pos": "LB",
-              "years": "2025",
-              "outcome": "Phil Steele Freshman All-American 1st team; FCS Football Central Freshman AA; 2026 Phil Steele preseason All-SLC 1st team (unit assignment ILB vs OLB unverified)",
-              "sources": [
-                "https://goutrgv.com/news/2025/12/29/football-places-five-on-phil-steele-freshman-all-american-teams.aspx"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 1,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                1,
+                -1
+              ],
+              "rank": 3
             }
           ],
           "low": [],
@@ -2503,16 +3480,6 @@
           "stop": "UTRGV DL, 2024–present (first games 2025)",
           "top": [
             {
-              "player": "Ian Box",
-              "pos": "DE, 6-3 236, Seguin TX, Lamar transfer",
-              "years": "2025",
-              "outcome": "All-Southland 2nd team; 8.0 TFL, 5.5 sacks (also credited to Lockhart; see above)",
-              "sources": [
-                "https://goutrgv.com/sports/football/roster/ian-box/12113",
-                "https://www.southland.org/news/2025/11/25/southland-announces-2025-all-conference-football-team-and-superlatives.aspx"
-              ]
-            },
-            {
               "player": "Ja'Marcus Anderson",
               "pos": "DL (R-So./So., class listing disputed)",
               "years": "2025",
@@ -2520,7 +3487,35 @@
               "sources": [
                 "https://goutrgv.com/news/2025/12/29/football-places-five-on-phil-steele-freshman-all-american-teams.aspx",
                 "https://goutrgv.com/sports/football/roster/ja-marcus-anderson/12898"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 6,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                6,
+                -1
+              ],
+              "rank": 1
+            },
+            {
+              "player": "Ian Box",
+              "pos": "DE, 6-3 236, Seguin TX, Lamar transfer",
+              "years": "2025",
+              "outcome": "All-Southland 2nd team; 8.0 TFL, 5.5 sacks (also credited to Lockhart; see above)",
+              "sources": [
+                "https://goutrgv.com/sports/football/roster/ian-box/12113",
+                "https://www.southland.org/news/2025/11/25/southland-announces-2025-all-conference-football-team-and-superlatives.aspx"
+              ],
+              "nfl_level": 0,
+              "honor_level": 1,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                1,
+                -1
+              ],
+              "rank": 2
             },
             {
               "player": "Nathan Huerta",
@@ -2529,7 +3524,16 @@
               "outcome": "11 starts at nose; returns 2026",
               "sources": [
                 "https://rgvsports.com/utrgv-d-line-looks-to-set-tone-for-vaqueros-in-year-2/"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 1,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                1,
+                -1
+              ],
+              "rank": 3
             },
             {
               "player": "Percy Jackson III",
@@ -2538,7 +3542,16 @@
               "outcome": "24 tkl, 6.5 TFL, 2 sacks, 2 FF",
               "sources": [
                 "https://rgvsports.com/utrgv-football-kicks-off-fall-camp-thursday/"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 1,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                1,
+                -1
+              ],
+              "rank": 4
             }
           ],
           "low": [],
@@ -2689,7 +3702,16 @@
               "outcome": "1st-team All-GAC; team 11-2, D2 playoffs",
               "sources": [
                 "https://goutrgv.com/sports/football/roster/coaches/josh-jones/4374"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 5,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                5,
+                -1
+              ],
+              "rank": 1
             }
           ],
           "low": [],
@@ -2708,7 +3730,16 @@
               "sources": [
                 "https://en.wikipedia.org/wiki/Tremon_Smith",
                 "https://ucasports.com/sports/football/roster/tremon-smith/4950"
-              ]
+              ],
+              "nfl_level": 3,
+              "honor_level": 5,
+              "pff_best": null,
+              "rank_key": [
+                3,
+                5,
+                -1
+              ],
+              "rank": 1
             },
             {
               "player": "Tyler Williams",
@@ -2718,7 +3749,16 @@
               "sources": [
                 "https://ucasports.com/sports/football/roster/coaches/josh-jones/649",
                 "https://ucasports.com/sports/football/roster/tyler-williams/3504"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 6,
+              "pff_best": null,
+              "rank_key": [
+                0,
+                6,
+                -1
+              ],
+              "rank": 2
             }
           ],
           "low": [],
@@ -2737,7 +3777,22 @@
               "sources": [
                 "https://usajaguars.com/staff-directory/josh-jones/445",
                 "https://www.pff.com/news/college-football-2019-pff-all-sun-belt-team"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 3,
+              "pff_best": {
+                "grade": 72.2,
+                "season": 2019,
+                "team": "S ALABAMA",
+                "pos": "CB",
+                "source": "defense"
+              },
+              "rank_key": [
+                0,
+                3,
+                72.2
+              ],
+              "rank": 1
             },
             {
               "player": "Darian Mills",
@@ -2746,7 +3801,22 @@
               "outcome": "All-Sun Belt; 2nd in conference in PBU",
               "sources": [
                 "https://usajaguars.com/staff-directory/josh-jones/445"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 1,
+              "pff_best": {
+                "grade": 70.1,
+                "season": 2018,
+                "team": "S ALABAMA",
+                "pos": "CB",
+                "source": "defense"
+              },
+              "rank_key": [
+                0,
+                1,
+                70.1
+              ],
+              "rank": 2
             },
             {
               "player": "Devin Rockette",
@@ -2756,7 +3826,22 @@
               "sources": [
                 "https://www.pff.com/news/college-football-2019-pff-all-sun-belt-team",
                 "https://usajaguars.com/staff-directory/josh-jones/445"
-              ]
+              ],
+              "nfl_level": 0,
+              "honor_level": 1,
+              "pff_best": {
+                "grade": 62.9,
+                "season": 2019,
+                "team": "S ALABAMA",
+                "pos": "CB",
+                "source": "defense"
+              },
+              "rank_key": [
+                0,
+                1,
+                62.9
+              ],
+              "rank": 3
             }
           ],
           "low": [],

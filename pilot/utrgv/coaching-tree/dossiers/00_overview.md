@@ -17,6 +17,18 @@ Dennis's October 9 summary referenced "the tree designed for Coach Bush" as the 
 - Direct page fetches failed from this environment (goutrgv.com, school sites and Wikipedia did not resolve), so every fact comes from search-result excerpts of the cited pages. Anything marked "unverified" or "not found" should be confirmed on the page before it is used in a coach-facing surface.
 - FCS, Division II, JUCO and high school stops have little public honors coverage. Where a stop says "thin," the gap is in the public record, not in the coach.
 
+## Ranking rule for the player lists
+
+Within each stop, the TOP and LOW lists are sorted highest to lowest by the same key: NFL outcome first, production second, PFF grade third.
+
+| Column | Values |
+|---|---|
+| NFL | NFL (drafted, NFL roster, or NFL honors) ranks above Pro (undrafted free agent, camp, practice squad, Arena/CFL/UFL), which ranks above blank. The Bills 2015 room is NFL by definition. |
+| Production | 6 All-American or conference/national player of the year · 5 first-team all-conference · 4 second team, newcomer, freshman or rookie of the year · 3 honorable mention, third team, all-region or academic · 2 school record or team-leading production · 1 stats only |
+| PFF best | Best PFF season grade during the coach's years at that stop, matched on player, team and position group, from the licensed PFF NCAA tables in edge3-model (FBS, 2014 to 2025). Blank at FCS, D2, JUCO, high school and pre-2014 stops is expected. 26 of 103 player rows carry a PFF grade. |
+
+The three levels are stored on every player row in `coaching_tree.json` and `coaching_tree_players.csv` (`nfl_level`, `honor_level`, `pff_best`), so the sort can be re-run or changed in code.
+
 ## The 2026 staff and where each tree roots
 
 | Coach | 2026 title | Tree roots | Years as position coach or coordinator | Timeline confidence | Player-list confidence |
@@ -73,6 +85,30 @@ Two staff-wide signals stand out. First, almost every documented top performer w
 - Do not train on the LOW set. It is too small and too dependent on staff churn to carry signal. Use it as a list of documented failure modes to check a recruit against (pocket QB in a new system, producer likely to be poached upward).
 - Mentor names and schemes are the join keys to the model's existing coaching data (CFBD covers FBS head coaches only). Assistant and FCS histories in this document are the part CFBD does not have.
 
+## Chase Ames: what was pulled, and what Coach Bush received
+
+Chase Ames is a 2027 quarterback from Dripping Springs High School (Texas Class 6A). He is the recruit whose read was built on Coach Bush's own history rather than UTRGV's one-season program history, and that method is now Rule 1 below. The record, from Gmail, Drive and the edge3-model repo:
+
+| Date | What | Where it lives |
+|---|---|---|
+| June 12, 2026 | Ames family check-in (Chase, Matt Ames, Brian, Kenyon). The decision was a pivot to targeting specific coaching systems and downstream schools with a clear path to playing time, instead of star-based rankings. | Drive: "Ames Family Edge3 Check in, 2026/06/12, Notes by Gemini" |
+| July 13, 2026 | Brian sent Chase and Matt a personalized UTRGV visit guide for the July 14 visit, with the questions to ask on the visit. | Email "UTRGV/ Chase Ames"; page amesutrgv.netlify.app |
+| July 13, 2026 | Brian sent Coach Bush the UTRGV Risk/Fit wallet on Chase "and how he maps to your program," plus the model and pilot breakdown. NIL material was held back for the staff meeting. | Email "Chase Ames/ Edge3 Pilot" to travis.bush@utrgv.edu; page utrgvamesriskfit.netlify.app |
+| July 15, 2026 | The staff demo built for UTRGV carried the Chase file: one year as a varsity starter in Texas 6A, 3,736 yards, 48 TD, 71 percent completions, 12-2; rhythm passer for a proven passing offense; low flight risk (in-state, 4.0 anchor, recruited-to-play fit); comp anchor "the Marburger arc," with Zappe and Mestemaker as the overlooked Texas passers who walked the same road. The file was labeled a comp-anchored EDGE3 staff evaluation. Sources pulled for it: Hudl film, MaxPreps, On3, PFF. | Session "Build Edge3 interactive demo for UTRGV coaching staff"; Desktop `edge3-utrgv-demo/index.html` |
+| August 1 to 2, 2026 | Official offer letter from Cameron Herrera; Chase forwarded "It's official!" | Email "Official Offer Letter - 27 QB Chase Ames" |
+| October 21, 2026 | Brian asked Cam about a revenue-share agreement for Chase's commitment. Cam: Coach Bush handles revenue share; UTRGV has not paid a high school recruit revenue share and has not raised it. | Email "Chase Ames" |
+| In edge3-model | The pattern was generalized: `scripts/build_utrgv_fcs_comps.py` ("UTRGV FCS comp mapping, Chase Ames pattern, generalized") builds comps for every UTRGV player from rooms Coach Bush knows personally first (Texas State, UTSA, Houston), then regional G5, then the full cohort. The Garret Rangel comp card follows the same anchor ("your offense just made a Walter Payton Award finalist out of this room"). `docs/athletes/wallets/chase-ames/` is the public sample preview, structure only. | edge3-model repo |
+
+Two things could not be retrieved from this environment: the two Netlify pages themselves (the domain does not resolve here, and their source is not in either repo, so they were deployed from the desktop), and the FBS/FCS media-guide mapping run. The only media-guide references in edge3-model are the FB-01b verification notes and the April 21 Positional Baselines scope, which proposed a one-time manual scrape of team media guides to fill OC and DC by year. `data/fcs/fcs_head_coaches_manual.csv` holds one row (Bush). The media-guide run is on the desktop or downloads, which this session cannot reach.
+
+## Rules added
+
+Three rules now sit in `RULES.md` beside this report and in the Edge3-demos `CLAUDE.md`, with a paste block for the edge3-model `CLAUDE.md` in `EDGE3_MODEL_CLAUDE_MD_ADDITION.md`:
+
+1. Coach history, not program history. Baselines come from the coach's own career at every stop; a first-time head coach is read through his assistant stops; media guides are the source for OC, DC and position-coach assignments by year.
+2. Map every position coach to the players he coached, ranked by NFL outcome, then production, then PFF grade, highest to lowest. LOW only when documented. Never train on LOW.
+3. Every row carries its source; unverified stays labeled.
+
 ## Gaps and the next pass
 
 - Full all-conference lists for Incarnate Word 2010 to 2017, Texas State 2004 to 2007 and 2021, Northwestern State, Angelo State, Tennessee State, Midwestern State 2022, and the official 2025 All-Southland roster beyond the names confirmed here.
@@ -80,6 +116,8 @@ Two staff-wide signals stand out. First, almost every documented top performer w
 - Three employment holes: Aych 2008 to 2010, Regalado 2017 to 2019, Barela's 2014 Kansas high school.
 - Bush's San Marcos HS assistant year could not be found in any source.
 - 2026 in-season production under the new titles (Aych as play-caller, Henderson as pass game coordinator, Barela as run game coordinator, Jones on special teams) is not yet in the record.
+- PFF grades for the UTRGV 2025 rows (the FCS pulls in Drive) and for the FCS stops generally; only the FBS tables were joined here.
+- The FBS/FCS media-guide mapping run and the two Chase Ames Netlify pages, both on the desktop.
 
 The per-coach dossiers follow. Each ends with its own confidence rating and gap list.
 
